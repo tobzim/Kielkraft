@@ -1,0 +1,91 @@
+title: Startseite
+icon: home
+num: zero
+
+tabs:
+  hero:
+    label: Hero
+    icon: bolt
+    fields:
+      heroEyebrow:
+        label: Eyebrow
+        type: text
+        translate: true
+      heroHeadline:
+        label: Überschrift (H1)
+        type: text
+        translate: true
+      heroLead:
+        label: Lead-Text
+        type: textarea
+        translate: true
+
+  categories:
+    label: Kategorien
+    icon: grid
+    fields:
+      sectionCatsEyebrow:
+        label: Eyebrow
+        type: text
+        translate: true
+        width: 1/2
+      sectionCatsTitle:
+        label: Sektions-Titel
+        type: text
+        translate: true
+        width: 1/2
+      catElectricTitle:
+        label: Elektro - Titel
+        type: text
+        translate: true
+        width: 1/2
+      catElectricText:
+        label: Elektro - Text
+        type: textarea
+        translate: true
+        width: 1/2
+      catPetrolTitle:
+        label: Benzin - Titel
+        type: text
+        translate: true
+        width: 1/2
+      catPetrolText:
+        label: Benzin - Text
+        type: textarea
+        translate: true
+        width: 1/2
+      sectionBestTitle:
+        label: Bestseller-Sektion - Titel
+        type: text
+        translate: true
+
+  usp:
+    label: USP & Beratung
+    icon: star
+    fields:
+      uspTitle:
+        label: USP-Sektion - Titel
+        type: text
+        translate: true
+      usp1Title: { label: USP 1 - Titel, type: text, translate: true, width: 1/2 }
+      usp1Text:  { label: USP 1 - Text, type: textarea, translate: true, width: 1/2 }
+      usp2Title: { label: USP 2 - Titel, type: text, translate: true, width: 1/2 }
+      usp2Text:  { label: USP 2 - Text, type: textarea, translate: true, width: 1/2 }
+      usp3Title: { label: USP 3 - Titel, type: text, translate: true, width: 1/2 }
+      usp3Text:  { label: USP 3 - Text, type: textarea, translate: true, width: 1/2 }
+      advisorLine: { type: line }
+      advisorTitle: { label: Kaufberater-CTA - Titel, type: text, translate: true }
+      advisorText:  { label: Kaufberater-CTA - Text, type: textarea, translate: true }
+
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      metaTitle:
+        label: Meta-Title
+        type: text
+        translate: true
+      metaDescription:
+        label: Meta-Description
+        type: textarea
+        translate: true

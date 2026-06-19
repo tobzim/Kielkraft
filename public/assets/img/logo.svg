@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Marvento">
+  <!-- PLACEHOLDER logo mark - replace with final brand asset -->
+  <rect width="40" height="40" rx="11" fill="#0a2540"/>
+  <path d="M6.5 26c3.6 0 3.6-4.2 7.2-4.2S17.3 26 20.9 26s3.6-4.2 7.2-4.2S31.7 26 33.5 26" fill="none" stroke="#0bb4c4" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M12 12l8 9 8-9" fill="none" stroke="#ffffff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

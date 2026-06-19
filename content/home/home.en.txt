@@ -1,0 +1,85 @@
+Title: Home
+
+----
+
+Heroeyebrow: Outboard motor specialist
+
+----
+
+Heroheadline: The right outboard. Electric or petrol.
+
+----
+
+Herolead: Tohatsu 4-stroke and ePropulsion electric – curated, ready to order, with genuine buying advice and transparent freight.
+
+----
+
+Sectioncatseyebrow: Our drives
+
+----
+
+Sectioncatstitle: Two worlds, one specialist
+
+----
+
+Catelectrictitle: Electric outboards by ePropulsion
+
+----
+
+Catelectrictext: Quiet, low-maintenance, zero-emission. Ideal for inflatables, tenders and sailing boats.
+
+----
+
+Catpetroltitle: Petrol outboards by Tohatsu
+
+----
+
+Catpetroltext: Proven 4-stroke engineering from 3.5 to 15 hp. Reliable, economical, durable.
+
+----
+
+Sectionbesttitle: Popular models
+
+----
+
+Usptitle: Why Marvento
+
+----
+
+Usp1title: A specialist, not a general store
+
+----
+
+Usp1text: Focused on Tohatsu and ePropulsion – deep product knowledge and honest advice instead of endless catalogue tables.
+
+----
+
+Usp2title: Ready to order
+
+----
+
+Usp2text: A real one-page checkout with all relevant payment methods – no enquiry form, no waiting.
+
+----
+
+Usp3title: Transparent freight & service
+
+----
+
+Usp3text: Clear freight costs, realistic delivery times, manufacturer warranty and reachable service.
+
+----
+
+Advisortitle: Which outboard suits you?
+
+----
+
+Advisortext: Enter boat type, weight and intended use – we recommend the right model. The right motor in two minutes.
+
+----
+
+Metatitle: Buy outboard motors – Tohatsu & ePropulsion | Marvento
+
+----
+
+Metadescription: Premium outboard motors by Tohatsu (petrol/4-stroke) and ePropulsion (electric). Buy now, invoice purchase for returning customers, transparent freight, genuine advice.

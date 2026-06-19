@@ -1,0 +1,33 @@
+title: Seite
+icon: page
+
+fields:
+  intro:
+    label: Intro
+    type: textarea
+    translate: true
+  text:
+    label: Inhalt
+    type: textarea
+    size: large
+    translate: true
+  line:
+    type: line
+  isPlaceholder:
+    label: Platzhalter-Hinweis anzeigen (TODO ersetzen)
+    type: toggle
+    default: false
+    help: Zeigt den Hinweis "durch anwaltlich geprüfte Endfassung ersetzen" an.
+  seoHeadline:
+    type: headline
+    label: SEO
+  metaTitle:
+    label: Meta-Title
+    type: text
+    translate: true
+    width: 1/2
+  metaDescription:
+    label: Meta-Description
+    type: textarea
+    translate: true
+    width: 1/2

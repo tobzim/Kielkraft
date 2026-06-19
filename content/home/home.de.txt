@@ -1,0 +1,85 @@
+Title: Start
+
+----
+
+Heroeyebrow: Spezialist für Außenbordmotoren
+
+----
+
+Heroheadline: Der richtige Außenborder. Elektro oder Benzin.
+
+----
+
+Herolead: Tohatsu 4-Takt und ePropulsion Elektro – kuratiert, sofort bestellbar, mit echter Kaufberatung und transparenter Fracht.
+
+----
+
+Sectioncatseyebrow: Unsere Antriebe
+
+----
+
+Sectioncatstitle: Zwei Welten, ein Spezialist
+
+----
+
+Catelectrictitle: Elektro-Außenborder von ePropulsion
+
+----
+
+Catelectrictext: Leise, wartungsarm, emissionsfrei. Ideal für Schlauchboot, Tender und Segelboot.
+
+----
+
+Catpetroltitle: Benzin-Außenborder von Tohatsu
+
+----
+
+Catpetroltext: Bewährte 4-Takt-Technik von 3,5 bis 15 PS. Zuverlässig, sparsam, langlebig.
+
+----
+
+Sectionbesttitle: Beliebte Modelle
+
+----
+
+Usptitle: Warum Marvento
+
+----
+
+Usp1title: Spezialist statt Gemischtwarenladen
+
+----
+
+Usp1text: Fokus auf Tohatsu und ePropulsion – tiefe Produktkenntnis und ehrliche Kaufberatung statt endloser Katalogtabellen.
+
+----
+
+Usp2title: Sofort bestellbar
+
+----
+
+Usp2text: Echter One-Page-Checkout mit allen relevanten Zahlarten – kein Anfrageformular, keine Wartezeit.
+
+----
+
+Usp3title: Transparente Fracht & Service
+
+----
+
+Usp3text: Klare Speditionskosten, realistische Lieferzeiten, Herstellergarantie und erreichbarer Service.
+
+----
+
+Advisortitle: Welcher Außenborder passt zu dir?
+
+----
+
+Advisortext: Boottyp, Gewicht und Einsatzzweck eingeben – wir empfehlen das passende Modell. In zwei Minuten zum richtigen Motor.
+
+----
+
+Metatitle: Außenbordmotoren kaufen – Tohatsu & ePropulsion | Marvento
+
+----
+
+Metadescription: Premium-Außenbordmotoren von Tohatsu (Benzin/4-Takt) und ePropulsion (Elektro). Sofort bestellbar, Kauf auf Rechnung für Bestandskunden, transparente Frachtkosten, echte Beratung.

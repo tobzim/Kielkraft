@@ -1,0 +1,48 @@
+# =============================================================================
+# Marvento - PRODUCTION stack (Hetzner)
+# Images are PULLED from GHCR (built by GitHub Actions) - no build on server.
+# Persistent data lives in named volumes and is NEVER recreated on deploy.
+# Sits behind the central reverse proxy (Caddy) on the host.
+#
+#   docker compose -f docker-compose.prod.yml pull
+#   docker compose -f docker-compose.prod.yml up -d
+# =============================================================================
+name: marvento
+
+services:
+  app:
+    image: ghcr.io/tobzim/marvento-shop:app-latest
+    env_file:
+      - .env
+    environment:
+      APP_ENV: production
+      KIRBY_DEBUG: "false"
+      KIRBY_CACHE: "true"
+    volumes:
+      - content:/var/www/html/content
+      - media:/var/www/html/public/media
+      - storage:/var/www/html/storage
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  web:
+    image: ghcr.io/tobzim/marvento-shop:web-latest
+    depends_on:
+      - app
+    ports:
+      - "127.0.0.1:8080:80"   # exposed only to the host; central Caddy proxies
+    volumes:
+      - media:/var/www/html/public/media:ro
+    restart: unless-stopped
+
+# Persistent volumes - back these up (see README "Backups & Volumes"):
+#   content -> products, pages AND orders/customers (DSGVO-relevant)
+#   media   -> generated thumbnails + uploaded files
+#   storage -> sessions, cache, accounts, invoices, logs
+volumes:
+  content:
+  media:
+  storage:

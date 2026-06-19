@@ -1,0 +1,35 @@
+# --- Dependencies (installed via Composer in the Docker build) ---
+/vendor/
+/kirby/
+/node_modules/
+
+# --- Kirby runtime storage (sessions, cache, accounts, invoices, logs) ---
+# Lives OUTSIDE the web root and is a persistent VOLUME in production.
+/storage/
+
+# --- Generated thumbnails / media ---
+/public/media/
+
+# --- Runtime DATA that must never reach GitHub (DSGVO) ---
+# Catalog content (products/categories/pages) IS tracked.
+# Customer-bound runtime data is NOT:
+/content/orders/
+/content/customers/
+/site/accounts/
+/site/sessions/
+
+# --- Secrets / local env ---
+.env
+.env.*.local
+*.local
+
+# --- Build / OS / editor noise ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.log
+npm-debug.log*
+.php-cs-fixer.cache
+.phpunit.result.cache

@@ -1,0 +1,47 @@
+# =============================================================================
+# Marvento - LOCAL DEV stack
+#   shop  -> http://localhost:${WEB_PORT:-8080}
+#   mail  -> http://localhost:${MAILPIT_UI_PORT:-8025}  (Mailpit catches mail)
+# Live code editing via bind-mount; vendor/ and kirby/ kept from the image.
+# =============================================================================
+name: marvento
+
+services:
+  app:
+    build:
+      context: .
+      target: runtime
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      APP_URL: ${APP_URL:-http://localhost:8080}
+      KIRBY_DEBUG: ${KIRBY_DEBUG:-true}
+      KIRBY_CACHE: ${KIRBY_CACHE:-false}
+      MAIL_HOST: ${MAIL_HOST:-mailpit}
+      MAIL_PORT: ${MAIL_PORT:-1025}
+    volumes:
+      - ./:/var/www/html
+      - /var/www/html/vendor   # keep image-built deps over the bind-mount
+      - /var/www/html/kirby
+    restart: unless-stopped
+
+  web:
+    image: nginx:1.27-alpine
+    depends_on:
+      - app
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    volumes:
+      - ./public:/var/www/html/public:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "${MAILPIT_UI_PORT:-8025}:8025"
+    environment:
+      MP_MAX_MESSAGES: 500
+    restart: unless-stopped

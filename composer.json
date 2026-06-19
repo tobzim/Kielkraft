@@ -1,0 +1,37 @@
+{
+    "name": "tobzim/marvento-shop",
+    "description": "Marvento - bilingual (DE/EN) premium outboard-motor shop (Tohatsu + ePropulsion) built on Kirby K5",
+    "type": "project",
+    "license": "proprietary",
+    "homepage": "https://marvento.de",
+    "authors": [
+        {
+            "name": "Tobias Zimmer",
+            "email": "tobias.zimmer@comcredit.de"
+        }
+    ],
+    "require": {
+        "php": ">=8.2.0",
+        "getkirby/cms": "^5.0"
+    },
+    "require-dev": {
+        "getkirby/cli": "^1.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "platform": {
+            "php": "8.2.99"
+        }
+    },
+    "extra": {
+        "kirby-cms-path": "kirby"
+    },
+    "scripts": {
+        "start": "php -S localhost:8000 public/index.php",
+        "comment-licenses": "Kirby (production) and the chosen shop plugin (Kart or Merx) are COMMERCIAL licenses - see README, section 'Lizenzen'."
+    }
+}
