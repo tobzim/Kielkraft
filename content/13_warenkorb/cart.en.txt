@@ -1,0 +1,13 @@
+Title: Cart
+
+----
+
+Slug: cart
+
+----
+
+Metatitle: Cart | Marvento
+
+----
+
+Metadescription: Your Marvento cart. Secure checkout with all common payment methods.

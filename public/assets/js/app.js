@@ -120,4 +120,21 @@
     if (sortSel) sortSel.addEventListener("change", apply);
     if (steerSel) steerSel.addEventListener("change", apply);
   }
+
+  /* --- Cookie consent --- */
+  var consent = document.querySelector("[data-consent]");
+  if (consent) {
+    var KEY = "mv-consent";
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+    if (!stored) consent.hidden = false;
+    var setConsent = function (v) {
+      try { localStorage.setItem(KEY, v); } catch (e) {}
+      consent.hidden = true;
+    };
+    var acc = consent.querySelector("[data-consent-accept]");
+    var dec = consent.querySelector("[data-consent-decline]");
+    if (acc) acc.addEventListener("click", function () { setConsent("all"); });
+    if (dec) dec.addEventListener("click", function () { setConsent("necessary"); });
+  }
 })();

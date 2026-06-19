@@ -1,0 +1,27 @@
+Title: Über uns
+
+----
+
+Intro: Spezialist für Außenbordmotoren – mit echter Produktkenntnis, ehrlicher Beratung und transparenten Konditionen.
+
+----
+
+Text:
+
+Marvento ist auf Außenbordmotoren von Tohatsu (Benzin/4-Takt) und ePropulsion (Elektro) spezialisiert. Statt eines unübersichtlichen Gemischtwarenladens bieten wir eine kuratierte Auswahl, tiefe Produktkenntnis und eine ehrliche Kaufberatung – damit du genau den Motor bekommst, der zu deinem Boot und deinem Einsatz passt.
+
+Wir sind Verkäufer und Rechnungssteller; die Auslieferung der schweren Speditionsware übernehmen erfahrene Logistikpartner. Gewährleistung, Widerruf und Service liegen bei uns – nicht beim Partner. Alle Geräte sind offizielle Neuware mit Herstellergarantie.
+
+(Platzhalter: Firmenangaben, Team und Expertise hier ergänzen.)
+
+----
+
+IsPlaceholder: true
+
+----
+
+Metatitle: Über Marvento – Spezialist für Außenborder | Marvento
+
+----
+
+Metadescription: Marvento ist Spezialist für Tohatsu- und ePropulsion-Außenborder: kuratierte Auswahl, ehrliche Beratung, transparente Fracht, echte Erreichbarkeit.

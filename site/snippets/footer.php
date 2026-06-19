@@ -35,6 +35,7 @@ $y    = date('Y');
                 <li><a href="<?= url($en ? 'en/shipping' : 'versand') ?>"><?= t('footer.shipping') ?></a></li>
                 <li><a href="<?= url($en ? 'en/payment' : 'zahlungsarten') ?>"><?= t('footer.payment') ?></a></li>
                 <li><a href="<?= url($en ? 'en/warranty' : 'garantie') ?>"><?= t('product.warranty') ?></a></li>
+                <li><a href="<?= url($en ? 'en/about' : 'ueber-uns') ?>"><?= $en ? 'About us' : 'Über uns' ?></a></li>
                 <li><a href="<?= url($en ? 'en/contact' : 'kontakt') ?>"><?= t('nav.contact') ?></a></li>
             </ul>
         </div>
@@ -56,6 +57,7 @@ $y    = date('Y');
     </div>
 </footer>
 
+<?php snippet('consent') ?>
 <?= js('assets/js/app.js', ['defer' => true]) ?>
 </body>
 </html>

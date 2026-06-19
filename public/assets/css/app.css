@@ -381,3 +381,17 @@
 @media (max-width: 720px) {
     .mini-konsole__name { display: none; }
 }
+
+/* ---- Cookie consent ---- */
+.consent { position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+    background: var(--tiefsee); color: var(--on-dark); box-shadow: 0 -8px 24px rgba(14,42,51,.18); }
+.consent__row { display: flex; align-items: center; gap: var(--sp-5); padding-block: var(--sp-4); }
+.consent__text { font-size: var(--fs-200); color: var(--on-dark); margin: 0; }
+.consent__text a { color: #fff; text-decoration: underline; }
+.consent__actions { margin-inline-start: auto; display: flex; gap: var(--sp-3); flex: 0 0 auto; }
+.consent .btn--ghost { color: #fff; border-color: rgba(255,255,255,.3); }
+.consent .btn--ghost:hover { background: rgba(255,255,255,.1); }
+@media (max-width: 720px) {
+    .consent__row { flex-direction: column; align-items: stretch; }
+    .consent__actions { margin-inline-start: 0; }
+}

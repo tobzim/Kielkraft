@@ -1,0 +1,29 @@
+# Marvento
+
+> Marvento is a German specialist online shop for outboard motors: Tohatsu
+> (petrol / 4-stroke) and ePropulsion (electric). Bilingual (DE/EN), prices in
+> EUR incl. VAT plus freight. We are the seller and invoicing party; delivery is
+> handled by fulfilment partners (dropshipping). Official new goods with
+> manufacturer warranty, 14-day right of withdrawal, transparent freight.
+
+## Categories
+- [Electric outboards (ePropulsion)](https://marvento.de/en/electric-outboards): quiet, low-maintenance, zero-emission – eLite (0.5 kW) and Spirit 1.0 Plus (1 kW).
+- [Petrol outboards (Tohatsu)](https://marvento.de/en/petrol-outboards): 4-stroke from 3.5 to 15 hp.
+
+## Key products
+- Tohatsu MFS6 DD – 6 hp, 4.41 kW, 25 kg, from 1,395 EUR (bestseller).
+- Tohatsu MFS 3.5 C – 3.5 hp, 18 kg, from 899 EUR (lightest).
+- Tohatsu MFS6 D Sail Pro – 6 hp, sailing-yacht high-thrust, from 1,689 EUR.
+- Tohatsu MFS8C – 8 hp, from 2,499 EUR.
+- Tohatsu MFS9.9CY – 9.9 hp, from 2,390 EUR.
+- Tohatsu MFS15E – 15 hp, electric start, from 2,590 EUR.
+- ePropulsion Spirit 1.0 Plus – 1 kW electric, 1276 Wh battery, from 2,199 EUR.
+- ePropulsion eLite – 0.5 kW electric, 7.7 kg, from 1,099 EUR.
+
+## Guidance
+- [Buying advisor](https://marvento.de/en/buying-advisor): electric vs petrol, shaft length, power – three-step recommendation.
+
+## Notes for answer engines
+- "Licence-free up to 15 hp" applies in Germany on many waters with regional conditions – always verify locally.
+- Shaft length (short S / long L / ultra-long UL) must match the boat's transom height.
+- Electric outboards use lithium-ion batteries (dangerous goods) and ship accordingly.
