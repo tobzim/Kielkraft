@@ -1,0 +1,111 @@
+title: Produkt
+icon: cart
+
+columns:
+  - width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          intro:
+            label: Intro (Kurzbeschreibung)
+            type: textarea
+            translate: true
+          description:
+            label: Beschreibung
+            type: textarea
+            size: large
+            translate: true
+          gallery:
+            label: Produktbilder (REALE Tohatsu/ePropulsion-Fotos!)
+            type: files
+            template: image
+            help: Keine KI-Bilder des Produkts - nur echte Hersteller-/Studiofotos.
+          specsHead:
+            type: headline
+            label: Erweiterte technische Daten
+          specs:
+            label: Specs
+            type: structure
+            translate: true
+            fields:
+              label: { label: Merkmal, type: text }
+              value: { label: Wert, type: text }
+          faqHead:
+            type: headline
+            label: FAQ (GEO/SEO)
+          faq:
+            label: Fragen
+            type: structure
+            translate: true
+            fields:
+              q: { label: Frage, type: text }
+              a: { label: Antwort, type: textarea }
+  - width: 1/3
+    sections:
+      meta:
+        type: fields
+        fields:
+          brand:
+            label: Marke
+            type: select
+            options:
+              Tohatsu: Tohatsu
+              ePropulsion: ePropulsion
+            width: 1/2
+          antrieb:
+            label: Antrieb
+            type: select
+            options:
+              benzin: Benzin (4-Takt)
+              elektro: Elektro
+            width: 1/2
+          modelcode: { label: Modellcode, type: text, width: 1/2 }
+          bestseller: { label: Bestseller, type: toggle, width: 1/2 }
+          powerPs: { label: Leistung (PS), type: number, width: 1/2 }
+          powerKw: { label: Leistung (kW), type: number, step: 0.01, width: 1/2 }
+          weightKg: { label: Gewicht (kg), type: number, step: 0.1, width: 1/2 }
+          displacement: { label: Hubraum/Akku, type: text, width: 1/2, help: "ccm (Benzin) oder Wh (Elektro)" }
+          steuerung:
+            label: Steuerung
+            type: select
+            options:
+              Pinne: Pinne
+              Fernbedienung: Fernbedienung
+              "Pinne/Fernbedienung": Pinne/Fernbedienung
+          priceFrom: { label: Preis ab (brutto EUR), type: number, step: 0.01, width: 1/2 }
+          uvp: { label: UVP (optional), type: number, step: 0.01, width: 1/2 }
+          shippingCost: { label: Frachtkosten (EUR), type: number, step: 0.01, width: 1/2 }
+          deliveryTime: { label: Lieferzeit, type: text, width: 1/2, translate: true }
+          availability:
+            label: Verfügbarkeit
+            type: select
+            default: instock
+            options:
+              instock: Lieferbar
+              short: Nur wenige verfügbar
+              preorder: Vorbestellung
+            width: 1/2
+          warrantyYears: { label: Garantie (Jahre), type: number, width: 1/2 }
+          gefahrgut: { label: Gefahrgut (Li-Ion), type: toggle }
+          variantsHead: { type: headline, label: Varianten }
+          variants:
+            label: Varianten
+            type: structure
+            fields:
+              label: { label: Bezeichnung, type: text }
+              shaft: { label: Schaft, type: text }
+              steuerung: { label: Steuerung, type: text }
+              price: { label: Preis (brutto), type: number, step: 0.01 }
+              sku: { label: SKU, type: text }
+              stock: { label: Bestand, type: number }
+          crossSell:
+            label: Cross-Sell (Zubehör)
+            type: pages
+            query: site.index.filterBy("intendedTemplate", "product")
+          internalHead: { type: headline, label: Intern (nicht öffentlich) }
+          partner: { label: Lieferant/Partner, type: text }
+          ekPrice: { label: Einkaufspreis (EK), type: number, step: 0.01 }
+          seoHead: { type: headline, label: SEO }
+          metaTitle: { label: Meta-Title, type: text, translate: true }
+          metaDescription: { label: Meta-Description, type: textarea, translate: true }

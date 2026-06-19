@@ -1,0 +1,11 @@
+title: Kaufberater
+icon: live
+
+fields:
+  intro:
+    label: Intro
+    type: textarea
+    translate: true
+  seoHead: { type: headline, label: SEO }
+  metaTitle: { label: Meta-Title, type: text, translate: true }
+  metaDescription: { label: Meta-Description, type: textarea, translate: true }

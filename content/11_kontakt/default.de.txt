@@ -1,0 +1,23 @@
+Title: Kontakt
+
+----
+
+Intro: Wir sind erreichbar – per Telefon, WhatsApp und E-Mail.
+
+----
+
+Text:
+
+Platzhalter. Telefon, WhatsApp, E-Mail (info@marvento.de) und Geschäftszeiten mit angegebener Reaktionszeit. Ein Kontaktformular folgt.
+
+----
+
+IsPlaceholder: true
+
+----
+
+Metatitle: Kontakt | Marvento
+
+----
+
+Metadescription: Wir sind erreichbar – per Telefon, WhatsApp und E-Mail.

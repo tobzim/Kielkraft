@@ -1,0 +1,152 @@
+Title: ePropulsion Spirit 1.0 Plus
+
+----
+
+Brand: ePropulsion
+
+----
+
+Antrieb: elektro
+
+----
+
+Modelcode: Spirit 1.0 Plus
+
+----
+
+Bestseller: false
+
+----
+
+PowerPs: 3
+
+----
+
+PowerKw: 1.0
+
+----
+
+WeightKg: 20
+
+----
+
+Displacement: 1276 Wh
+
+----
+
+Steuerung: Pinne
+
+----
+
+PriceFrom: 2199
+
+----
+
+Uvp:
+
+----
+
+ShippingCost: 39
+
+----
+
+DeliveryTime: Versand in 2–4 Werktagen
+
+----
+
+Availability: instock
+
+----
+
+WarrantyYears: 2
+
+----
+
+Gefahrgut: true
+
+----
+
+Intro: Leiser 1-kW-Elektro-Außenborder mit integriertem 1276-Wh-Lithium-Akku und Pinne mit Display – ideal für Tender, kleine Segelboote und elektroreine Seen.
+
+----
+
+Description:
+
+Der ePropulsion Spirit 1.0 Plus bringt 1 kW Elektroantrieb in ein Gehäuse mit fest integriertem 1276-Wh-Lithium-Akku. Du fährst nahezu lautlos, ohne Benzin und ohne Öl – die Pinne zeigt Akkustand und verbleibende Reichweite direkt im Display an. Damit ist er die saubere Lösung für Tender, kleine Segelboote und elektroreine Gewässer.
+
+Mit nur 20 kg lässt er sich leicht tragen und montieren, der Wartungsaufwand ist denkbar gering. Den fest verbauten Lithium-Akku versenden wir als Gefahrgut. Wähle Kurzschaft (S) für die meisten Tender und Langschaft (L) für höhere Spiegel und Segelboote.
+
+----
+
+Variants:
+
+-
+  label: Kurzschaft (S)
+  shaft: S
+  steuerung: Pinne
+  price: 2199
+  sku: EPR-SPIRIT10P-S
+  stock: 5
+-
+  label: Langschaft (L)
+  shaft: L
+  steuerung: Pinne
+  price: 2199
+  sku: EPR-SPIRIT10P-L
+  stock: 5
+
+----
+
+Specs:
+
+-
+  label: Antriebsart
+  value: Elektro, bürstenloser Direktantrieb
+-
+  label: Leistung
+  value: 1,0 kW (vergleichbar ca. 3 PS)
+-
+  label: Akku
+  value: 1276 Wh Lithium, integriert
+-
+  label: Steuerung
+  value: Pinne mit Display (Akku & Reichweite)
+-
+  label: Startsystem
+  value: Magnetschlüssel
+-
+  label: Gewicht
+  value: 20 kg
+-
+  label: Versand
+  value: Lithium-Akku als Gefahrgut
+
+----
+
+Faq:
+
+-
+  q: Wie weit komme ich mit einer Akkuladung?
+  a: Die Reichweite hängt von Boot, Beladung und Geschwindigkeit ab. Bei gemächlicher Fahrt sind mehrere Stunden möglich, bei Volllast entsprechend weniger. Das Display zeigt dir die verbleibende Reichweite in Echtzeit an.
+-
+  q: Wie aufwendig ist die Wartung?
+  a: Sehr gering. Es gibt keinen Ölwechsel und keine Zündkerzen. Spüle den Antrieb nach Salzwasser-Einsatz und lade den Akku sachgerecht – mehr ist im Normalbetrieb nicht nötig.
+-
+  q: Bekomme ich eine Garantie?
+  a: Ja, es gilt die ePropulsion-Herstellergarantie gemäß den jeweils aktuellen Bedingungen. Es handelt sich um offizielle Neuware.
+
+----
+
+Partner:
+
+----
+
+EkPrice:
+
+----
+
+Metatitle: ePropulsion Spirit 1.0 Plus (3 PS) kaufen – leiser Elektro-Außenborder | Marvento
+
+----
+
+Metadescription: ePropulsion Spirit 1.0 Plus mit 1 kW und integriertem 1276-Wh-Akku – leise, wartungsarm, ideal für Tender und Segelboote. Neuware mit Garantie, ab 2.199 €.

@@ -1,0 +1,65 @@
+Title: Tohatsu MFS6 D Sail Pro
+
+----
+
+Intro: The sailing-yacht specialist: 6 hp with a high-thrust propeller, 12 V charging coil and long or ultra-long shaft for high transoms – quiet auxiliary power for sailors.
+
+----
+
+Description:
+
+The Tohatsu MFS6 D Sail Pro is built specifically for sailing yachts. A high-thrust propeller puts the 6 hp into the water efficiently and keeps you moving safely even in wind and waves. The integrated 12 V charging coil tops up your onboard battery while underway – ideal for long passages.
+
+The long and ultra-long shaft keeps the propeller reliably submerged even on high transoms, so it never spins in air. As a clean, quiet 4-stroke it is the dependable auxiliary power when the wind drops or the harbour gets tight. Choose long shaft (L) or ultra-long shaft (UL) to match your transom.
+
+----
+
+DeliveryTime: Ships in 2–4 working days
+
+----
+
+Specs:
+
+-
+  label: Engine type
+  value: 4-stroke, 1 cylinder
+-
+  label: Displacement
+  value: 123 cc
+-
+  label: Propeller
+  value: High-thrust for sailing yachts
+-
+  label: Alternator
+  value: 12 V charging coil for onboard battery
+-
+  label: Starting
+  value: Manual recoil start
+-
+  label: Gearshift
+  value: Forward – Neutral – Reverse
+-
+  label: Weight
+  value: 27 kg
+
+----
+
+Faq:
+
+-
+  q: Which shaft length do I need?
+  a: Sailing yachts usually have high transoms. Choose the long shaft (L) for typical transoms and the ultra-long shaft (UL) for especially high ones. If unsure, measure from the top of the transom to its lower edge – we are happy to advise you on WhatsApp.
+-
+  q: Can the MFS6 D Sail Pro be used without a licence?
+  a: In Germany, boats with engines up to 15 hp are licence-free on many waters – regional exceptions and conditions apply. Please check the rules for your area.
+-
+  q: Is there a warranty?
+  a: Yes, the Tohatsu manufacturer warranty applies according to the current Tohatsu terms. This is official new goods.
+
+----
+
+Metatitle: Buy Tohatsu MFS6 D Sail Pro (6 hp) – sailing-yacht outboard | Marvento
+
+----
+
+Metadescription: Tohatsu MFS6 D Sail Pro with 6 hp, high-thrust propeller and 12 V charging coil – quiet auxiliary power for sailing yachts. Long or ultra-long shaft, new goods, from €1,689.

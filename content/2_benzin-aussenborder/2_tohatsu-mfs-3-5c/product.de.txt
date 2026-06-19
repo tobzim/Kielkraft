@@ -1,0 +1,149 @@
+Title: Tohatsu MFS 3.5 C
+
+----
+
+Brand: Tohatsu
+
+----
+
+Antrieb: benzin
+
+----
+
+Modelcode: MFS 3.5 C
+
+----
+
+Bestseller: false
+
+----
+
+PowerPs: 3.5
+
+----
+
+PowerKw: 2.57
+
+----
+
+WeightKg: 18
+
+----
+
+Displacement: 85,5 ccm
+
+----
+
+Steuerung: Pinne
+
+----
+
+PriceFrom: 899
+
+----
+
+Uvp:
+
+----
+
+ShippingCost: 39
+
+----
+
+DeliveryTime: Versand in 2–4 Werktagen
+
+----
+
+Availability: instock
+
+----
+
+WarrantyYears: 5
+
+----
+
+Gefahrgut: false
+
+----
+
+Intro: Der leichteste Tohatsu-4-Takter mit nur 18 kg und integriertem Tank – sehr sparsam und ideal als Back-up- oder Dinghy-Motor.
+
+----
+
+Description:
+
+Der Tohatsu MFS 3.5 C ist der leichteste 4-Takt-Außenborder im Tohatsu-Programm: Mit nur 18 kg trägst du ihn mühelos ans Wasser und montierst ihn ohne Kraftaufwand am Spiegel. Der integrierte Tank macht ihn unabhängig von externen Kanistern – perfekt für kurze Runden mit Dinghy oder Schlauchboot.
+
+Als sparsamer 4-Takter läuft er sauber und leise, der Seilzugstart bringt ihn zuverlässig in Gang. Damit ist er die ideale Wahl als kompakter Hauptantrieb für kleine Boote und als zuverlässiges Back-up. Wähle Kurzschaft (S) für die meisten Schlauchboote, Langschaft (L) für höhere Spiegel.
+
+----
+
+Variants:
+
+-
+  label: Kurzschaft (S)
+  shaft: S · 381 mm
+  steuerung: Pinne
+  price: 899
+  sku: TOH-MFS35C-S
+  stock: 7
+-
+  label: Langschaft (L)
+  shaft: L · 508 mm
+  steuerung: Pinne
+  price: 979
+  sku: TOH-MFS35C-L
+  stock: 5
+
+----
+
+Specs:
+
+-
+  label: Motortyp
+  value: 4-Takt, 1 Zylinder
+-
+  label: Hubraum
+  value: 85,5 ccm
+-
+  label: Startsystem
+  value: Seilzugstart
+-
+  label: Schaltung
+  value: Vorwärts – Leerlauf
+-
+  label: Tank
+  value: integriert
+-
+  label: Gewicht
+  value: 18 kg
+
+----
+
+Faq:
+
+-
+  q: Welche Schaftlänge brauche ich?
+  a: Miss den Abstand von der Oberkante des Spiegels bis zur Unterkante. Bis ca. 43 cm Kurzschaft (S), darüber Langschaft (L). Im Zweifel beraten wir dich per WhatsApp.
+-
+  q: Ist der MFS 3.5 C führerscheinfrei fahrbar?
+  a: In Deutschland sind Boote mit Motoren bis 15 PS auf vielen Gewässern führerscheinfrei – es gelten regionale Ausnahmen und Bedingungen. Bitte prüfe die Regeln deines Reviers.
+-
+  q: Bekomme ich eine Garantie?
+  a: Ja, es gilt die Tohatsu-Herstellergarantie gemäß den jeweils aktuellen Tohatsu-Bedingungen. Es handelt sich um offizielle Neuware.
+
+----
+
+Partner:
+
+----
+
+EkPrice:
+
+----
+
+Metatitle: Tohatsu MFS 3.5 C (3.5 PS) kaufen – leichtester 4-Takt-Außenborder | Marvento
+
+----
+
+Metadescription: Tohatsu MFS 3.5 C mit 3,5 PS und nur 18 kg – leichter, sparsamer 4-Takter mit integriertem Tank. Kurz- oder Langschaft, Neuware mit Garantie, ab 899 €.

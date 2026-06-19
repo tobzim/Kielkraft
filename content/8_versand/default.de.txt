@@ -1,0 +1,23 @@
+Title: Versand & Fracht
+
+----
+
+Intro: Versand und Fracht – transparent statt versteckt.
+
+----
+
+Text:
+
+Außenborder werden als Sperrgut per Spedition geliefert. Platzhalter: Frachtkostenmatrix nach Gewicht und Region sowie Lieferzeiten. Li-Ion-Akkus (ePropulsion) gelten als Gefahrgut und werden gefahrgutkonform versandt.
+
+----
+
+IsPlaceholder: true
+
+----
+
+Metatitle: Versand & Fracht | Marvento
+
+----
+
+Metadescription: Versand und Fracht – transparent statt versteckt.

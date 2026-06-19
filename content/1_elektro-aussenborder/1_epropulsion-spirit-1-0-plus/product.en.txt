@@ -1,0 +1,65 @@
+Title: ePropulsion Spirit 1.0 Plus
+
+----
+
+Intro: Quiet 1 kW electric outboard with an integrated 1276 Wh lithium battery and a tiller with display – ideal for tenders, small sailing boats and electric-only lakes.
+
+----
+
+Description:
+
+The ePropulsion Spirit 1.0 Plus packs a 1 kW electric drive into a housing with a built-in 1276 Wh lithium battery. You run near-silent, with no petrol and no oil – the tiller shows battery level and remaining range right on the display. That makes it the clean choice for tenders, small sailing boats and electric-only waters.
+
+At just 20 kg it is easy to carry and mount, and maintenance is minimal. The built-in lithium battery ships as dangerous goods. Choose short shaft (S) for most tenders and long shaft (L) for higher transoms and sailing boats.
+
+----
+
+DeliveryTime: Ships in 2–4 working days
+
+----
+
+Specs:
+
+-
+  label: Drive type
+  value: Electric, brushless direct drive
+-
+  label: Power
+  value: 1.0 kW (comparable to approx. 3 hp)
+-
+  label: Battery
+  value: 1276 Wh lithium, integrated
+-
+  label: Control
+  value: Tiller with display (battery & range)
+-
+  label: Starting
+  value: Magnetic key
+-
+  label: Weight
+  value: 20 kg
+-
+  label: Shipping
+  value: Lithium battery as dangerous goods
+
+----
+
+Faq:
+
+-
+  q: How far can I go on one charge?
+  a: Range depends on the boat, load and speed. At a gentle pace several hours are possible; at full power it is correspondingly less. The display shows your remaining range in real time.
+-
+  q: How much maintenance does it need?
+  a: Very little. There is no oil change and no spark plugs. Rinse the drive after use in salt water and charge the battery properly – nothing more is needed in normal operation.
+-
+  q: Is there a warranty?
+  a: Yes, the ePropulsion manufacturer warranty applies according to the current terms. This is official new goods.
+
+----
+
+Metatitle: Buy ePropulsion Spirit 1.0 Plus (3 hp) – quiet electric outboard | Marvento
+
+----
+
+Metadescription: ePropulsion Spirit 1.0 Plus with 1 kW and an integrated 1276 Wh battery – quiet, low-maintenance, ideal for tenders and sailing boats. New goods with warranty, from €2,199.

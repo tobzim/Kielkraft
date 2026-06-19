@@ -1,0 +1,23 @@
+Title: AGB
+
+----
+
+Intro: Allgemeine Geschäftsbedingungen.
+
+----
+
+Text:
+
+Platzhalter. Vertragsschluss, Preise, Zahlung, Lieferung per Spedition, Eigentumsvorbehalt und Gewährleistung. Bitte anwaltlich finalisieren.
+
+----
+
+IsPlaceholder: true
+
+----
+
+Metatitle: AGB | Marvento
+
+----
+
+Metadescription: Allgemeine Geschäftsbedingungen.

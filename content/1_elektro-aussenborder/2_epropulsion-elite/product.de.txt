@@ -1,0 +1,152 @@
+Title: ePropulsion eLite
+
+----
+
+Brand: ePropulsion
+
+----
+
+Antrieb: elektro
+
+----
+
+Modelcode: eLite
+
+----
+
+Bestseller: false
+
+----
+
+PowerPs: 1
+
+----
+
+PowerKw: 0.5
+
+----
+
+WeightKg: 7.7
+
+----
+
+Displacement: Akku integriert
+
+----
+
+Steuerung: Pinne
+
+----
+
+PriceFrom: 1099
+
+----
+
+Uvp:
+
+----
+
+ShippingCost: 19
+
+----
+
+DeliveryTime: Versand in 2–4 Werktagen
+
+----
+
+Availability: instock
+
+----
+
+WarrantyYears: 2
+
+----
+
+Gefahrgut: true
+
+----
+
+Intro: Ultraleichter 0,5-kW-Elektro-Außenborder mit nur 7,7 kg und integriertem Akku – perfekt als Antrieb für Dinghy, Kajak und sehr kleine Tender sowie als Back-up.
+
+----
+
+Description:
+
+Der ePropulsion eLite ist der federleichte Elektroantrieb für kleine Boote: 0,5 kW Leistung, integrierter Akku und ein Gewicht von nur 7,7 kg. Damit trägst du ihn mühelos ans Wasser und verstaust ihn nach der Fahrt platzsparend an Bord oder im Kofferraum.
+
+Ob als Hauptantrieb für Dinghy, Kajak und sehr kleinen Tender oder als zuverlässiges Back-up zum Segeln – der eLite läuft leise, sauber und nahezu wartungsfrei. Den integrierten Lithium-Akku versenden wir als Gefahrgut. Wähle Kurzschaft (S) oder Langschaft (L) passend zu deinem Spiegelmaß.
+
+----
+
+Variants:
+
+-
+  label: Kurzschaft (S)
+  shaft: S
+  steuerung: Pinne
+  price: 1099
+  sku: EPR-ELITE-S
+  stock: 8
+-
+  label: Langschaft (L)
+  shaft: L
+  steuerung: Pinne
+  price: 1199
+  sku: EPR-ELITE-L
+  stock: 6
+
+----
+
+Specs:
+
+-
+  label: Antriebsart
+  value: Elektro, bürstenlos
+-
+  label: Leistung
+  value: 0,5 kW (vergleichbar ca. 1 PS)
+-
+  label: Akku
+  value: integriert
+-
+  label: Steuerung
+  value: Pinne
+-
+  label: Startsystem
+  value: Magnetschlüssel
+-
+  label: Gewicht
+  value: 7,7 kg
+-
+  label: Versand
+  value: Lithium-Akku als Gefahrgut
+
+----
+
+Faq:
+
+-
+  q: Wie weit komme ich mit einer Akkuladung?
+  a: Die Reichweite richtet sich nach Boot, Beladung und Tempo. Für kurze Strecken auf Dinghy, Kajak oder kleinem Tender und als Back-up ist der eLite gut ausgelegt; bei zügiger Fahrt sinkt die Reichweite entsprechend.
+-
+  q: Wie aufwendig ist die Wartung?
+  a: Nahezu wartungsfrei. Kein Ölwechsel, keine Zündkerzen. Nach Salzwasser-Einsatz kurz abspülen und den Akku sachgerecht laden – mehr ist im Normalbetrieb nicht nötig.
+-
+  q: Bekomme ich eine Garantie?
+  a: Ja, es gilt die ePropulsion-Herstellergarantie gemäß den jeweils aktuellen Bedingungen. Es handelt sich um offizielle Neuware.
+
+----
+
+Partner:
+
+----
+
+EkPrice:
+
+----
+
+Metatitle: ePropulsion eLite (1 PS) kaufen – ultraleichter Elektro-Außenborder | Marvento
+
+----
+
+Metadescription: ePropulsion eLite mit 0,5 kW und nur 7,7 kg – ultraleicht, leise, ideal für Dinghy, Kajak und als Back-up. Neuware mit Garantie, ab 1.099 €.

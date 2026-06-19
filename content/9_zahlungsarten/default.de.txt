@@ -1,0 +1,23 @@
+Title: Zahlungsarten
+
+----
+
+Intro: Sichere Zahlung mit allen gängigen Methoden.
+
+----
+
+Text:
+
+PayPal, Klarna, Kreditkarte, Apple Pay, Google Pay und SEPA über einen sicheren Checkout. Kauf auf Rechnung ist für freigeschaltete Bestandskunden verfügbar.
+
+----
+
+IsPlaceholder: true
+
+----
+
+Metatitle: Zahlungsarten | Marvento
+
+----
+
+Metadescription: Sichere Zahlung mit allen gängigen Methoden.

@@ -1,0 +1,23 @@
+Title: Widerruf
+
+----
+
+Intro: Widerrufsrecht und Muster-Widerrufsformular.
+
+----
+
+Text:
+
+Platzhalter. 14-tägiges Widerrufsrecht für Verbraucher inklusive Belehrung und Muster-Widerrufsformular. Hinweise zu Rücksendekosten bei Speditionsware.
+
+----
+
+IsPlaceholder: true
+
+----
+
+Metatitle: Widerruf | Marvento
+
+----
+
+Metadescription: Widerrufsrecht und Muster-Widerrufsformular.

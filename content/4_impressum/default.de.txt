@@ -1,0 +1,23 @@
+Title: Impressum
+
+----
+
+Intro: Anbieterkennzeichnung nach § 5 DDG.
+
+----
+
+Text:
+
+Platzhalter. Hier stehen Firmenname, Anschrift, vertretungsberechtigte Person, Kontaktdaten, Register- und USt-IdNr. Bitte durch die rechtsverbindlichen Angaben ersetzen.
+
+----
+
+IsPlaceholder: true
+
+----
+
+Metatitle: Impressum | Marvento
+
+----
+
+Metadescription: Anbieterkennzeichnung nach § 5 DDG.

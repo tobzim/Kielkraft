@@ -1,0 +1,23 @@
+Title: Contact
+
+----
+
+Slug: contact
+
+----
+
+Intro: Reach us – by phone, WhatsApp and e-mail.
+
+----
+
+Text:
+
+Placeholder. Phone, WhatsApp, e-mail (info@marvento.de) and business hours with a stated response time. A contact form will follow.
+
+----
+
+Metatitle: Contact | Marvento
+
+----
+
+Metadescription: Reach us – by phone, WhatsApp and e-mail.

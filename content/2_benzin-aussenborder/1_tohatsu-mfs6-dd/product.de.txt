@@ -1,0 +1,157 @@
+Title: Tohatsu MFS6 DD
+
+----
+
+Brand: Tohatsu
+
+----
+
+Antrieb: benzin
+
+----
+
+Modelcode: MFS6 DD
+
+----
+
+Bestseller: true
+
+----
+
+PowerPs: 6
+
+----
+
+PowerKw: 4.41
+
+----
+
+WeightKg: 25
+
+----
+
+Displacement: 123 ccm
+
+----
+
+Steuerung: Pinne
+
+----
+
+PriceFrom: 1395
+
+----
+
+Uvp: 1549
+
+----
+
+ShippingCost: 49
+
+----
+
+DeliveryTime: Versand in 2–4 Werktagen
+
+----
+
+Availability: instock
+
+----
+
+WarrantyYears: 5
+
+----
+
+Gefahrgut: false
+
+----
+
+Intro: Der meistgekaufte kompakte 4-Takt-Außenborder: 6 PS, leiser Lauf, integrierter und externer Tank – ideal für Schlauchboot, Tender und kleine Segelyacht.
+
+----
+
+Description:
+
+Der Tohatsu MFS6 DD ist unser Bestseller – und das aus gutem Grund. Mit 6 PS aus 123 ccm bietet er spürbaren Schub bei vorbildlicher Laufruhe. Der Doppeltank-Betrieb (integrierter 1,1-l-Tank plus externer Anschluss) macht ihn flexibel für kurze Runden und lange Touren.
+
+Dank Vorwärts-Leerlauf-Rückwärts-Schaltung manövrierst du präzise im Hafen. Das geringe Gewicht von 25 kg erlaubt den einfachen Transport und die Montage am Spiegel. Als 4-Takter läuft er sauber, sparsam und erfüllt aktuelle Abgasvorgaben.
+
+Wähle die Schaftlänge passend zu deinem Spiegelmaß: Kurzschaft (S) für die meisten Schlauchboote, Langschaft (L) für höhere Spiegel und Segelyachten.
+
+----
+
+Variants:
+
+-
+  label: Kurzschaft (S)
+  shaft: S · 381 mm
+  steuerung: Pinne
+  price: 1395
+  sku: TOH-MFS6DD-S
+  stock: 6
+-
+  label: Langschaft (L)
+  shaft: L · 508 mm
+  steuerung: Pinne
+  price: 1439
+  sku: TOH-MFS6DD-L
+  stock: 4
+
+----
+
+Specs:
+
+-
+  label: Motortyp
+  value: 4-Takt, 1 Zylinder
+-
+  label: Hubraum
+  value: 123 ccm
+-
+  label: Empf. Drehzahlbereich
+  value: 5000–6000 min⁻¹
+-
+  label: Startsystem
+  value: Seilzugstart
+-
+  label: Schaltung
+  value: Vorwärts – Leerlauf – Rückwärts
+-
+  label: Tank
+  value: 1,1 l integriert + externer Anschluss
+-
+  label: Lichtmaschine
+  value: 12 V / 60 W optional
+-
+  label: Gewicht
+  value: 25 kg
+
+----
+
+Faq:
+
+-
+  q: Welche Schaftlänge brauche ich?
+  a: Miss den Abstand von der Oberkante des Spiegels bis zur Unterkante. Bis ca. 43 cm Kurzschaft (S), darüber Langschaft (L). Im Zweifel beraten wir dich per WhatsApp.
+-
+  q: Ist der MFS6 führerscheinfrei fahrbar?
+  a: In Deutschland sind Boote mit Motoren bis 15 PS auf vielen Gewässern führerscheinfrei – es gelten regionale Ausnahmen und Bedingungen. Bitte prüfe die Regeln deines Reviers.
+-
+  q: Bekomme ich eine Garantie?
+  a: Ja, es gilt die Tohatsu-Herstellergarantie gemäß den jeweils aktuellen Tohatsu-Bedingungen. Es handelt sich um offizielle Neuware.
+
+----
+
+Partner:
+
+----
+
+EkPrice:
+
+----
+
+Metatitle: Tohatsu MFS6 DD (6 PS) kaufen – Bestseller 4-Takt | Marvento
+
+----
+
+Metadescription: Tohatsu MFS6 DD mit 6 PS – kompakter, leiser 4-Takt-Außenborder. Kurz- oder Langschaft, Neuware mit Garantie, Versand in 2–4 Werktagen, ab 1.395 €.

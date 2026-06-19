@@ -1,0 +1,62 @@
+Title: Tohatsu MFS 3.5 C
+
+----
+
+Intro: The lightest Tohatsu 4-stroke at just 18 kg with an integrated tank – very economical and ideal as a back-up or dinghy engine.
+
+----
+
+Description:
+
+The Tohatsu MFS 3.5 C is the lightest 4-stroke outboard in the Tohatsu range: at just 18 kg you carry it to the water effortlessly and mount it on the transom without strain. The integrated tank makes it independent of external cans – perfect for short trips with a dinghy or inflatable.
+
+As an economical 4-stroke it runs clean and quiet, and the recoil start gets it going reliably. That makes it the ideal choice as a compact main drive for small boats and as a dependable back-up. Choose short shaft (S) for most inflatables, long shaft (L) for higher transoms.
+
+----
+
+DeliveryTime: Ships in 2–4 working days
+
+----
+
+Specs:
+
+-
+  label: Engine type
+  value: 4-stroke, 1 cylinder
+-
+  label: Displacement
+  value: 85.5 cc
+-
+  label: Starting
+  value: Manual recoil start
+-
+  label: Gearshift
+  value: Forward – Neutral
+-
+  label: Tank
+  value: integrated
+-
+  label: Weight
+  value: 18 kg
+
+----
+
+Faq:
+
+-
+  q: Which shaft length do I need?
+  a: Measure from the top of the transom to its lower edge. Up to approx. 43 cm choose short shaft (S), above that long shaft (L). If unsure, we advise you on WhatsApp.
+-
+  q: Can the MFS 3.5 C be used without a licence?
+  a: In Germany, boats with engines up to 15 hp are licence-free on many waters – regional exceptions and conditions apply. Please check the rules for your area.
+-
+  q: Is there a warranty?
+  a: Yes, the Tohatsu manufacturer warranty applies according to the current Tohatsu terms. This is official new goods.
+
+----
+
+Metatitle: Buy Tohatsu MFS 3.5 C (3.5 hp) – lightest 4-stroke outboard | Marvento
+
+----
+
+Metadescription: Tohatsu MFS 3.5 C with 3.5 hp and just 18 kg – light, economical 4-stroke with integrated tank. Short or long shaft, new goods with warranty, from €899.

@@ -1,0 +1,149 @@
+Title: Tohatsu MFS15E
+
+----
+
+Brand: Tohatsu
+
+----
+
+Antrieb: benzin
+
+----
+
+Modelcode: MFS15E
+
+----
+
+Bestseller: false
+
+----
+
+PowerPs: 15
+
+----
+
+PowerKw: 11
+
+----
+
+WeightKg: 43
+
+----
+
+Displacement: 362 ccm
+
+----
+
+Steuerung: Pinne
+
+----
+
+PriceFrom: 2590
+
+----
+
+Uvp:
+
+----
+
+ShippingCost: 99
+
+----
+
+DeliveryTime: Versand in 2–4 Werktagen
+
+----
+
+Availability: instock
+
+----
+
+WarrantyYears: 5
+
+----
+
+Gefahrgut: false
+
+----
+
+Intro: Die Spitze der führerscheinfrei relevanten Klasse: 15 PS mit Elektrostart (E) und souveräner Gleitkraft für größere Schlauchboote und kleine Tagesboote.
+
+----
+
+Description:
+
+Der Tohatsu MFS15E steht an der Spitze der Klasse, die für die deutsche 15-PS-Grenze relevant ist. 15 PS aus 362 ccm liefern souveräne Gleitkraft und bringen auch größere Schlauchboote und kleine Tagesboote zügig auf Tempo. Der Elektrostart (E) macht den Start per Knopfdruck bequem und zuverlässig.
+
+Als sauberer 4-Takter läuft er kräftig und dennoch sparsam, die Vorwärts-Leerlauf-Rückwärts-Schaltung sorgt für präzises Manövrieren. Mit 43 kg bietet er viel Leistung bei noch handhabbarem Gewicht. Wähle Kurzschaft (S) für die meisten Schlauchboote, Langschaft (L) für höhere Spiegel.
+
+----
+
+Variants:
+
+-
+  label: Kurzschaft (S)
+  shaft: S · 381 mm
+  steuerung: Pinne
+  price: 2590
+  sku: TOH-MFS15E-S
+  stock: 3
+-
+  label: Langschaft (L)
+  shaft: L · 508 mm
+  steuerung: Pinne
+  price: 3490
+  sku: TOH-MFS15E-L
+  stock: 2
+
+----
+
+Specs:
+
+-
+  label: Motortyp
+  value: 4-Takt, 2 Zylinder
+-
+  label: Hubraum
+  value: 362 ccm
+-
+  label: Startsystem
+  value: Elektrostart (E)
+-
+  label: Schaltung
+  value: Vorwärts – Leerlauf – Rückwärts
+-
+  label: Einsatz
+  value: größere Schlauchboote, kleine Tagesboote
+-
+  label: Gewicht
+  value: 43 kg
+
+----
+
+Faq:
+
+-
+  q: Welche Schaftlänge brauche ich?
+  a: Miss den Abstand von der Oberkante des Spiegels bis zur Unterkante. Bis ca. 43 cm Kurzschaft (S), darüber Langschaft (L). Im Zweifel beraten wir dich per WhatsApp.
+-
+  q: Ist der MFS15E führerscheinfrei fahrbar?
+  a: In Deutschland sind Boote mit Motoren bis 15 PS auf vielen Gewässern führerscheinfrei – der MFS15E liegt genau an dieser Grenze. Es gelten regionale Ausnahmen und Bedingungen, bitte prüfe die Regeln deines Reviers.
+-
+  q: Bekomme ich eine Garantie?
+  a: Ja, es gilt die Tohatsu-Herstellergarantie gemäß den jeweils aktuellen Tohatsu-Bedingungen. Es handelt sich um offizielle Neuware.
+
+----
+
+Partner:
+
+----
+
+EkPrice:
+
+----
+
+Metatitle: Tohatsu MFS15E (15 PS) kaufen – Elektrostart, 4-Takt | Marvento
+
+----
+
+Metadescription: Tohatsu MFS15E mit 15 PS aus 362 ccm und Elektrostart – souveräne Gleitkraft für größere Schlauchboote und kleine Tagesboote. Kurz- oder Langschaft, Neuware, ab 2.590 €.

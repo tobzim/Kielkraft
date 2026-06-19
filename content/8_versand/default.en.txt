@@ -1,0 +1,23 @@
+Title: Shipping & freight
+
+----
+
+Slug: shipping
+
+----
+
+Intro: Shipping and freight – transparent, not hidden.
+
+----
+
+Text:
+
+Outboards are delivered as bulky freight by forwarder. Placeholder: freight matrix by weight and region plus delivery times. Li-ion batteries (ePropulsion) are dangerous goods and shipped accordingly.
+
+----
+
+Metatitle: Shipping & freight | Marvento
+
+----
+
+Metadescription: Shipping and freight – transparent, not hidden.

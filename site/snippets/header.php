@@ -55,8 +55,8 @@ $nav = [
 
         <nav class="main-nav" aria-label="<?= $en ? 'Main navigation' : 'Hauptnavigation' ?>">
             <ul>
-                <li><a href="<?= url($nav['electric']) ?>"><?= t('nav.electric') ?></a></li>
-                <li><a href="<?= url($nav['petrol']) ?>"><?= t('nav.petrol') ?></a></li>
+                <li><a href="<?= url($nav['electric']) ?>" data-axis="cool"><span class="dot"></span><?= t('nav.electric') ?></a></li>
+                <li><a href="<?= url($nav['petrol']) ?>" data-axis="warm"><span class="dot"></span><?= t('nav.petrol') ?></a></li>
                 <li><a href="<?= url($nav['advisor']) ?>"><?= t('nav.advisor') ?></a></li>
                 <li><a href="<?= url($nav['guide']) ?>"><?= t('nav.guide') ?></a></li>
                 <li><a href="<?= url($nav['service']) ?>"><?= t('nav.service') ?></a></li>

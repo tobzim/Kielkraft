@@ -1,0 +1,149 @@
+Title: Tohatsu MFS9.9CY
+
+----
+
+Brand: Tohatsu
+
+----
+
+Antrieb: benzin
+
+----
+
+Modelcode: MFS9.9CY
+
+----
+
+Bestseller: false
+
+----
+
+PowerPs: 9.9
+
+----
+
+PowerKw: 7.3
+
+----
+
+WeightKg: 38.5
+
+----
+
+Displacement: 209 ccm
+
+----
+
+Steuerung: Pinne
+
+----
+
+PriceFrom: 2390
+
+----
+
+Uvp:
+
+----
+
+ShippingCost: 79
+
+----
+
+DeliveryTime: Versand in 2–4 Werktagen
+
+----
+
+Availability: instock
+
+----
+
+WarrantyYears: 5
+
+----
+
+Gefahrgut: false
+
+----
+
+Intro: Die beliebte 9,9-PS-Klasse: kräftiges Drehmoment und die praktische Wahl eine Stufe unter 15 PS – für gleitstarke Tender und Segelyachten mit Leistungsreserve.
+
+----
+
+Description:
+
+Der Tohatsu MFS9.9CY trifft den praktischen Mittelweg: Mit 9,9 PS aus 209 ccm liefert er kräftiges Drehmoment und ist die populäre Wahl eine Stufe unter 15 PS. Tender, die ins Gleiten kommen sollen, profitieren ebenso wie Segelyachten, die sich etwas Leistungsreserve wünschen.
+
+Als sauberer 4-Takter läuft er ruhig und sparsam, die Vorwärts-Leerlauf-Rückwärts-Schaltung sorgt für präzises Manövrieren. Mit 38,5 kg bleibt er handhabbar am Spiegel. Wähle Kurzschaft (S) für die meisten Schlauchboote, Langschaft (L) für höhere Spiegel und Segelyachten.
+
+----
+
+Variants:
+
+-
+  label: Kurzschaft (S)
+  shaft: S · 381 mm
+  steuerung: Pinne
+  price: 2390
+  sku: TOH-MFS99CY-S
+  stock: 4
+-
+  label: Langschaft (L)
+  shaft: L · 508 mm
+  steuerung: Pinne
+  price: 2990
+  sku: TOH-MFS99CY-L
+  stock: 2
+
+----
+
+Specs:
+
+-
+  label: Motortyp
+  value: 4-Takt, 2 Zylinder
+-
+  label: Hubraum
+  value: 209 ccm
+-
+  label: Startsystem
+  value: Seilzugstart
+-
+  label: Schaltung
+  value: Vorwärts – Leerlauf – Rückwärts
+-
+  label: Einsatz
+  value: gleitstarke Tender, Segelyachten
+-
+  label: Gewicht
+  value: 38,5 kg
+
+----
+
+Faq:
+
+-
+  q: Welche Schaftlänge brauche ich?
+  a: Miss den Abstand von der Oberkante des Spiegels bis zur Unterkante. Bis ca. 43 cm Kurzschaft (S), darüber Langschaft (L). Im Zweifel beraten wir dich per WhatsApp.
+-
+  q: Ist der MFS9.9CY führerscheinfrei fahrbar?
+  a: In Deutschland sind Boote mit Motoren bis 15 PS auf vielen Gewässern führerscheinfrei – es gelten regionale Ausnahmen und Bedingungen. Bitte prüfe die Regeln deines Reviers.
+-
+  q: Bekomme ich eine Garantie?
+  a: Ja, es gilt die Tohatsu-Herstellergarantie gemäß den jeweils aktuellen Tohatsu-Bedingungen. Es handelt sich um offizielle Neuware.
+
+----
+
+Partner:
+
+----
+
+EkPrice:
+
+----
+
+Metatitle: Tohatsu MFS9.9CY (9.9 PS) kaufen – beliebte 9,9-PS-Klasse | Marvento
+
+----
+
+Metadescription: Tohatsu MFS9.9CY mit 9,9 PS aus 209 ccm – kräftiges Drehmoment, die praktische Stufe unter 15 PS. Kurz- oder Langschaft, Neuware mit Garantie, ab 2.390 €.

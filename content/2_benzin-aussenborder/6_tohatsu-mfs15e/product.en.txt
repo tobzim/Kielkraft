@@ -1,0 +1,62 @@
+Title: Tohatsu MFS15E
+
+----
+
+Intro: The top of the licence-free-relevant range: 15 hp with electric start (E) and confident planing power for larger inflatables and small day boats.
+
+----
+
+Description:
+
+The Tohatsu MFS15E sits at the top of the class that is relevant to the German 15 hp limit. 15 hp from 362 cc deliver confident planing power and bring even larger inflatables and small day boats up to speed quickly. The electric start (E) makes starting convenient and reliable at the push of a button.
+
+As a clean 4-stroke it runs strong yet economical, and forward-neutral-reverse shifting gives you precise manoeuvring. At 43 kg it offers plenty of power at a still manageable weight. Choose short shaft (S) for most inflatables, long shaft (L) for higher transoms.
+
+----
+
+DeliveryTime: Ships in 2–4 working days
+
+----
+
+Specs:
+
+-
+  label: Engine type
+  value: 4-stroke, 2 cylinders
+-
+  label: Displacement
+  value: 362 cc
+-
+  label: Starting
+  value: Electric start (E)
+-
+  label: Gearshift
+  value: Forward – Neutral – Reverse
+-
+  label: Use
+  value: larger inflatables, small day boats
+-
+  label: Weight
+  value: 43 kg
+
+----
+
+Faq:
+
+-
+  q: Which shaft length do I need?
+  a: Measure from the top of the transom to its lower edge. Up to approx. 43 cm choose short shaft (S), above that long shaft (L). If unsure, we advise you on WhatsApp.
+-
+  q: Can the MFS15E be used without a licence?
+  a: In Germany, boats with engines up to 15 hp are licence-free on many waters – the MFS15E sits right at this limit. Regional exceptions and conditions apply, so please check the rules for your area.
+-
+  q: Is there a warranty?
+  a: Yes, the Tohatsu manufacturer warranty applies according to the current Tohatsu terms. This is official new goods.
+
+----
+
+Metatitle: Buy Tohatsu MFS15E (15 hp) – electric start, 4-stroke | Marvento
+
+----
+
+Metadescription: Tohatsu MFS15E with 15 hp from 362 cc and electric start – confident planing power for larger inflatables and small day boats. Short or long shaft, new goods, from €2,590.

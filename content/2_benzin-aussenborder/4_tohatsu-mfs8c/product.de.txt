@@ -1,0 +1,149 @@
+Title: Tohatsu MFS8C
+
+----
+
+Brand: Tohatsu
+
+----
+
+Antrieb: benzin
+
+----
+
+Modelcode: MFS8C
+
+----
+
+Bestseller: false
+
+----
+
+PowerPs: 8
+
+----
+
+PowerKw: 5.9
+
+----
+
+WeightKg: 38.5
+
+----
+
+Displacement: 209 ccm
+
+----
+
+Steuerung: Pinne
+
+----
+
+PriceFrom: 2499
+
+----
+
+Uvp:
+
+----
+
+ShippingCost: 79
+
+----
+
+DeliveryTime: Versand in 2–4 Werktagen
+
+----
+
+Availability: instock
+
+----
+
+WarrantyYears: 5
+
+----
+
+Gefahrgut: false
+
+----
+
+Intro: Kräftiger 8-PS-4-Takter aus 209 ccm für größere Schlauchboote und Tagesboote – mit Gleitfahrt-Reserven für leichte Boote.
+
+----
+
+Description:
+
+Der Tohatsu MFS8C ist der kräftige Schritt nach oben: 8 PS aus 209 ccm liefern spürbar mehr Schub als die kleinen Klassen und bringen leichte Boote zuverlässig ins Gleiten. Damit ist er die richtige Wahl für größere Schlauchboote und kompakte Tagesboote, die Reserven brauchen.
+
+Als sauberer 4-Takter läuft er ruhig und sparsam, die Vorwärts-Leerlauf-Rückwärts-Schaltung sorgt für präzises Manövrieren im Hafen. Mit 38,5 kg bleibt er gut handhabbar. Wähle Kurzschaft (S) für die meisten Schlauchboote, Langschaft (L) für höhere Spiegel.
+
+----
+
+Variants:
+
+-
+  label: Kurzschaft (S)
+  shaft: S · 381 mm
+  steuerung: Pinne
+  price: 2499
+  sku: TOH-MFS8C-S
+  stock: 4
+-
+  label: Langschaft (L)
+  shaft: L · 508 mm
+  steuerung: Pinne
+  price: 2559
+  sku: TOH-MFS8C-L
+  stock: 3
+
+----
+
+Specs:
+
+-
+  label: Motortyp
+  value: 4-Takt, 2 Zylinder
+-
+  label: Hubraum
+  value: 209 ccm
+-
+  label: Startsystem
+  value: Seilzugstart
+-
+  label: Schaltung
+  value: Vorwärts – Leerlauf – Rückwärts
+-
+  label: Einsatz
+  value: größere Schlauchboote, Tagesboote
+-
+  label: Gewicht
+  value: 38,5 kg
+
+----
+
+Faq:
+
+-
+  q: Welche Schaftlänge brauche ich?
+  a: Miss den Abstand von der Oberkante des Spiegels bis zur Unterkante. Bis ca. 43 cm Kurzschaft (S), darüber Langschaft (L). Im Zweifel beraten wir dich per WhatsApp.
+-
+  q: Ist der MFS8C führerscheinfrei fahrbar?
+  a: In Deutschland sind Boote mit Motoren bis 15 PS auf vielen Gewässern führerscheinfrei – es gelten regionale Ausnahmen und Bedingungen. Bitte prüfe die Regeln deines Reviers.
+-
+  q: Bekomme ich eine Garantie?
+  a: Ja, es gilt die Tohatsu-Herstellergarantie gemäß den jeweils aktuellen Tohatsu-Bedingungen. Es handelt sich um offizielle Neuware.
+
+----
+
+Partner:
+
+----
+
+EkPrice:
+
+----
+
+Metatitle: Tohatsu MFS8C (8 PS) kaufen – kräftiger 4-Takt-Außenborder | Marvento
+
+----
+
+Metadescription: Tohatsu MFS8C mit 8 PS aus 209 ccm – kräftiger 4-Takter für größere Schlauchboote und Tagesboote. Kurz- oder Langschaft, Neuware mit Garantie, ab 2.499 €.

@@ -1,0 +1,70 @@
+Title: Tohatsu MFS6 DD
+
+----
+
+Intro: The best-selling compact 4-stroke outboard: 6 hp, quiet running, integrated and external tank – ideal for inflatables, tenders and small sailing yachts.
+
+----
+
+Description:
+
+The Tohatsu MFS6 DD is our bestseller – and for good reason. With 6 hp from 123 cc it delivers noticeable thrust with exemplary smoothness. Dual-tank operation (integrated 1.1 l tank plus external connector) keeps it flexible for short trips and long tours.
+
+Thanks to forward-neutral-reverse shifting you manoeuvre precisely in the harbour. The low weight of 25 kg makes transport and transom mounting easy. As a 4-stroke it runs clean, economical and meets current emission standards.
+
+Choose the shaft length to match your transom: short shaft (S) for most inflatables, long shaft (L) for higher transoms and sailing yachts.
+
+----
+
+DeliveryTime: Ships in 2–4 working days
+
+----
+
+Specs:
+
+-
+  label: Engine type
+  value: 4-stroke, 1 cylinder
+-
+  label: Displacement
+  value: 123 cc
+-
+  label: Rec. RPM range
+  value: 5000–6000 rpm
+-
+  label: Starting
+  value: Manual recoil start
+-
+  label: Gearshift
+  value: Forward – Neutral – Reverse
+-
+  label: Tank
+  value: 1.1 l integrated + external port
+-
+  label: Alternator
+  value: 12 V / 60 W optional
+-
+  label: Weight
+  value: 25 kg
+
+----
+
+Faq:
+
+-
+  q: Which shaft length do I need?
+  a: Measure from the top of the transom to its lower edge. Up to approx. 43 cm choose short shaft (S), above that long shaft (L). If unsure, we advise you on WhatsApp.
+-
+  q: Can the MFS6 be used without a licence?
+  a: In Germany, boats with engines up to 15 hp are licence-free on many waters – regional exceptions and conditions apply. Please check the rules for your area.
+-
+  q: Is there a warranty?
+  a: Yes, the Tohatsu manufacturer warranty applies according to the current Tohatsu terms. This is official new goods.
+
+----
+
+Metatitle: Buy Tohatsu MFS6 DD (6 hp) – bestselling 4-stroke | Marvento
+
+----
+
+Metadescription: Tohatsu MFS6 DD with 6 hp – compact, quiet 4-stroke outboard. Short or long shaft, new goods with warranty, ships in 2–4 working days, from €1,395.

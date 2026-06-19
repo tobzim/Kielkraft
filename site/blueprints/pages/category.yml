@@ -1,0 +1,34 @@
+title: Kategorie
+icon: grid
+
+fields:
+  antrieb:
+    label: Antrieb dieser Kategorie
+    type: select
+    options:
+      benzin: Benzin (4-Takt)
+      elektro: Elektro
+    width: 1/2
+  brand:
+    label: Marke
+    type: text
+    width: 1/2
+  intro:
+    label: Intro (unter H1)
+    type: textarea
+    translate: true
+  description:
+    label: Einleitungstext (SEO/GEO)
+    type: textarea
+    size: large
+    translate: true
+  line: { type: line }
+  metaTitle: { label: Meta-Title, type: text, translate: true }
+  metaDescription: { label: Meta-Description, type: textarea, translate: true }
+
+sections:
+  products:
+    label: Produkte
+    type: pages
+    template: product
+    info: "{{ page.brand }} · {{ page.powerPs }} PS"

@@ -1,0 +1,23 @@
+Title: Garantie
+
+----
+
+Intro: Herstellergarantie und Gewährleistung.
+
+----
+
+Text:
+
+Platzhalter. Es gelten die jeweils aktuellen Garantiebedingungen von Tohatsu bzw. ePropulsion sowie die gesetzliche Gewährleistung. Alle Geräte sind offizielle Neuware.
+
+----
+
+IsPlaceholder: true
+
+----
+
+Metatitle: Garantie | Marvento
+
+----
+
+Metadescription: Herstellergarantie und Gewährleistung.

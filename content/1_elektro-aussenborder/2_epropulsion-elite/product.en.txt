@@ -1,0 +1,65 @@
+Title: ePropulsion eLite
+
+----
+
+Intro: Ultra-light 0.5 kW electric outboard at just 7.7 kg with an integrated battery – perfect as a drive for dinghies, kayaks and very small tenders, and as a back-up.
+
+----
+
+Description:
+
+The ePropulsion eLite is the featherweight electric drive for small boats: 0.5 kW of power, an integrated battery and a weight of just 7.7 kg. You carry it to the water effortlessly and stow it compactly on board or in the boot after your trip.
+
+Whether as the main drive for a dinghy, kayak or very small tender, or as a reliable back-up for sailing – the eLite runs quiet, clean and almost maintenance-free. The integrated lithium battery ships as dangerous goods. Choose short shaft (S) or long shaft (L) to match your transom.
+
+----
+
+DeliveryTime: Ships in 2–4 working days
+
+----
+
+Specs:
+
+-
+  label: Drive type
+  value: Electric, brushless
+-
+  label: Power
+  value: 0.5 kW (comparable to approx. 1 hp)
+-
+  label: Battery
+  value: integrated
+-
+  label: Control
+  value: Tiller
+-
+  label: Starting
+  value: Magnetic key
+-
+  label: Weight
+  value: 7.7 kg
+-
+  label: Shipping
+  value: Lithium battery as dangerous goods
+
+----
+
+Faq:
+
+-
+  q: How far can I go on one charge?
+  a: Range depends on the boat, load and speed. The eLite is well suited to short trips on a dinghy, kayak or small tender and as a back-up; at a brisk pace the range drops accordingly.
+-
+  q: How much maintenance does it need?
+  a: Almost none. No oil change, no spark plugs. Rinse briefly after use in salt water and charge the battery properly – nothing more is needed in normal operation.
+-
+  q: Is there a warranty?
+  a: Yes, the ePropulsion manufacturer warranty applies according to the current terms. This is official new goods.
+
+----
+
+Metatitle: Buy ePropulsion eLite (1 hp) – ultra-light electric outboard | Marvento
+
+----
+
+Metadescription: ePropulsion eLite with 0.5 kW and just 7.7 kg – ultra-light, quiet, ideal for dinghies, kayaks and as a back-up. New goods with warranty, from €1,099.

@@ -1,0 +1,23 @@
+Title: Privacy
+
+----
+
+Slug: privacy
+
+----
+
+Intro: Information on the processing of personal data (GDPR).
+
+----
+
+Text:
+
+Placeholder. Controller, purposes and legal bases, processors (Stripe, e-mail provider, lexoffice/sevDesk, analytics), retention periods and data-subject rights belong here.
+
+----
+
+Metatitle: Privacy | Marvento
+
+----
+
+Metadescription: Information on the processing of personal data (GDPR).

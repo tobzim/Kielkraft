@@ -1,0 +1,62 @@
+Title: Tohatsu MFS8C
+
+----
+
+Intro: Strong 8 hp 4-stroke from 209 cc for larger inflatables and day boats – with planing reserves for light boats.
+
+----
+
+Description:
+
+The Tohatsu MFS8C is the strong step up: 8 hp from 209 cc deliver noticeably more thrust than the small classes and get light boats planing reliably. That makes it the right choice for larger inflatables and compact day boats that need reserves.
+
+As a clean 4-stroke it runs smooth and economical, and forward-neutral-reverse shifting gives you precise manoeuvring in the harbour. At 38.5 kg it stays easy to handle. Choose short shaft (S) for most inflatables, long shaft (L) for higher transoms.
+
+----
+
+DeliveryTime: Ships in 2–4 working days
+
+----
+
+Specs:
+
+-
+  label: Engine type
+  value: 4-stroke, 2 cylinders
+-
+  label: Displacement
+  value: 209 cc
+-
+  label: Starting
+  value: Manual recoil start
+-
+  label: Gearshift
+  value: Forward – Neutral – Reverse
+-
+  label: Use
+  value: larger inflatables, day boats
+-
+  label: Weight
+  value: 38.5 kg
+
+----
+
+Faq:
+
+-
+  q: Which shaft length do I need?
+  a: Measure from the top of the transom to its lower edge. Up to approx. 43 cm choose short shaft (S), above that long shaft (L). If unsure, we advise you on WhatsApp.
+-
+  q: Can the MFS8C be used without a licence?
+  a: In Germany, boats with engines up to 15 hp are licence-free on many waters – regional exceptions and conditions apply. Please check the rules for your area.
+-
+  q: Is there a warranty?
+  a: Yes, the Tohatsu manufacturer warranty applies according to the current Tohatsu terms. This is official new goods.
+
+----
+
+Metatitle: Buy Tohatsu MFS8C (8 hp) – strong 4-stroke outboard | Marvento
+
+----
+
+Metadescription: Tohatsu MFS8C with 8 hp from 209 cc – strong 4-stroke for larger inflatables and day boats. Short or long shaft, new goods with warranty, from €2,499.

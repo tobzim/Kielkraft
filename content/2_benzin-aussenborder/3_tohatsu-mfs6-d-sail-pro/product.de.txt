@@ -1,0 +1,152 @@
+Title: Tohatsu MFS6 D Sail Pro
+
+----
+
+Brand: Tohatsu
+
+----
+
+Antrieb: benzin
+
+----
+
+Modelcode: MFS6 D Sail Pro
+
+----
+
+Bestseller: false
+
+----
+
+PowerPs: 6
+
+----
+
+PowerKw: 4.41
+
+----
+
+WeightKg: 27
+
+----
+
+Displacement: 123 ccm
+
+----
+
+Steuerung: Pinne
+
+----
+
+PriceFrom: 1689
+
+----
+
+Uvp:
+
+----
+
+ShippingCost: 49
+
+----
+
+DeliveryTime: Versand in 2–4 Werktagen
+
+----
+
+Availability: instock
+
+----
+
+WarrantyYears: 5
+
+----
+
+Gefahrgut: false
+
+----
+
+Intro: Der Segelyacht-Spezialist: 6 PS mit schubstarkem Propeller, 12-V-Ladespule und Lang- bzw. Ultralangschaft für hohe Spiegel – leise Hilfskraft für Segler.
+
+----
+
+Description:
+
+Der Tohatsu MFS6 D Sail Pro ist speziell für Segelyachten ausgelegt. Ein schubstarker High-Thrust-Propeller bringt die 6 PS effizient ins Wasser und sorgt auch bei Wind und Welle für sicheren Vortrieb. Die integrierte 12-V-Ladespule lädt während der Fahrt deine Bordbatterie – ideal für lange Törns.
+
+Der Lang- und Ultralangschaft hält den Propeller auch bei hohen Spiegeln zuverlässig im Wasser, damit du nicht ins Leere drehst. Als sauberer, leiser 4-Takter ist er die zuverlässige Hilfskraft, wenn der Wind einschläft oder es eng im Hafen wird. Wähle Langschaft (L) oder Ultralangschaft (UL) passend zu deinem Spiegelmaß.
+
+----
+
+Variants:
+
+-
+  label: Langschaft (L)
+  shaft: L · 508 mm
+  steuerung: Pinne
+  price: 1689
+  sku: TOH-MFS6SAIL-L
+  stock: 4
+-
+  label: Ultralangschaft (UL)
+  shaft: UL · 635 mm
+  steuerung: Pinne
+  price: 1799
+  sku: TOH-MFS6SAIL-UL
+  stock: 3
+
+----
+
+Specs:
+
+-
+  label: Motortyp
+  value: 4-Takt, 1 Zylinder
+-
+  label: Hubraum
+  value: 123 ccm
+-
+  label: Propeller
+  value: High-Thrust für Segelyachten
+-
+  label: Lichtmaschine
+  value: 12 V Ladespule für Bordbatterie
+-
+  label: Startsystem
+  value: Seilzugstart
+-
+  label: Schaltung
+  value: Vorwärts – Leerlauf – Rückwärts
+-
+  label: Gewicht
+  value: 27 kg
+
+----
+
+Faq:
+
+-
+  q: Welche Schaftlänge brauche ich?
+  a: Segelyachten haben meist hohe Spiegel. Den Langschaft (L) wählst du für übliche Spiegel, den Ultralangschaft (UL) für besonders hohe. Miss im Zweifel vom Spiegel-Oberkante bis zur Unterkante – wir beraten dich gern per WhatsApp.
+-
+  q: Ist der MFS6 D Sail Pro führerscheinfrei fahrbar?
+  a: In Deutschland sind Boote mit Motoren bis 15 PS auf vielen Gewässern führerscheinfrei – es gelten regionale Ausnahmen und Bedingungen. Bitte prüfe die Regeln deines Reviers.
+-
+  q: Bekomme ich eine Garantie?
+  a: Ja, es gilt die Tohatsu-Herstellergarantie gemäß den jeweils aktuellen Tohatsu-Bedingungen. Es handelt sich um offizielle Neuware.
+
+----
+
+Partner:
+
+----
+
+EkPrice:
+
+----
+
+Metatitle: Tohatsu MFS6 D Sail Pro (6 PS) kaufen – Segelyacht-Außenborder | Marvento
+
+----
+
+Metadescription: Tohatsu MFS6 D Sail Pro mit 6 PS, High-Thrust-Propeller und 12-V-Ladespule – die leise Hilfskraft für Segelyachten. Lang- oder Ultralangschaft, Neuware, ab 1.689 €.

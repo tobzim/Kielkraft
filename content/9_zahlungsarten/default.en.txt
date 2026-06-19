@@ -1,0 +1,23 @@
+Title: Payment methods
+
+----
+
+Slug: payment
+
+----
+
+Intro: Secure payment with all common methods.
+
+----
+
+Text:
+
+PayPal, Klarna, credit card, Apple Pay, Google Pay and SEPA via a secure checkout. Invoice purchase is available for unlocked returning customers.
+
+----
+
+Metatitle: Payment methods | Marvento
+
+----
+
+Metadescription: Secure payment with all common methods.

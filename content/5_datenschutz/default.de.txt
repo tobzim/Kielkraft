@@ -1,0 +1,23 @@
+Title: Datenschutz
+
+----
+
+Intro: Informationen zur Verarbeitung personenbezogener Daten (DSGVO).
+
+----
+
+Text:
+
+Platzhalter. Verantwortlicher, Zwecke und Rechtsgrundlagen, Auftragsverarbeiter (Stripe, E-Mail-Dienst, lexoffice/sevDesk, Analytics), Speicherdauer und Betroffenenrechte sind hier aufzuführen.
+
+----
+
+IsPlaceholder: true
+
+----
+
+Metatitle: Datenschutz | Marvento
+
+----
+
+Metadescription: Informationen zur Verarbeitung personenbezogener Daten (DSGVO).

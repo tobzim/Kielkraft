@@ -1,0 +1,23 @@
+Title: Warranty
+
+----
+
+Slug: warranty
+
+----
+
+Intro: Manufacturer warranty and statutory warranty.
+
+----
+
+Text:
+
+Placeholder. The current warranty terms of Tohatsu or ePropulsion apply, plus the statutory warranty. All units are official new goods.
+
+----
+
+Metatitle: Warranty | Marvento
+
+----
+
+Metadescription: Manufacturer warranty and statutory warranty.

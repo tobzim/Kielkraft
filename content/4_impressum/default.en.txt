@@ -1,0 +1,23 @@
+Title: Imprint
+
+----
+
+Slug: imprint
+
+----
+
+Intro: Provider identification pursuant to § 5 DDG.
+
+----
+
+Text:
+
+Placeholder. Company name, address, authorised representative, contact details, commercial register and VAT ID belong here. Replace with the legally binding information.
+
+----
+
+Metatitle: Imprint | Marvento
+
+----
+
+Metadescription: Provider identification pursuant to § 5 DDG.
