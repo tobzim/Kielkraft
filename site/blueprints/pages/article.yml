@@ -1,0 +1,36 @@
+title: Ratgeber-Beitrag
+icon: text
+num: "{{ page.date.toDate('Ymd') }}"
+
+fields:
+  date:
+    label: Datum
+    type: date
+    default: today
+    display: DD.MM.YYYY
+    width: 1/2
+  excerpt:
+    label: Auszug (Teaser)
+    type: textarea
+    translate: true
+  cover:
+    label: Titelbild
+    type: files
+    template: image
+    max: 1
+  text:
+    label: Inhalt
+    type: textarea
+    size: large
+    translate: true
+  faqHead: { type: headline, label: FAQ (Schema) }
+  faq:
+    label: Fragen
+    type: structure
+    translate: true
+    fields:
+      q: { label: Frage, type: text }
+      a: { label: Antwort, type: textarea }
+  seoHead: { type: headline, label: SEO }
+  metaTitle: { label: Meta-Title, type: text, translate: true }
+  metaDescription: { label: Meta-Description, type: textarea, translate: true }
