@@ -96,8 +96,8 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
                 <a class="iconlink" href="<?= $navAccount ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span><?= t('nav.account') ?></span></a>
                 <a class="cart-btn" href="<?= $navCart ?>">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
-                    <span class="cart-btn__meta"><span class="cart-btn__label"><?= t('cart.title') ?></span><span class="cart-btn__total price">0,00 €</span></span>
-                    <span class="cart-btn__count" data-cart-count>0</span>
+                    <span class="cart-btn__meta"><span class="cart-btn__label"><?= t('cart.title') ?></span><span class="cart-btn__total price" data-cart-total><?= mv_eur(kk_cart_subtotal()) ?></span></span>
+                    <span class="cart-btn__count" data-cart-count><?= kk_cart_count() ?></span>
                 </a>
                 <button class="nav-toggle" type="button" aria-label="<?= t('kielkraft.menu') ?>" data-nav-toggle><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
             </div>

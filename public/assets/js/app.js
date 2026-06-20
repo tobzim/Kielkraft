@@ -38,6 +38,7 @@
         if (priceEl) priceEl.textContent = v.priceFormatted;
         if (skuEl) skuEl.textContent = v.sku;
         if (miniPrice) miniPrice.textContent = v.priceFormatted;
+        var cartSku = k.querySelector("[data-cart-sku]"); if (cartSku) cartSku.value = v.sku;
       });
     });
   });
@@ -52,20 +53,24 @@
     io.observe(kons);
   }
 
-  /* --- Add to cart (visual stub until the shop module is wired in Phase 5) --- */
-  function bumpCart() {
-    document.querySelectorAll("[data-cart-count]").forEach(function (c) {
-      c.textContent = String((parseInt(c.textContent, 10) || 0) + 1);
-    });
-  }
+  /* --- Add to cart: submit the buy form (used by the mini-console button) --- */
   document.querySelectorAll("[data-add-to-cart]").forEach(function (btn) {
-    var original = btn.textContent;
     btn.addEventListener("click", function () {
-      bumpCart();
-      btn.textContent = btn.getAttribute("data-added") || "✓";
-      setTimeout(function () { btn.textContent = original; }, 1600);
+      var form = document.querySelector("[data-cart-form]");
+      if (form) form.submit();
     });
   });
+
+  /* --- Cart badge: refresh from server so it is correct even with page cache --- */
+  if (document.querySelector("[data-cart-count]") && window.fetch) {
+    fetch("/cart/count.json", { headers: { Accept: "application/json" } })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        document.querySelectorAll("[data-cart-count]").forEach(function (b) { b.textContent = d.count; });
+        document.querySelectorAll("[data-cart-total]").forEach(function (t) { t.textContent = d.formatted; });
+      })
+      .catch(function () {});
+  }
 
   /* --- Buying advisor: real recommendation engine (/kaufberater) --- */
   var adv = document.querySelector("[data-advisor]");

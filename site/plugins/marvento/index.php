@@ -37,6 +37,20 @@ if (!function_exists('mv_asset')) {
     }
 }
 
+/* ---------------------------------------------------------------------------
+ * Session cart (lightweight; no commercial shop plugin required yet)
+ * ------------------------------------------------------------------------- */
+if (!function_exists('kk_cart_get')) {
+    function kk_cart_get(): array { return (array) kirby()->session()->get('kk.cart', []); }
+    function kk_cart_save(array $c): void { kirby()->session()->set('kk.cart', $c); }
+    function kk_cart_count(): int { $n = 0; foreach (kk_cart_get() as $i) { $n += (int) $i['qty']; } return $n; }
+    function kk_cart_subtotal(): float { $t = 0; foreach (kk_cart_get() as $i) { $t += (float) $i['price'] * (int) $i['qty']; } return $t; }
+    // Outboards ship by forwarder: one consolidated shipment = the highest freight in the cart.
+    function kk_cart_shipping(): float { $s = 0; foreach (kk_cart_get() as $i) { $s = max($s, (float) $i['shipping']); } return $s; }
+    function kk_cart_total(): float { return kk_cart_subtotal() + kk_cart_shipping(); }
+    function kk_cart_url(): string { return get('lang') === 'en' ? 'en/cart' : 'warenkorb'; }
+}
+
 /**
  * Normalised product-feed items (one per orderable variant) for all export
  * channels (Google Shopping, Meta/Facebook, Idealo, generic CSV).
@@ -199,6 +213,77 @@ Kirby::plugin('kielkraft/core', [
                 $csv = stream_get_contents($out);
                 fclose($out);
                 return new Response($csv, 'text/csv');
+            },
+        ],
+
+        // ---- Cart actions ----
+        [
+            'pattern' => 'cart/add',
+            'method'  => 'POST',
+            'action'  => function () {
+                if (csrf(get('csrf')) !== true) { go('/'); }
+                $p = page(get('product'));
+                if (!$p) { go(kk_cart_url()); }
+                $qty = max(1, (int) get('qty', 1));
+                $sku = (string) get('sku');
+                $v = $p->variants()->toStructure()->filter(fn ($x) => (string) $x->sku()->value() === $sku)->first();
+                $price = $v ? (float) $v->price()->value() : (float) $p->priceFrom()->value();
+                $label = $v ? $v->label()->value() : '';
+                if ($sku === '') { $sku = $p->slug(); }
+                $img = $p->image();
+                $cart = kk_cart_get();
+                if (isset($cart[$sku])) {
+                    $cart[$sku]['qty'] += $qty;
+                } else {
+                    $cart[$sku] = [
+                        'sku' => $sku, 'product' => $p->id(), 'title' => $p->title()->value(),
+                        'variant' => $label, 'price' => $price,
+                        'shipping' => (float) $p->shippingCost()->or(0)->value(),
+                        'qty' => $qty, 'url' => $p->url(),
+                        'img' => $img ? $img->resize(160)->url() : '',
+                    ];
+                }
+                kk_cart_save($cart);
+                go(kk_cart_url());
+            },
+        ],
+        [
+            'pattern' => 'cart/update',
+            'method'  => 'POST',
+            'action'  => function () {
+                if (csrf(get('csrf')) === true) {
+                    $cart = kk_cart_get();
+                    $sku  = (string) get('sku');
+                    $qty  = (int) get('qty', 1);
+                    if (isset($cart[$sku])) {
+                        if ($qty < 1) { unset($cart[$sku]); } else { $cart[$sku]['qty'] = $qty; }
+                    }
+                    kk_cart_save($cart);
+                }
+                go(kk_cart_url());
+            },
+        ],
+        [
+            'pattern' => 'cart/remove',
+            'method'  => 'POST',
+            'action'  => function () {
+                if (csrf(get('csrf')) === true) {
+                    $cart = kk_cart_get();
+                    unset($cart[(string) get('sku')]);
+                    kk_cart_save($cart);
+                }
+                go(kk_cart_url());
+            },
+        ],
+        [
+            'pattern' => 'cart/count.json',
+            'action'  => function () {
+                return Response::json([
+                    'count'     => kk_cart_count(),
+                    'subtotal'  => kk_cart_subtotal(),
+                    'total'     => kk_cart_total(),
+                    'formatted' => mv_eur(kk_cart_subtotal()),
+                ]);
             },
         ],
     ],

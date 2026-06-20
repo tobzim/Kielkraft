@@ -54,6 +54,12 @@ $wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
         <div class="kgauge"><span><?= $product->weightKg() ?></span><em>kg</em></div>
     </div>
 
+    <form method="post" action="<?= url('cart/add') ?>" data-cart-form>
+        <input type="hidden" name="csrf" value="<?= csrf() ?>">
+        <input type="hidden" name="product" value="<?= $product->id() ?>">
+        <input type="hidden" name="lang" value="<?= $code ?>">
+        <input type="hidden" name="sku" value="<?= $first ? $first->sku() : $product->slug() ?>" data-cart-sku>
+
 <?php if ($variants->count() > 0): ?>
     <div class="opt-group">
         <div class="opt-label"><span><?= t('product.shaft') ?> / <?= $en ? 'variant' : 'Variante' ?></span> <span class="opt-current" data-sku><?= $first->sku() ?></span></div>
@@ -71,9 +77,10 @@ $wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
     </div>
 
     <div class="konsole__cta">
-        <button type="button" class="btn btn--cta btn--lg btn--block" data-add-to-cart data-added="<?= $en ? 'Added ✓' : 'Im Warenkorb ✓' ?>"><?= t('product.add_to_cart') ?></button>
+        <button type="submit" name="submit" value="1" class="btn btn--cta btn--lg btn--block"><?= t('product.add_to_cart') ?></button>
         <a class="btn btn--ghost btn--block" href="<?= $wa ?>" rel="nofollow"><?= $en ? 'Get advice on WhatsApp' : 'Per WhatsApp beraten lassen' ?></a>
     </div>
+    </form>
 
     <div class="wallets" aria-label="<?= t('footer.payment') ?>">
         <?php snippet('payment-logos') ?>
