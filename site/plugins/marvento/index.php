@@ -26,6 +26,16 @@ if (!function_exists('mv_eur')) {
     }
 }
 
+/** Versioned asset URL (cache-busting via file mtime; beats immutable caching). */
+if (!function_exists('mv_asset')) {
+    function mv_asset(string $path): string
+    {
+        $file = kirby()->root('index') . '/' . ltrim($path, '/');
+        $v = is_file($file) ? filemtime($file) : 1;
+        return url($path) . '?v=' . $v;
+    }
+}
+
 Kirby::plugin('kielkraft/core', [
     'routes' => [
         [

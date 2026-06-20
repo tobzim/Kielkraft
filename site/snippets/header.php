@@ -39,7 +39,8 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
     <meta property="og:locale" content="<?= $en ? 'en_US' : 'de_DE' ?>">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="<?= url('assets/img/favicon.svg') ?>" type="image/svg+xml">
-    <?= css(['assets/css/tokens.css', 'assets/css/app.css']) ?>
+    <link rel="stylesheet" href="<?= mv_asset('assets/css/tokens.css') ?>">
+    <link rel="stylesheet" href="<?= mv_asset('assets/css/app.css') ?>">
     <?php snippet('seo/jsonld-organization') ?>
 </head>
 <body>

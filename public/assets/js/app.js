@@ -67,29 +67,84 @@
     });
   });
 
-  /* --- Buying advisor (client-side wizard, see /kaufberater) --- */
-  var wizard = document.querySelector("[data-wizard]");
-  if (wizard) {
-    var steps = Array.prototype.slice.call(wizard.querySelectorAll("[data-step]"));
-    var result = wizard.querySelector("[data-result]");
-    var answers = {};
-    function show(i) {
-      steps.forEach(function (s, idx) { s.hidden = idx !== i; });
-      if (result) result.hidden = true;
+  /* --- Buying advisor: real recommendation engine (/kaufberater) --- */
+  var adv = document.querySelector("[data-advisor]");
+  if (adv) {
+    var products = [], labels = {};
+    try { products = JSON.parse(adv.querySelector("[data-advisor-products]").textContent); } catch (e) {}
+    try { labels = JSON.parse(adv.querySelector("[data-advisor-labels]").textContent); } catch (e) {}
+    var aSteps = Array.prototype.slice.call(adv.querySelectorAll("[data-step]"));
+    var aResult = adv.querySelector("[data-advisor-result]");
+    var aProg = adv.querySelector("[data-advisor-progress]");
+    var aAns = {}, aLab = {};
+
+    function aShow(i) {
+      aSteps.forEach(function (s, idx) { s.hidden = idx !== i; });
+      if (aResult) aResult.hidden = true;
+      if (aProg) aProg.style.width = (i / aSteps.length * 100) + "%";
     }
-    wizard.querySelectorAll("[data-choice]").forEach(function (c) {
-      c.addEventListener("click", function () {
-        var step = c.closest("[data-step]");
-        answers[step.getAttribute("data-step")] = c.getAttribute("data-choice");
-        var next = parseInt(step.getAttribute("data-next"), 10);
-        if (!isNaN(next) && steps[next]) { show(next); }
-        else if (result) {
-          steps.forEach(function (s) { s.hidden = true; });
-          result.hidden = false;
-        }
+
+    function recommend(a) {
+      var targets = { kajak: 1.5, tender: 3.5, schlauchboot: 6, angel: 8, segel: 6 };
+      var ps = targets[a.boot] != null ? targets[a.boot] : 6;
+      if (a.size === "gross") ps += 3;
+      if (a.size === "klein") ps -= 1;
+      if (a.use === "leistung") ps += 4;
+      if (a.use === "backup") ps = Math.max(1, ps - 2);
+      if (ps < 1) ps = 1;
+      var drive = a.drive === "egal" ? (a.use === "leise" ? "elektro" : "benzin") : a.drive;
+      var pool = products.filter(function (p) { return p.antrieb === drive; });
+      if (!pool.length) pool = products.slice();
+      pool.sort(function (x, y) { return Math.abs(x.ps - ps) - Math.abs(y.ps - ps); });
+      var best = pool[0];
+      var alt = pool[1] || products.filter(function (p) { return p !== best; })[0];
+      return { best: best, alt: alt, ps: Math.round(ps), drive: drive };
+    }
+
+    function card(p, big) {
+      if (!p) return "";
+      var media = p.img ? '<img src="' + p.img + '" alt="' + p.title + '" loading="lazy">' : '<span class="acard-rec__ph">' + p.title + '</span>';
+      return '<a class="acard-rec' + (big ? ' acard-rec--big' : '') + '" href="' + p.url + '">' +
+        '<div class="acard-rec__media">' + media + '</div>' +
+        '<div class="acard-rec__body"><span class="acard-rec__brand">' + p.brand + '</span>' +
+        '<strong>' + p.title + '</strong>' +
+        '<span class="acard-rec__specs">' + p.ps + ' PS · ' + p.kw + ' kW · ' + p.kg + ' kg</span>' +
+        '<span class="acard-rec__price">' + p.price + '</span></div></a>';
+    }
+
+    function render() {
+      var r = recommend(aAns);
+      if (!r.best) return;
+      var drv = r.drive === "elektro" ? labels.electric : labels.petrol;
+      var reason = (labels.reason || "")
+        .replace("{boot}", aLab.boot || aAns.boot)
+        .replace("{use}", aLab.use || aAns.use)
+        .replace("{drive}", drv)
+        .replace("{ps}", r.ps);
+      aResult.innerHTML =
+        '<div class="advisor__rec-head"><span class="eyebrow" style="color:var(--green)">' + labels.rec + '</span><p class="advisor__reason">' + reason + '</p></div>' +
+        card(r.best, true) +
+        (r.alt ? '<div class="advisor__alt"><span class="eyebrow">' + labels.alt + '</span>' + card(r.alt, false) + '</div>' : '') +
+        '<div class="advisor__actions"><a class="btn btn--cta btn--lg" href="' + r.best.url + '">' + labels.view + '</a>' +
+        '<a class="btn btn--ghost" href="https://wa.me/4940609019969" rel="nofollow">' + labels.advice + '</a>' +
+        '<button class="btn btn--ghost" type="button" data-advisor-restart>' + labels.restart + '</button></div>';
+      aSteps.forEach(function (s) { s.hidden = true; });
+      aResult.hidden = false;
+      if (aProg) aProg.style.width = "100%";
+      var rb = aResult.querySelector("[data-advisor-restart]");
+      if (rb) rb.addEventListener("click", function () { aAns = {}; aLab = {}; aShow(0); });
+    }
+
+    adv.querySelectorAll("[data-choice]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var step = btn.closest("[data-step]"), key = step.getAttribute("data-step");
+        aAns[key] = btn.getAttribute("data-choice");
+        aLab[key] = (btn.querySelector("b") || {}).textContent || aAns[key];
+        var idx = aSteps.indexOf(step);
+        if (idx < aSteps.length - 1) { aShow(idx + 1); } else { render(); }
       });
     });
-    if (steps.length) show(0);
+    if (aSteps.length) aShow(0);
   }
 
   /* --- Category listing: sort + filter --- */

@@ -65,6 +65,6 @@ $y    = date('Y');
 </footer>
 
 <?php snippet('consent') ?>
-<?= js('assets/js/app.js', ['defer' => true]) ?>
+<script defer src="<?= mv_asset('assets/js/app.js') ?>"></script>
 </body>
 </html>
