@@ -15,21 +15,20 @@ $en = $code === 'en';
                 </p>
 
                 <div class="brandstrip">
-                    <!-- TODO: offizielle Hersteller-Logos (mit Freigabe) als <img> einsetzen -->
                     <div class="brand-tile">
-                        <span class="brand-tile__name">Tohatsu</span>
+                        <?php snippet('brand-logo', ['brand' => 'Tohatsu', 'class' => 'brand-logo--tile']) ?>
                         <small><?= $en ? 'Petrol · 4-stroke' : 'Benzin · 4-Takt' ?></small>
                     </div>
                     <div class="brand-tile">
-                        <span class="brand-tile__name">ePropulsion</span>
+                        <?php snippet('brand-logo', ['brand' => 'ePropulsion', 'class' => 'brand-logo--tile']) ?>
                         <small><?= $en ? 'Electric' : 'Elektro' ?></small>
                     </div>
                 </div>
 
                 <p class="partner-note">
                     <?= $en
-                        ? 'Placeholder: insert the official manufacturer logos here, and an authorised-dealer / partner badge once it is formally confirmed. We only state partner status if it is true.'
-                        : 'Platzhalter: hier die offiziellen Hersteller-Logos einsetzen – und einen Vertrags-/Partner-Status-Hinweis, sobald er offiziell bestätigt ist. Partner-Status nennen wir nur, wenn er zutrifft.' ?>
+                        ? 'We state an authorised-dealer / partner status only once it is formally confirmed.'
+                        : 'Einen Vertrags- oder Partner-Status nennen wir erst, wenn er offiziell bestätigt ist.' ?>
                 </p>
             </div>
 

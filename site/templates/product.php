@@ -23,6 +23,7 @@ $cross = $page->crossSell()->toPages();
 <section class="pdp <?= $axis ?>">
     <div class="container">
         <header style="max-width:60ch;margin-bottom:var(--sp-6)">
+            <?php snippet('brand-logo', ['brand' => $page->brand()->value(), 'class' => 'brand-logo--pdp']) ?>
             <div class="eyebrow"><?= $page->brand() ?> · <?= $isElectric ? ($en ? 'Electric' : 'Elektro') : ($en ? 'Petrol 4-stroke' : 'Benzin 4-Takt') ?></div>
             <h1><?= $page->title() ?></h1>
             <p class="section__lead"><?= $page->intro() ?></p>

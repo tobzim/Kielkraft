@@ -32,7 +32,7 @@ $availLabel = $avail === 'short' ? ($en ? 'Few in stock' : 'Wenige verfügbar') 
 <?php endif ?>
     </a>
     <div class="pcard__body">
-        <span class="pcard__brand"><?= $product->brand() ?></span>
+        <?php snippet('brand-logo', ['brand' => $product->brand()->value(), 'class' => 'brand-logo--card']) ?>
         <h3 class="pcard__title"><a href="<?= $product->url() ?>"><?= $product->title() ?></a></h3>
         <div class="pcard__specs">
             <span><?= $product->powerPs() ?> PS</span>

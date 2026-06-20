@@ -6,6 +6,11 @@ $y    = date('Y');
 </main>
 
 <footer class="site-footer">
+    <div class="container footer-brands">
+        <span><?= $en ? 'Official new goods:' : 'Offizielle Neuware:' ?></span>
+        <span class="brand-chip"><?php snippet('brand-logo', ['brand' => 'Tohatsu']) ?></span>
+        <span class="brand-chip"><?php snippet('brand-logo', ['brand' => 'ePropulsion']) ?></span>
+    </div>
     <div class="container site-footer__grid">
         <div>
             <a class="brand" href="<?= $site->url($code) ?>" style="margin-bottom:var(--sp-4)">

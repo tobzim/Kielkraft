@@ -18,7 +18,7 @@ $products = $page->children()->listed()->filterBy('intendedTemplate', 'product')
     <img class="cat-banner__img" src="<?= url($banner) ?>" alt="" loading="eager" fetchpriority="high">
     <div class="cat-banner__scrim"></div>
     <div class="container cat-banner__inner">
-        <span class="eyebrow" style="color:#bcd0e4"><?= $page->brand() ?></span>
+        <span class="brand-chip" style="margin-bottom:var(--sp-3)"><?php snippet('brand-logo', ['brand' => $page->brand()->value()]) ?></span>
         <h1><?= $page->title() ?></h1>
         <p><?= $page->intro() ?></p>
     </div>

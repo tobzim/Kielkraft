@@ -97,7 +97,7 @@ $pf = function ($pr) use ($code) {
         <div class="brands">
             <div class="brand-block">
                 <span class="brand-block__tag">Tohatsu · <?= $en ? 'Petrol 4-stroke' : 'Benzin 4-Takt' ?></span>
-                <div class="brand-block__name">Tohatsu</div>
+                <?php snippet('brand-logo', ['brand' => 'Tohatsu', 'class' => 'brand-logo--block']) ?>
                 <p><?= $en ? 'Proven Japanese 4-stroke engineering from 3.5 to 15 hp – reliable, economical, durable.' : 'Bewährte japanische 4-Takt-Technik von 3,5 bis 15 PS – zuverlässig, sparsam, langlebig.' ?></p>
                 <div class="brand-block__models">
 <?php if ($catP): foreach ($catP->children()->listed()->sortBy('powerPs', 'asc')->limit(4) as $pr): ?>
@@ -108,7 +108,7 @@ $pf = function ($pr) use ($code) {
             </div>
             <div class="brand-block">
                 <span class="brand-block__tag">ePropulsion · <?= $en ? 'Electric' : 'Elektro' ?></span>
-                <div class="brand-block__name">ePropulsion</div>
+                <?php snippet('brand-logo', ['brand' => 'ePropulsion', 'class' => 'brand-logo--block']) ?>
                 <p><?= $en ? 'Modern electric drives with lithium batteries – quiet, low-maintenance, zero-emission.' : 'Moderne Elektroantriebe mit Lithium-Akku – leise, wartungsarm, emissionsfrei.' ?></p>
                 <div class="brand-block__models">
 <?php if ($catE): foreach ($catE->children()->listed()->sortBy('powerPs', 'asc') as $pr): ?>
