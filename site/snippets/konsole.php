@@ -76,7 +76,7 @@ $wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
     </div>
 
     <div class="wallets" aria-label="<?= t('footer.payment') ?>">
-        <span>PayPal</span><span>Klarna</span><span>Apple&nbsp;Pay</span><span>Google&nbsp;Pay</span><span><?= $en ? 'Card' : 'Karte' ?></span><span>SEPA</span>
+        <?php snippet('payment-logos') ?>
     </div>
 
     <ul class="microtrust">

@@ -18,10 +18,12 @@ $y    = date('Y');
                 <span class="brand__name" style="color:#fff"><?= $site->title()->or('Kielkraft') ?></span>
             </a>
             <p style="max-width:34ch"><?= t('kielkraft.tagline') ?></p>
-            <div class="payment-icons" style="margin-top:var(--sp-5)">
-                <span>VISA</span><span>Mastercard</span><span>PayPal</span>
-                <span>Klarna</span><span>Apple Pay</span><span>SEPA</span>
-            </div>
+            <p style="margin-top:var(--sp-3);font-size:var(--fs-200);line-height:1.6">
+                Kielkraft &middot; <?= $en ? 'a brand of' : 'eine Marke der' ?> Boostboards GmbH &amp; Co. KG<br>
+                Groten Hoff 21 &middot; 22359 Hamburg<br>
+                <a href="tel:+4940609019969">+49 40 60 90 199 69</a> &middot; <a href="mailto:info@boostboards.de">info@boostboards.de</a>
+            </p>
+            <div style="margin-top:var(--sp-5)"><?php snippet('payment-logos') ?></div>
         </div>
 
         <div>

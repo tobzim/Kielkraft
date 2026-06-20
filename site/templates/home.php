@@ -91,6 +91,8 @@ $pf = function ($pr) use ($code) {
 </section>
 <?php endif ?>
 
+<?php snippet('tiefpreis') ?>
+
 <section class="section">
     <div class="container">
         <div class="section__head"><h2 class="section__title"><?= $en ? 'Our brands' : 'Unsere Marken' ?></h2></div>
@@ -123,9 +125,11 @@ $pf = function ($pr) use ($code) {
 
 <?php snippet('partner-trust') ?>
 
-<section class="section--tight">
+<?php snippet('boostboards-banner') ?>
+
+<section class="section">
     <div class="container">
-        <div class="bg-navy" style="border-radius:var(--r-lg);padding:clamp(1.5rem,1rem+3vw,3rem)">
+        <div class="bg-navy" style="border-radius:var(--r-lg);padding:clamp(2rem,1.5rem+3vw,3.5rem)">
             <h2 style="color:#fff;max-width:24ch"><?= $page->advisorTitle() ?></h2>
             <p style="color:#d6e3f0;max-width:56ch;margin-top:var(--sp-2)"><?= $page->advisorText() ?></p>
             <a class="btn btn--on-navy btn--lg" style="margin-top:var(--sp-4)" href="<?= $urlAdv ?>"><?= t('nav.advisor') ?></a>

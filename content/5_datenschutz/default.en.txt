@@ -12,7 +12,28 @@ Intro: Information on the processing of personal data (GDPR).
 
 Text:
 
-Placeholder. Controller, purposes and legal bases, processors (Stripe, e-mail provider, lexoffice/sevDesk, analytics), retention periods and data-subject rights belong here.
+## Controller
+
+Boostboards GmbH & Co. KG (Kielkraft brand)<br>
+Groten Hoff 21, 22359 Hamburg, Germany<br>
+E-mail: info@boostboards.de · Phone: +49 40 60 90 199 69
+
+## What this notice covers
+
+This privacy notice outlines which personal data we process when you visit and use this shop, for which purposes and on which legal basis. The points below describe the structure – the full, legally binding text will be added (see note below).
+
+- **Server / log data** on page visits (Art. 6(1)(f) GDPR)
+- **Order processing and customer account** (Art. 6(1)(b) GDPR)
+- **Payment service providers** (e.g. Stripe, PayPal, Klarna)
+- **Invoicing / accounting** (e.g. lexoffice/sevDesk) and statutory retention
+- **Shipping / logistics partners** for delivery (dropshipping)
+- **Transactional e-mail** via an e-mail service provider
+- **Contact form** (Art. 6(1)(a)/(b) GDPR)
+- **Analytics** only with consent (consent banner)
+
+## Your rights
+
+Access, rectification, erasure, restriction, data portability and objection, plus the right to lodge a complaint with a supervisory authority.
 
 ----
 
@@ -20,4 +41,4 @@ Metatitle: Privacy | Kielkraft
 
 ----
 
-Metadescription: Information on the processing of personal data (GDPR).
+Metadescription: Privacy notice of Kielkraft (Boostboards GmbH & Co. KG) on the processing of personal data.

@@ -8,7 +8,28 @@ Intro: Informationen zur Verarbeitung personenbezogener Daten (DSGVO).
 
 Text:
 
-Platzhalter. Verantwortlicher, Zwecke und Rechtsgrundlagen, Auftragsverarbeiter (Stripe, E-Mail-Dienst, lexoffice/sevDesk, Analytics), Speicherdauer und Betroffenenrechte sind hier aufzuführen.
+## Verantwortlicher
+
+Boostboards GmbH & Co. KG (Marke Kielkraft)<br>
+Groten Hoff 21, 22359 Hamburg<br>
+E-Mail: info@boostboards.de · Telefon: +49 40 60 90 199 69
+
+## Worüber diese Erklärung informiert
+
+Diese Datenschutzerklärung erläutert, welche personenbezogenen Daten wir beim Besuch und bei der Nutzung dieses Shops verarbeiten, zu welchen Zwecken und auf welcher Rechtsgrundlage. Die nachstehenden Punkte umreißen die Struktur – der vollständige, rechtsverbindliche Text wird ergänzt (siehe Hinweis unten).
+
+- **Server-/Logdaten** beim Seitenaufruf (Art. 6 Abs. 1 lit. f DSGVO)
+- **Bestellabwicklung und Kundenkonto** (Art. 6 Abs. 1 lit. b DSGVO)
+- **Zahlungsdienstleister** (z. B. Stripe, PayPal, Klarna) zur Zahlungsabwicklung
+- **Rechnungs-/Buchhaltung** (z. B. lexoffice/sevDesk) und gesetzliche Aufbewahrung
+- **Versand-/Logistikpartner** zur Auslieferung (Dropshipping)
+- **Transaktions-E-Mails** über einen E-Mail-Dienst
+- **Kontaktformular** (Art. 6 Abs. 1 lit. a/b DSGVO)
+- **Reichweitenmessung** nur nach Einwilligung (Consent-Banner)
+
+## Ihre Rechte
+
+Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch sowie ein Beschwerderecht bei einer Aufsichtsbehörde.
 
 ----
 
@@ -20,4 +41,4 @@ Metatitle: Datenschutz | Kielkraft
 
 ----
 
-Metadescription: Informationen zur Verarbeitung personenbezogener Daten (DSGVO).
+Metadescription: Datenschutzhinweise von Kielkraft (Boostboards GmbH & Co. KG) zur Verarbeitung personenbezogener Daten.

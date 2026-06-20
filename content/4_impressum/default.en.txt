@@ -6,13 +6,41 @@ Slug: imprint
 
 ----
 
-Intro: Provider identification pursuant to § 5 DDG.
+Intro: Information pursuant to § 5 DDG.
 
 ----
 
 Text:
 
-Placeholder. Company name, address, authorised representative, contact details, commercial register and VAT ID belong here. Replace with the legally binding information.
+**Kielkraft** is a brand of
+
+**Boostboards GmbH & Co. KG**<br>
+Groten Hoff 21<br>
+22359 Hamburg<br>
+Germany
+
+**Represented by:** Sebastian Keye
+
+## Contact
+
+Phone: +49 40 60 90 199 69<br>
+E-mail: info@boostboards.de
+
+## Register entry
+
+Register court: Amtsgericht Hamburg (Hamburg Local Court)<br>
+Register number: HRA 131421
+
+## VAT ID
+
+VAT identification number pursuant to § 27a German VAT Act:<br>
+DE442130574
+
+## Online dispute resolution
+
+EU Commission online dispute resolution platform (ODR): https://ec.europa.eu/consumers/odr
+
+We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.
 
 ----
 
@@ -20,4 +48,4 @@ Metatitle: Imprint | Kielkraft
 
 ----
 
-Metadescription: Provider identification pursuant to § 5 DDG.
+Metadescription: Imprint of Boostboards GmbH & Co. KG (Kielkraft brand), Groten Hoff 21, 22359 Hamburg.

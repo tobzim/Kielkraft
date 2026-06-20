@@ -2,17 +2,45 @@ Title: Impressum
 
 ----
 
-Intro: Anbieterkennzeichnung nach § 5 DDG.
+Intro: Angaben gemäß § 5 DDG.
 
 ----
 
 Text:
 
-Platzhalter. Hier stehen Firmenname, Anschrift, vertretungsberechtigte Person, Kontaktdaten, Register- und USt-IdNr. Bitte durch die rechtsverbindlichen Angaben ersetzen.
+**Kielkraft** ist eine Marke der
+
+**Boostboards GmbH & Co. KG**<br>
+Groten Hoff 21<br>
+22359 Hamburg<br>
+Deutschland
+
+**Vertreten durch:** Sebastian Keye
+
+## Kontakt
+
+Telefon: +49 40 60 90 199 69<br>
+E-Mail: info@boostboards.de
+
+## Registereintrag
+
+Registergericht: Amtsgericht Hamburg<br>
+Registernummer: HRA 131421
+
+## Umsatzsteuer-ID
+
+Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br>
+DE442130574
+
+## Online-Streitbeilegung
+
+Plattform der EU-Kommission zur Online-Streitbeilegung (OS): https://ec.europa.eu/consumers/odr
+
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
 
 ----
 
-IsPlaceholder: true
+IsPlaceholder: false
 
 ----
 
@@ -20,4 +48,4 @@ Metatitle: Impressum | Kielkraft
 
 ----
 
-Metadescription: Anbieterkennzeichnung nach § 5 DDG.
+Metadescription: Impressum der Boostboards GmbH & Co. KG (Marke Kielkraft), Groten Hoff 21, 22359 Hamburg.
