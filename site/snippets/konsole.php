@@ -1,8 +1,5 @@
 <?php
-/**
- * "Die Konsole" - the PDP buy unit (signature element).
- * @var \Kirby\Cms\Page $product
- */
+/** PDP buy box ("Kaufbox"). @var \Kirby\Cms\Page $product */
 $code = $kirby->language() ? $kirby->language()->code() : 'de';
 $en   = $code === 'en';
 $isElectric = $product->antrieb()->value() === 'elektro';
@@ -14,24 +11,18 @@ $basePrice = $first && $first->price()->isNotEmpty() ? (float) $first->price()->
 $uvp   = $product->uvp()->isNotEmpty() ? (float) $product->uvp()->value() : null;
 $ship  = (float) $product->shippingCost()->or(0)->value();
 $warr  = $product->warrantyYears()->or(2)->value();
+$pct   = ($uvp && $uvp > $basePrice) ? (int) round((1 - $basePrice / $uvp) * 100) : 0;
 
 $vjson = [];
-foreach ($variants as $i => $v) {
+foreach ($variants as $v) {
     $vjson[] = [
-        'label' => $v->label()->value(),
         'sku'   => $v->sku()->value(),
-        'stock' => (int) $v->stock()->value(),
         'priceFormatted' => mv_eur($v->price()->value(), $code),
     ];
 }
 
-$availLabels = [
-    'instock'  => $en ? 'Lieferbar'           : 'Lieferbar',
-    'short'    => $en ? 'Only a few in stock' : 'Nur wenige verfügbar',
-    'preorder' => $en ? 'Pre-order'           : 'Vorbestellung',
-];
-if ($en) { $availLabels['instock'] = 'In stock'; }
 $avail = $product->availability()->or('instock')->value();
+$availLabel = $avail === 'short' ? ($en ? 'Only a few in stock' : 'Nur wenige verfügbar') : ($avail === 'preorder' ? ($en ? 'Pre-order' : 'Vorbestellung') : ($en ? 'In stock' : 'Lieferbar'));
 
 $wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
 ?>
@@ -41,20 +32,22 @@ $wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
         <span class="konsole__axis"><?= $isElectric ? ($en ? 'Electric' : 'Elektro') : ($en ? 'Petrol' : 'Benzin') ?></span>
     </div>
 
-    <div class="konsole__price" data-price><?= mv_eur($basePrice, $code) ?></div>
-    <div class="konsole__ship">
-        <span><?= t('product.incl_vat') ?></span> ·
-<?php if ($ship > 0): ?>
-        <?= $en ? 'plus freight' : 'zzgl. Fracht' ?> <b><?= mv_eur($ship, $code) ?></b>
-<?php else: ?>
-        <b><?= $en ? 'free freight' : 'fracht­frei' ?></b>
+    <div class="konsole__pricewrap">
+        <span class="konsole__price price" data-price><?= mv_eur($basePrice, $code) ?></span>
+<?php if ($pct > 0): ?>
+        <span class="konsole__old price"><?= mv_eur($uvp, $code) ?></span>
+        <span class="konsole__save">&minus;<?= $pct ?>&nbsp;%</span>
 <?php endif ?>
-<?php if ($uvp && $uvp > $basePrice): ?>
-        · <s><?= $en ? 'RRP' : 'UVP' ?> <?= mv_eur($uvp, $code) ?></s>
+    </div>
+    <div class="konsole__ship">
+        <?= t('product.incl_vat') ?> ·
+<?php if ($ship > 0): ?>
+        <?= $en ? 'plus freight' : 'zzgl. Fracht' ?> <b><?= mv_eur($ship, $code) ?></b> <?= $en ? '(transparent)' : '(transparent)' ?>
+<?php else: ?>
+        <b><?= $en ? 'freight included' : 'frachtfrei' ?></b>
 <?php endif ?>
     </div>
 
-    <!-- compact gauge readout -->
     <div class="kgauges">
         <div class="kgauge"><span><?= $product->powerPs() ?></span><em>PS</em></div>
         <div class="kgauge"><span><?= $product->powerKw() ?></span><em>kW</em></div>
@@ -63,7 +56,7 @@ $wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
 
 <?php if ($variants->count() > 0): ?>
     <div class="opt-group">
-        <div class="opt-label"><span><?= t('product.shaft') ?> / <?= $en ? 'variant' : 'Variante' ?></span> <span class="opt-current mono" data-sku><?= $first->sku() ?></span></div>
+        <div class="opt-label"><span><?= t('product.shaft') ?> / <?= $en ? 'variant' : 'Variante' ?></span> <span class="opt-current" data-sku><?= $first->sku() ?></span></div>
         <div class="seg" role="group" aria-label="<?= t('product.choose_variant') ?>">
 <?php foreach ($variants as $i => $v): ?>
             <button type="button" class="seg__btn" data-variant="<?= $i ?>" aria-pressed="<?= $i === 0 ? 'true' : 'false' ?>"><?= $v->label() ?></button>
@@ -74,16 +67,16 @@ $wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
 
     <div class="konsole__avail">
         <span class="dot" aria-hidden="true"></span>
-        <span><b><?= $availLabels[$avail] ?? $availLabels['instock'] ?></b> · <?= $product->deliveryTime() ?></span>
+        <span><b><?= $availLabel ?></b> · <?= $product->deliveryTime() ?></span>
     </div>
 
     <div class="konsole__cta">
-        <button type="button" class="btn btn--primary btn--lg btn--block" data-add-to-cart><?= t('product.add_to_cart') ?></button>
+        <button type="button" class="btn btn--cta btn--lg btn--block" data-add-to-cart data-added="<?= $en ? 'Added ✓' : 'Im Warenkorb ✓' ?>"><?= t('product.add_to_cart') ?></button>
         <a class="btn btn--ghost btn--block" href="<?= $wa ?>" rel="nofollow"><?= $en ? 'Get advice on WhatsApp' : 'Per WhatsApp beraten lassen' ?></a>
     </div>
 
     <div class="wallets" aria-label="<?= t('footer.payment') ?>">
-        <span>PayPal</span><span>Klarna</span><span>Apple&nbsp;Pay</span><span>Google&nbsp;Pay</span><span><?= $en ? 'Card' : 'Karte' ?></span>
+        <span>PayPal</span><span>Klarna</span><span>Apple&nbsp;Pay</span><span>Google&nbsp;Pay</span><span><?= $en ? 'Card' : 'Karte' ?></span><span>SEPA</span>
     </div>
 
     <ul class="microtrust">

@@ -23,7 +23,7 @@ $cross = $page->crossSell()->toPages();
 <section class="pdp <?= $axis ?>">
     <div class="container">
         <header style="max-width:60ch;margin-bottom:var(--sp-6)">
-            <div class="section__label"><?= $page->brand() ?> · <?= $isElectric ? ($en ? 'Electric' : 'Elektro') : ($en ? 'Petrol 4-stroke' : 'Benzin 4-Takt') ?></div>
+            <div class="eyebrow"><?= $page->brand() ?> · <?= $isElectric ? ($en ? 'Electric' : 'Elektro') : ($en ? 'Petrol 4-stroke' : 'Benzin 4-Takt') ?></div>
             <h1><?= $page->title() ?></h1>
             <p class="section__lead"><?= $page->intro() ?></p>
         </header>
@@ -90,7 +90,7 @@ $cross = $page->crossSell()->toPages();
 <?php endif ?>
             </div>
 
-            <div class="pdp__konsole-col">
+            <div class="pdp__buy-col">
                 <?php snippet('konsole', ['product' => $page]) ?>
             </div>
         </div>
@@ -98,7 +98,7 @@ $cross = $page->crossSell()->toPages();
 </section>
 
 <!-- Risk reversal -->
-<section class="section--tight bg-panel">
+<section class="section--tight bg-soft">
     <div class="container">
         <div class="featurelist">
             <div class="feature"><h3><?= $en ? '14-day right of withdrawal' : '14 Tage Widerrufsrecht' ?></h3><p><?= $en ? 'Buy with confidence. Return within 14 days under the statutory terms.' : 'Kaufe ohne Risiko. Rückgabe innerhalb von 14 Tagen nach den gesetzlichen Bedingungen.' ?></p></div>
@@ -111,8 +111,8 @@ $cross = $page->crossSell()->toPages();
 <?php if ($cross->count() > 0): ?>
 <section class="section--tight">
     <div class="container">
-        <div class="section__head"><span class="section__label"><?= $en ? 'Goes well with' : 'Passendes Zubehör' ?></span></div>
-        <div class="grid grid--4">
+        <div class="section__head"><h2 class="section__title"><?= $en ? 'Goes well with' : 'Passendes Zubehör' ?></h2></div>
+        <div class="pgrid">
 <?php foreach ($cross->limit(4) as $c): ?>
             <?php snippet('product-card', ['product' => $c]) ?>
 <?php endforeach ?>

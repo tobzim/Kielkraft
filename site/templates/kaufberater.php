@@ -8,8 +8,8 @@ $urlPetrol   = url($en ? 'en/petrol-outboards' : 'benzin-aussenborder');
 
 <section class="section">
     <div class="container container--narrow">
-        <div class="section__head" style="text-align:left">
-            <span class="section__label"><?= t('nav.advisor') ?></span>
+        <div style="margin-bottom:var(--sp-6)">
+            <span class="eyebrow"><?= t('nav.advisor') ?></span>
             <h1><?= $page->title() ?></h1>
             <p class="section__lead"><?= $page->intro() ?></p>
         </div>
@@ -62,9 +62,9 @@ $urlPetrol   = url($en ? 'en/petrol-outboards' : 'benzin-aussenborder');
     </div>
 </section>
 
-<section class="section--tight bg-panel">
+<section class="section--tight bg-soft">
     <div class="container">
-        <div class="section__head"><span class="section__label"><?= $en ? 'Electric vs petrol' : 'Elektro vs. Benzin' ?></span><h2><?= $en ? 'Which drive fits you?' : 'Welcher Antrieb passt zu dir?' ?></h2></div>
+        <div style="margin-bottom:var(--sp-5)"><span class="eyebrow"><?= $en ? 'Electric vs petrol' : 'Elektro vs. Benzin' ?></span><h2 class="section__title"><?= $en ? 'Which drive fits you?' : 'Welcher Antrieb passt zu dir?' ?></h2></div>
         <table class="compare">
             <thead><tr><th>&nbsp;</th><th><?= $en ? 'Electric (ePropulsion)' : 'Elektro (ePropulsion)' ?></th><th>Benzin (Tohatsu)</th></tr></thead>
             <tbody>

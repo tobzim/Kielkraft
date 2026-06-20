@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
 <section class="section container container--narrow">
-    <div class="section__head">
+    <div style="margin-bottom:var(--sp-5)">
         <h1><?= $page->title() ?></h1>
 <?php if ($page->intro()->isNotEmpty()): ?>
         <p class="section__lead"><?= $page->intro() ?></p>

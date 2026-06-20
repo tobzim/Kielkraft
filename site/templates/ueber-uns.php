@@ -8,7 +8,7 @@ $en = $code === 'en';
     <img class="cat-banner__img" src="<?= url('assets/img/lifestyle.webp') ?>" alt="" loading="eager">
     <div class="cat-banner__scrim"></div>
     <div class="container cat-banner__inner">
-        <div class="section__label" style="color:#fff"><?= $en ? 'About us' : 'Über uns' ?></div>
+        <div class="eyebrow" style="color:#bcd0e4"><?= $en ? 'About us' : 'Über uns' ?></div>
         <h1><?= $page->title() ?></h1>
         <p><?= $page->intro() ?></p>
     </div>
@@ -23,7 +23,7 @@ $en = $code === 'en';
     </div>
 </section>
 
-<section class="section--tight bg-panel">
+<section class="section--tight bg-soft">
     <div class="container">
         <div class="featurelist">
             <div class="feature"><h3><?= $en ? 'Specialists, not a general store' : 'Spezialisten, kein Gemischtwarenladen' ?></h3><p><?= $en ? 'We focus on Tohatsu and ePropulsion – so we actually know the products and can advise honestly.' : 'Wir konzentrieren uns auf Tohatsu und ePropulsion – deshalb kennen wir die Produkte wirklich und beraten ehrlich.' ?></p></div>
