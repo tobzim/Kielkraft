@@ -42,6 +42,7 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
     <link rel="stylesheet" href="<?= mv_asset('assets/css/tokens.css') ?>">
     <link rel="stylesheet" href="<?= mv_asset('assets/css/app.css') ?>">
     <?php snippet('seo/jsonld-organization') ?>
+    <?php snippet('analytics') ?>
 </head>
 <body>
 <a class="skip-link" href="#main"><?= t('kielkraft.skip') ?></a>

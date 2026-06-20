@@ -176,16 +176,38 @@
     if (steerSel) steerSel.addEventListener("change", apply);
   }
 
-  /* --- Cookie consent --- */
+  /* --- Cookie consent + consent-gated analytics (GA4 / GTM) --- */
+  function loadAnalytics() {
+    var a = window.__kkAnalytics;
+    if (!a || window.__kkAnalyticsLoaded) return;
+    window.__kkAnalyticsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    if (a.ga4) {
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + a.ga4;
+      document.head.appendChild(s);
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", a.ga4, { anonymize_ip: true });
+    }
+    if (a.gtm) {
+      window.dataLayer.push({ "gtm.start": +new Date(), event: "gtm.js" });
+      var g = document.createElement("script");
+      g.async = true; g.src = "https://www.googletagmanager.com/gtm.js?id=" + a.gtm;
+      document.head.appendChild(g);
+    }
+  }
+  try { if (localStorage.getItem("mv-consent") === "all") loadAnalytics(); } catch (e) {}
+
   var consent = document.querySelector("[data-consent]");
   if (consent) {
-    var KEY = "mv-consent";
-    var stored = null;
+    var KEY = "mv-consent", stored = null;
     try { stored = localStorage.getItem(KEY); } catch (e) {}
     if (!stored) consent.hidden = false;
     var setConsent = function (v) {
       try { localStorage.setItem(KEY, v); } catch (e) {}
       consent.hidden = true;
+      if (v === "all") loadAnalytics();
     };
     var acc = consent.querySelector("[data-consent-accept]");
     var dec = consent.querySelector("[data-consent-decline]");
