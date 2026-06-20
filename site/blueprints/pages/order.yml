@@ -1,0 +1,54 @@
+title: Bestellung
+icon: cart
+num: "{{ page.date.toDate('YmdHis') }}"
+
+columns:
+  - width: 2/3
+    sections:
+      items:
+        type: fields
+        fields:
+          itemsHead: { type: headline, label: Positionen }
+          items:
+            label: Artikel
+            type: structure
+            fields:
+              sku: { label: SKU, type: text }
+              title: { label: Artikel, type: text }
+              variant: { label: Variante, type: text }
+              price: { label: Einzelpreis, type: number, step: 0.01 }
+              qty: { label: Menge, type: number }
+          notesHead: { type: headline, label: Notizen }
+          notes: { label: Notizen, type: textarea }
+  - width: 1/3
+    sections:
+      meta:
+        type: fields
+        fields:
+          orderNumber: { label: Bestellnummer, type: text }
+          date: { label: Datum, type: date, time: true }
+          status:
+            label: Status
+            type: select
+            default: new
+            options:
+              new: Neu
+              paid: Bezahlt
+              partner: An Partner gemeldet
+              shipped: Versendet
+              delivered: Zugestellt
+              cancelled: Storniert
+          paymentMethod: { label: Zahlart, type: text }
+          tracking: { label: Tracking-Nr., type: text }
+          custHead: { type: headline, label: Kunde }
+          customerName: { label: Name, type: text }
+          customerEmail: { label: E-Mail, type: email }
+          customerPhone: { label: Telefon, type: tel }
+          street: { label: Straße, type: text }
+          zip: { label: PLZ, type: text, width: 1/2 }
+          city: { label: Ort, type: text, width: 1/2 }
+          country: { label: Land, type: text }
+          totalsHead: { type: headline, label: Summen }
+          subtotal: { label: Zwischensumme, type: number, step: 0.01, width: 1/2 }
+          shipping: { label: Fracht, type: number, step: 0.01, width: 1/2 }
+          total: { label: Gesamt, type: number, step: 0.01 }

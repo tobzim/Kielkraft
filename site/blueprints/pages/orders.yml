@@ -1,0 +1,11 @@
+title: Bestellungen
+icon: cart
+
+sections:
+  orders:
+    label: Bestellungen
+    type: pages
+    template: order
+    sortBy: date desc
+    info: "{{ page.total }} € · {{ page.status }} · {{ page.customerName }}"
+    empty: Noch keine Bestellungen.
