@@ -178,22 +178,26 @@
 
   /* --- Cookie consent + consent-gated analytics (GA4 / GTM) --- */
   function loadAnalytics() {
-    var a = window.__kkAnalytics;
-    if (!a || window.__kkAnalyticsLoaded) return;
+    if (window.__kkAnalyticsLoaded) return;
+    var m4 = document.querySelector("meta[name=kk-ga4]");
+    var mg = document.querySelector("meta[name=kk-gtm]");
+    var ga4 = m4 ? m4.getAttribute("content") : "";
+    var gtm = mg ? mg.getAttribute("content") : "";
+    if (!ga4 && !gtm) return;
     window.__kkAnalyticsLoaded = true;
     window.dataLayer = window.dataLayer || [];
-    if (a.ga4) {
+    if (ga4) {
       var s = document.createElement("script");
-      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + a.ga4;
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + ga4;
       document.head.appendChild(s);
       window.gtag = function () { window.dataLayer.push(arguments); };
       window.gtag("js", new Date());
-      window.gtag("config", a.ga4, { anonymize_ip: true });
+      window.gtag("config", ga4, { anonymize_ip: true });
     }
-    if (a.gtm) {
+    if (gtm) {
       window.dataLayer.push({ "gtm.start": +new Date(), event: "gtm.js" });
       var g = document.createElement("script");
-      g.async = true; g.src = "https://www.googletagmanager.com/gtm.js?id=" + a.gtm;
+      g.async = true; g.src = "https://www.googletagmanager.com/gtm.js?id=" + gtm;
       document.head.appendChild(g);
     }
   }

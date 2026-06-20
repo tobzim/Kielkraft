@@ -1,4 +1,15 @@
 <?php
+// Frontend Content-Security-Policy (the Panel keeps its own, since it does not
+// include this snippet). Allows self + Google Analytics/Tag Manager only.
+if (headers_sent() === false) {
+    header("Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; "
+        . "frame-ancestors 'self'; form-action 'self'; "
+        . "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; "
+        . "font-src 'self'; style-src 'self' 'unsafe-inline'; "
+        . "script-src 'self' https://www.googletagmanager.com; "
+        . "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; "
+        . "frame-src https://www.googletagmanager.com");
+}
 $lang = $kirby->language();
 $code = $lang ? $lang->code() : 'de';
 $en   = $code === 'en';
