@@ -16,7 +16,7 @@ PayPal, Klarna, credit card, Apple Pay, Google Pay and SEPA via a secure checkou
 
 ----
 
-Metatitle: Payment methods | Marvento
+Metatitle: Payment methods | Kielkraft
 
 ----
 

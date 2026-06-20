@@ -10,11 +10,11 @@ return [
 
     'translations' => [
         // Brand / generic
-        'marvento.tagline'        => 'Außenbordmotoren – Elektro & Benzin. Spezialist für Tohatsu und ePropulsion.',
-        'marvento.skip'           => 'Zum Inhalt springen',
-        'marvento.menu'           => 'Menü',
-        'marvento.close'          => 'Schließen',
-        'marvento.search'         => 'Suchen',
+        'kielkraft.tagline'        => 'Außenbordmotoren – Elektro & Benzin. Spezialist für Tohatsu und ePropulsion.',
+        'kielkraft.skip'           => 'Zum Inhalt springen',
+        'kielkraft.menu'           => 'Menü',
+        'kielkraft.close'          => 'Schließen',
+        'kielkraft.search'         => 'Suchen',
 
         // Navigation
         'nav.electric'            => 'Elektro-Außenborder',

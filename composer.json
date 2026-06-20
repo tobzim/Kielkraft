@@ -1,9 +1,9 @@
 {
-    "name": "tobzim/marvento-shop",
-    "description": "Marvento - bilingual (DE/EN) premium outboard-motor shop (Tohatsu + ePropulsion) built on Kirby K5",
+    "name": "tobzim/kielkraft-shop",
+    "description": "Kielkraft - bilingual (DE/EN) premium outboard-motor shop (Tohatsu + ePropulsion) built on Kirby K5",
     "type": "project",
     "license": "proprietary",
-    "homepage": "https://marvento.de",
+    "homepage": "https://kielkraft.de",
     "authors": [
         {
             "name": "Tobias Zimmer",

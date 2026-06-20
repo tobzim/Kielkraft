@@ -10,11 +10,11 @@ return [
 
     'translations' => [
         // Brand / generic
-        'marvento.tagline'        => 'Outboard motors - electric & petrol. Specialist for Tohatsu and ePropulsion.',
-        'marvento.skip'           => 'Skip to content',
-        'marvento.menu'           => 'Menu',
-        'marvento.close'          => 'Close',
-        'marvento.search'         => 'Search',
+        'kielkraft.tagline'        => 'Outboard motors - electric & petrol. Specialist for Tohatsu and ePropulsion.',
+        'kielkraft.skip'           => 'Skip to content',
+        'kielkraft.menu'           => 'Menu',
+        'kielkraft.close'          => 'Close',
+        'kielkraft.search'         => 'Search',
 
         // Navigation
         'nav.electric'            => 'Electric outboards',

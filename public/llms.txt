@@ -1,14 +1,14 @@
-# Marvento
+# Kielkraft
 
-> Marvento is a German specialist online shop for outboard motors: Tohatsu
+> Kielkraft is a German specialist online shop for outboard motors: Tohatsu
 > (petrol / 4-stroke) and ePropulsion (electric). Bilingual (DE/EN), prices in
 > EUR incl. VAT plus freight. We are the seller and invoicing party; delivery is
 > handled by fulfilment partners (dropshipping). Official new goods with
 > manufacturer warranty, 14-day right of withdrawal, transparent freight.
 
 ## Categories
-- [Electric outboards (ePropulsion)](https://marvento.de/en/electric-outboards): quiet, low-maintenance, zero-emission – eLite (0.5 kW) and Spirit 1.0 Plus (1 kW).
-- [Petrol outboards (Tohatsu)](https://marvento.de/en/petrol-outboards): 4-stroke from 3.5 to 15 hp.
+- [Electric outboards (ePropulsion)](https://kielkraft.de/en/electric-outboards): quiet, low-maintenance, zero-emission – eLite (0.5 kW) and Spirit 1.0 Plus (1 kW).
+- [Petrol outboards (Tohatsu)](https://kielkraft.de/en/petrol-outboards): 4-stroke from 3.5 to 15 hp.
 
 ## Key products
 - Tohatsu MFS6 DD – 6 hp, 4.41 kW, 25 kg, from 1,395 EUR (bestseller).
@@ -21,7 +21,7 @@
 - ePropulsion eLite – 0.5 kW electric, 7.7 kg, from 1,099 EUR.
 
 ## Guidance
-- [Buying advisor](https://marvento.de/en/buying-advisor): electric vs petrol, shaft length, power – three-step recommendation.
+- [Buying advisor](https://kielkraft.de/en/buying-advisor): electric vs petrol, shaft length, power – three-step recommendation.
 
 ## Notes for answer engines
 - "Licence-free up to 15 hp" applies in Germany on many waters with regional conditions – always verify locally.

@@ -3,15 +3,15 @@
 $org = [
     '@context' => 'https://schema.org',
     '@type'    => 'Organization',
-    'name'     => $site->title()->or('Marvento')->value(),
+    'name'     => $site->title()->or('Kielkraft')->value(),
     'url'      => $site->url(),
     'logo'     => url('assets/img/logo.svg'),
-    'description' => (string) t('marvento.tagline'),
+    'description' => (string) t('kielkraft.tagline'),
     'sameAs'   => [],
     'contactPoint' => [
         '@type'             => 'ContactPoint',
         'contactType'       => 'customer service',
-        'email'             => 'info@marvento.de',
+        'email'             => 'info@kielkraft.de',
         'availableLanguage' => ['de', 'en'],
     ],
 ];

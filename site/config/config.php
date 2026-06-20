@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Marvento - Kirby configuration.
+ * Kielkraft - Kirby configuration.
  * Driven by environment variables (Docker). See .env.example for all keys.
  */
 
@@ -68,15 +68,15 @@ return [
         ],
     ],
 
-    // App-level settings consumed by Marvento code (shop, invoicing, partner)
-    'marvento' => [
+    // App-level settings consumed by Kielkraft code (shop, invoicing, partner)
+    'kielkraft' => [
         'env'             => mv_env('APP_ENV', 'production'),
         'invoiceProvider' => mv_env('INVOICE_PROVIDER', 'fallback'),
-        'mailFrom'        => mv_env('MAIL_FROM', 'bestellung@marvento.de'),
-        'mailFromName'    => mv_env('MAIL_FROM_NAME', 'Marvento'),
+        'mailFrom'        => mv_env('MAIL_FROM', 'bestellung@kielkraft.de'),
+        'mailFromName'    => mv_env('MAIL_FROM_NAME', 'Kielkraft'),
         'partnerBcc'      => mv_env('PARTNER_ORDER_BCC', null),
     ],
 
     // Routes & hooks (shop, Stripe webhooks, sitemap) are registered by the
-    // site/plugins/marvento plugin in later build phases.
+    // site/plugins/kielkraft plugin in later build phases.
 ];

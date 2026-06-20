@@ -16,7 +16,7 @@ Placeholder. Controller, purposes and legal bases, processors (Stripe, e-mail pr
 
 ----
 
-Metatitle: Privacy | Marvento
+Metatitle: Privacy | Kielkraft
 
 ----
 

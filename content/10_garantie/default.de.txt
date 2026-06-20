@@ -16,7 +16,7 @@ IsPlaceholder: true
 
 ----
 
-Metatitle: Garantie | Marvento
+Metatitle: Garantie | Kielkraft
 
 ----
 

@@ -1,4 +1,4 @@
-# Marvento - developer shortcuts (run via Git Bash; `make` optional, see README)
+# Kielkraft - developer shortcuts (run via Git Bash; `make` optional, see README)
 .DEFAULT_GOAL := help
 .PHONY: help up down build rebuild shell logs ps lint seed-user
 

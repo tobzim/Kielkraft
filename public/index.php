@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Marvento - Kirby bootstrap (public-folder layout).
+ * Kielkraft - Kirby bootstrap (public-folder layout).
  *
  * Only this "public/" directory is the web root. Everything else
  * (content/, site/, kirby/, storage/) lives one level up and is therefore

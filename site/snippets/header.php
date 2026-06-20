@@ -43,7 +43,7 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
     <?php snippet('seo/jsonld-organization') ?>
 </head>
 <body>
-<a class="skip-link" href="#main"><?= t('marvento.skip') ?></a>
+<a class="skip-link" href="#main"><?= t('kielkraft.skip') ?></a>
 
 <header class="site-header" data-header>
     <!-- Tier 1: trust / service bar -->
@@ -64,9 +64,9 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
     <!-- Tier 2: logo + search + actions -->
     <div class="headbar">
         <div class="container headbar__row">
-            <a class="brand" href="<?= $site->url($code) ?>" aria-label="<?= $site->title()->or('Marvento') ?>">
+            <a class="brand" href="<?= $site->url($code) ?>" aria-label="<?= $site->title()->or('Kielkraft') ?>">
                 <img class="brand__mark" src="<?= url('assets/img/logo.svg') ?>" alt="" width="34" height="34">
-                <span class="brand__name"><?= $site->title()->or('Marvento') ?></span>
+                <span class="brand__name"><?= $site->title()->or('Kielkraft') ?></span>
             </a>
 
             <form class="search" action="<?= $navP ?>" method="get" role="search">
@@ -75,8 +75,8 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
                     <option value="elektro"><?= t('nav.electric') ?></option>
                     <option value="benzin"><?= t('nav.petrol') ?></option>
                 </select>
-                <input class="search__input" type="search" name="q" placeholder="<?= $en ? 'Search for model, hp, brand…' : 'Modell, PS, Marke suchen…' ?>" aria-label="<?= t('marvento.search') ?>">
-                <button class="search__btn" type="submit" aria-label="<?= t('marvento.search') ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+                <input class="search__input" type="search" name="q" placeholder="<?= $en ? 'Search for model, hp, brand…' : 'Modell, PS, Marke suchen…' ?>" aria-label="<?= t('kielkraft.search') ?>">
+                <button class="search__btn" type="submit" aria-label="<?= t('kielkraft.search') ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
             </form>
 
             <div class="header-actions">
@@ -86,7 +86,7 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
                     <span class="cart-btn__meta"><span class="cart-btn__label"><?= t('cart.title') ?></span><span class="cart-btn__total price">0,00 €</span></span>
                     <span class="cart-btn__count" data-cart-count>0</span>
                 </a>
-                <button class="nav-toggle" type="button" aria-label="<?= t('marvento.menu') ?>" data-nav-toggle><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+                <button class="nav-toggle" type="button" aria-label="<?= t('kielkraft.menu') ?>" data-nav-toggle><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
             </div>
         </div>
     </div>

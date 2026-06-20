@@ -1,9 +1,9 @@
-# Marvento - Keyword-Map (DE/EN)
+# Kielkraft - Keyword-Map (DE/EN)
 
 Arbeitsgrundlage für SEO/GEO. Pro Seite eine primäre Intention + sekundäre Begriffe.
 
 ## Brand
-- marvento, marvento außenborder, marvento outboards
+- kielkraft, kielkraft außenborder, kielkraft outboards
 
 ## Kategorie (DE)
 - **Elektro-Außenborder:** elektro außenborder kaufen, e-außenborder, epropulsion kaufen, elektromotor boot, lautloser außenborder, außenborder akku

@@ -16,7 +16,7 @@ IsPlaceholder: true
 
 ----
 
-Metatitle: AGB | Marvento
+Metatitle: AGB | Kielkraft
 
 ----
 

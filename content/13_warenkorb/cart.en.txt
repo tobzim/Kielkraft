@@ -6,8 +6,8 @@ Slug: cart
 
 ----
 
-Metatitle: Cart | Marvento
+Metatitle: Cart | Kielkraft
 
 ----
 
-Metadescription: Your Marvento cart. Secure checkout with all common payment methods.
+Metadescription: Your Kielkraft cart. Secure checkout with all common payment methods.

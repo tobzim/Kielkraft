@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  IMAGE: ghcr.io/tobzim/marvento-shop
+  IMAGE: ghcr.io/tobzim/kielkraft-shop
 
 jobs:
   build-push:

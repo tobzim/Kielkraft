@@ -26,7 +26,7 @@ if (!function_exists('mv_eur')) {
     }
 }
 
-Kirby::plugin('marvento/core', [
+Kirby::plugin('kielkraft/core', [
     'routes' => [
         [
             'pattern' => 'sitemap.xml',

@@ -1,11 +1,11 @@
-# Marvento
+# Kielkraft
 
 Zweisprachiger (DE/EN) Premium-Webshop für Außenbordmotoren der Marken
 **Tohatsu** (Benzin/4-Takt) und **ePropulsion** (Elektro).
 Geschäftsmodell: **Dropshipping** – wir sind Verkäufer und Rechnungssteller,
 die physische Auslieferung übernehmen Partner.
 
-> **Markenname „Marvento"** ist eine Empfehlung/Platzhalter. Domains, Logo und
+> **Markenname „Kielkraft"** ist eine Empfehlung/Platzhalter. Domains, Logo und
 > finale Rechtstexte sind noch zu klären (siehe „Offene Punkte").
 
 ---
@@ -23,7 +23,7 @@ die physische Auslieferung übernehmen Partner.
 | Frontend       | Vanilla CSS/JS, Progressive Enhancement | Core Web Vitals, kein schweres SPA |
 | Container      | **Docker / Compose** (PHP 8.2-FPM + nginx) | identisch lokal/Prod |
 | Hosting        | **Hetzner** + GitHub Actions (GHCR → SSH-Deploy) | |
-| Repo           | privat **`tobzim/marvento-shop`** | persönlicher Account (separate Marke, nicht die Org) |
+| Repo           | privat **`tobzim/kielkraft-shop`** | persönlicher Account (separate Marke, nicht die Org) |
 
 **Kostenpflichtige Lizenzen** (siehe „Lizenzen"): Kirby (Produktivbetrieb),
 Kart **oder** Merx. Lokal/Entwicklung läuft Kirby im Trial-Modus ohne Lizenz.
@@ -67,7 +67,7 @@ php83\php.exe -S 127.0.0.1:8095 -t public kirby/router.php
 ## Projektstruktur
 
 ```
-marvento-shop/
+kielkraft-shop/
 ├─ public/                # WEB ROOT (einziger über HTTP erreichbarer Ordner)
 │  ├─ index.php           # Kirby-Bootstrap (custom roots)
 │  ├─ assets/             # css/ js/ img/ fonts/ (versioniert)
@@ -109,7 +109,7 @@ Start-Katalog landet so im `content`-Volume. Spätere Deploys überschreiben den
 Katalog NICHT (Pflege danach über das Panel).
 
 **Backup-Job (Server, einzurichten):** täglich `content`, `media`, `storage`
-sichern, z. B. `docker run --rm -v marvento_content:/c -v $PWD:/b alpine tar czf /b/content-$(date +%F).tgz -C /c .` (analog für media/storage), Rotation + Offsite-Kopie.
+sichern, z. B. `docker run --rm -v kielkraft_content:/c -v $PWD:/b alpine tar czf /b/content-$(date +%F).tgz -C /c .` (analog für media/storage), Rotation + Offsite-Kopie.
 
 ---
 
@@ -129,7 +129,7 @@ Partner-Routing, `APP_SECRET`, Matomo.
 `.github/workflows/deploy.yml` (Push auf `main`):
 
 1. Baut **zwei** Images (`target: runtime` → `:app-latest`, `target: web` →
-   `:web-latest`) und pusht nach **`ghcr.io/tobzim/marvento-shop`**.
+   `:web-latest`) und pusht nach **`ghcr.io/tobzim/kielkraft-shop`**.
 2. SSH auf Hetzner → `docker compose -f docker-compose.prod.yml pull && up -d`.
    Daten-Volumes bleiben unberührt.
 
@@ -203,7 +203,7 @@ in der Datenschutzerklärung listen.
 
 ## Offene Punkte (manuell durch Tobias)
 
-1. **Domains** `marvento.de/.com/.eu` prüfen/registrieren; E-Mail-Postfächer.
+1. **Domains** `kielkraft.de/.com/.eu` prüfen/registrieren; E-Mail-Postfächer.
    Falls belegt: Alternativen „Kielkraft" / „Voltmare".
 2. **GitHub:** `gh auth login` als `tobzim` (Scopes `repo`, `workflow`) ist
    vorhanden; Repo-Erstellung + Push erfolgt nach deinem OK (Phase 12).

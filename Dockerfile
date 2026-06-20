@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # =============================================================================
-# Marvento - multi-stage image (Kirby K5)
+# Kielkraft - multi-stage image (Kirby K5)
 #   target "runtime" -> PHP-FPM 8.2 application image
 #   target "web"     -> nginx with baked static assets (public/)
 # =============================================================================
@@ -37,8 +37,8 @@ RUN set -eux; \
     rm -rf /tmp/*
 
 # PHP + FPM config
-COPY docker/php/php.ini /usr/local/etc/php/conf.d/zz-marvento.ini
-COPY docker/php/www.conf /usr/local/etc/php-fpm.d/zz-marvento.conf
+COPY docker/php/php.ini /usr/local/etc/php/conf.d/zz-kielkraft.ini
+COPY docker/php/www.conf /usr/local/etc/php-fpm.d/zz-kielkraft.conf
 
 WORKDIR /var/www/html
 

@@ -1,5 +1,5 @@
 # =============================================================================
-# Marvento - PRODUCTION stack (Hetzner)
+# Kielkraft - PRODUCTION stack (Hetzner)
 # Images are PULLED from GHCR (built by GitHub Actions) - no build on server.
 # Persistent data lives in named volumes and is NEVER recreated on deploy.
 # Sits behind the central reverse proxy (Caddy) on the host.
@@ -7,11 +7,11 @@
 #   docker compose -f docker-compose.prod.yml pull
 #   docker compose -f docker-compose.prod.yml up -d
 # =============================================================================
-name: marvento
+name: kielkraft
 
 services:
   app:
-    image: ghcr.io/tobzim/marvento-shop:app-latest
+    image: ghcr.io/tobzim/kielkraft-shop:app-latest
     env_file:
       - .env
     environment:
@@ -29,7 +29,7 @@ services:
           memory: 512M
 
   web:
-    image: ghcr.io/tobzim/marvento-shop:web-latest
+    image: ghcr.io/tobzim/kielkraft-shop:web-latest
     depends_on:
       - app
     ports:

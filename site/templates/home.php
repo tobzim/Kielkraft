@@ -121,16 +121,7 @@ $pf = function ($pr) use ($code) {
     </div>
 </section>
 
-<section class="section--tight bg-soft">
-    <div class="container">
-        <div class="section__head"><h2 class="section__title"><?= $page->uspTitle() ?></h2></div>
-        <div class="featurelist">
-            <div class="feature"><h3><?= $page->usp1Title() ?></h3><p><?= $page->usp1Text() ?></p></div>
-            <div class="feature"><h3><?= $page->usp2Title() ?></h3><p><?= $page->usp2Text() ?></p></div>
-            <div class="feature"><h3><?= $page->usp3Title() ?></h3><p><?= $page->usp3Text() ?></p></div>
-        </div>
-    </div>
-</section>
+<?php snippet('partner-trust') ?>
 
 <section class="section--tight">
     <div class="container">

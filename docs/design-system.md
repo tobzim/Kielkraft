@@ -1,4 +1,4 @@
-# Marvento - Designsprache
+# Kielkraft - Designsprache
 
 Richtung: **vertrauenswürdiger deutscher Marine-Webshop**, abgeleitet aus den
 Referenzen des Kunden (awn.de, bootshop-online.shop, aussenborder-markt.de).
@@ -28,7 +28,7 @@ sauber und einen Tick hochwertiger als der Wettbewerb umgesetzt.
   transparente Fracht, Sprache) → (2) Logo + **prominente Suche** (Kategorie-Dropdown)
   + Konto + Warenkorb mit Betrag → (3) **Mega-Menü** mit Modell-Flyouts.
 - **Home:** Promo-Hero → Trust-Strip → Kategorie-Grid → Bestseller-Grid →
-  Marken-Showcase (Tohatsu/ePropulsion) → „Warum Marvento" → Kaufberater-CTA.
+  Marken-Showcase (Tohatsu/ePropulsion) → „Warum Kielkraft" → Kaufberater-CTA.
 - **Kategorie:** Banner + **Filter-Sidebar** + Toolbar (Anzahl, Sortierung) + Produktgrid.
 - **PDP:** Galerie + sticky **Kaufbox** (UVP durchgestrichen + Ersparnis-Badge,
   Varianten, Lager/Lieferzeit, CTA, Wallets, Micro-Trust, Rechnungskauf).

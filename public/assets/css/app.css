@@ -1,5 +1,5 @@
 /* =========================================================================
-   Marvento - components & layout (marine webshop)
+   Kielkraft - components & layout (marine webshop)
    ========================================================================= */
 
 /* ---- Sections ---- */
@@ -381,3 +381,19 @@
 .eyebrow--sale { color: var(--red); }
 .listing-item { display: flex; }
 .listing-item > .pcard { flex: 1 1 auto; }
+
+/* ---- Brands & partnership ---- */
+.partner__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--sp-6); align-items: center; }
+.partner-claim { display: flex; gap: var(--sp-3); align-items: flex-start; font-size: var(--fs-400); font-weight: 600; color: var(--ink); }
+.partner-claim svg { width: 24px; height: 24px; color: var(--green); flex: 0 0 auto; margin-top: 2px; }
+.brandstrip { display: flex; gap: var(--sp-4); margin-top: var(--sp-5); flex-wrap: wrap; }
+.brand-tile { background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); padding: var(--sp-4) var(--sp-5); min-width: 180px; text-align: center; }
+.brand-tile__name { display: block; font-family: var(--font-display); font-weight: 800; font-size: var(--fs-500); color: var(--navy); letter-spacing: -.01em; }
+.brand-tile small { color: var(--muted); font-size: var(--fs-100); }
+.partner-note { margin-top: var(--sp-4); font-size: var(--fs-100); color: var(--muted); max-width: 62ch; }
+.testimonial { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--navy); border-radius: var(--r-md); padding: var(--sp-5); margin: 0; }
+.testimonial__avatar { width: 56px; height: 56px; border-radius: 50%; overflow: hidden; }
+.testimonial__quote { font-family: var(--font-display); font-size: var(--fs-400); color: var(--ink); line-height: 1.45; margin: var(--sp-4) 0; }
+.testimonial__by strong { display: block; color: var(--ink); }
+.testimonial__placeholder { font-size: var(--fs-100); color: var(--red); }
+@media (max-width: 860px) { .partner__grid { grid-template-columns: 1fr; } }

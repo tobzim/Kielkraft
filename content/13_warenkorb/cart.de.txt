@@ -2,8 +2,8 @@ Title: Warenkorb
 
 ----
 
-Metatitle: Warenkorb | Marvento
+Metatitle: Warenkorb | Kielkraft
 
 ----
 
-Metadescription: Dein Marvento-Warenkorb. Sicherer Checkout mit allen gängigen Zahlarten.
+Metadescription: Dein Kielkraft-Warenkorb. Sicherer Checkout mit allen gängigen Zahlarten.

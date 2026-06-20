@@ -1,4 +1,4 @@
-# Marvento - robots.txt
+# Kielkraft - robots.txt
 User-agent: *
 Allow: /
 Disallow: /panel
@@ -21,4 +21,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://marvento.de/sitemap.xml
+Sitemap: https://kielkraft.de/sitemap.xml

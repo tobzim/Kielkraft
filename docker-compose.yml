@@ -1,10 +1,10 @@
 # =============================================================================
-# Marvento - LOCAL DEV stack
+# Kielkraft - LOCAL DEV stack
 #   shop  -> http://localhost:${WEB_PORT:-8080}
 #   mail  -> http://localhost:${MAILPIT_UI_PORT:-8025}  (Mailpit catches mail)
 # Live code editing via bind-mount; vendor/ and kirby/ kept from the image.
 # =============================================================================
-name: marvento
+name: kielkraft
 
 services:
   app:

@@ -1,4 +1,4 @@
-/* Marvento - progressive enhancement (no framework) */
+/* Kielkraft - progressive enhancement (no framework) */
 (function () {
   "use strict";
 
