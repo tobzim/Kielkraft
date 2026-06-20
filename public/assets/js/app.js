@@ -223,4 +223,67 @@
     if (acc) acc.addEventListener("click", function () { setConsent("all"); });
     if (dec) dec.addEventListener("click", function () { setConsent("necessary"); });
   }
+
+  /* --- Register/profile: toggle business fields by account type --- */
+  document.querySelectorAll("[data-register]").forEach(function (form) {
+    var box = form.querySelector("[data-business-fields]");
+    var company = box ? box.querySelector('input[name="company"]') : null;
+    var radios = form.querySelectorAll("[data-account-type]");
+    function syncType() {
+      var sel = form.querySelector("[data-account-type]:checked");
+      var business = sel && sel.value === "business";
+      if (box) box.hidden = !business;
+      if (company) {
+        if (business) { company.setAttribute("required", "required"); }
+        else { company.removeAttribute("required"); }
+      }
+    }
+    radios.forEach(function (r) { r.addEventListener("change", syncType); });
+    if (radios.length) syncType();
+  });
+
+  /* --- Address detection: fill city from postal code (zippopotam.us) --- */
+  document.querySelectorAll("[data-zip]").forEach(function (zipEl) {
+    var scope = zipEl.form || document;
+    var cityEl = scope.querySelector("[data-city]");
+    if (!cityEl || !window.fetch) return;
+    var country = (zipEl.getAttribute("data-zip-country") || "de").toLowerCase();
+    var last = "";
+    function lookup() {
+      var zip = (zipEl.value || "").trim();
+      if (zip === last) return;
+      if (!/^[0-9]{4,5}$/.test(zip)) return;
+      last = zip;
+      fetch("https://api.zippopotam.us/" + country + "/" + encodeURIComponent(zip))
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (!d || !d.places || !d.places.length) return;
+          var place = d.places[0]["place name"];
+          if (place && (cityEl.value.trim() === "" || cityEl.dataset.autofilled === "1")) {
+            cityEl.value = place;
+            cityEl.dataset.autofilled = "1";
+          }
+        })
+        .catch(function () {});
+    }
+    zipEl.addEventListener("blur", lookup);
+    zipEl.addEventListener("change", lookup);
+    cityEl.addEventListener("input", function () { cityEl.dataset.autofilled = "0"; });
+  });
+
+  /* --- Account dashboard: tab switching --- */
+  var account = document.querySelector("[data-account]");
+  if (account) {
+    var links = account.querySelectorAll("[data-account-link]");
+    var panels = account.querySelectorAll("[data-account-panel]");
+    function activate(name) {
+      panels.forEach(function (p) { p.classList.toggle("is-active", p.getAttribute("data-account-panel") === name); });
+      account.querySelectorAll(".account__navlink[data-account-link]").forEach(function (l) {
+        l.classList.toggle("is-active", l.getAttribute("data-account-link") === name);
+      });
+    }
+    links.forEach(function (l) {
+      l.addEventListener("click", function () { activate(l.getAttribute("data-account-link")); });
+    });
+  }
 })();

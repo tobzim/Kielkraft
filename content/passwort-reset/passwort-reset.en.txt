@@ -1,0 +1,13 @@
+Title: Reset password
+
+----
+
+Slug: reset-password
+
+----
+
+Metatitle: Reset password | Kielkraft
+
+----
+
+Metadescription: Reset your Kielkraft password.

@@ -27,7 +27,7 @@ columns:
         fields:
           orderNumber: { label: Bestellnummer, type: text }
           date: { label: Datum, type: date, time: true }
-          status:
+          orderStatus:
             label: Status
             type: select
             default: new

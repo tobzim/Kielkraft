@@ -286,5 +286,29 @@ Kirby::plugin('kielkraft/core', [
                 ]);
             },
         ],
+
+        // ---- Account: logout ----
+        [
+            'pattern' => 'logout',
+            'action'  => function () {
+                if ($u = kirby()->user()) { $u->logout(); }
+                go(get('lang') === 'en' ? 'en/login' : 'anmelden');
+            },
+        ],
+    ],
+
+    'hooks' => [
+        // Auto-unlock "Kauf auf Rechnung" once a customer's order is set to delivered.
+        'page.update:after' => function ($newPage) {
+            if ($newPage->intendedTemplate()->name() !== 'order') { return; }
+            if ((string) $newPage->content()->get('orderStatus') !== 'delivered') { return; }
+            $email = (string) $newPage->customerEmail();
+            if ($email === '') { return; }
+            $user = kirby()->users()->findBy('email', $email);
+            if ($user && $user->invoiceEligible()->toBool() === false) {
+                kirby()->impersonate('kirby');
+                $user->update(['invoiceEligible' => 'true']);
+            }
+        },
     ],
 ]);

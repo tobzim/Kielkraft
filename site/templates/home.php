@@ -129,10 +129,12 @@ $pf = function ($pr) use ($code) {
 
 <section class="section">
     <div class="container">
-        <div class="bg-navy" style="border-radius:var(--r-lg);padding:clamp(2rem,1.5rem+3vw,3.5rem)">
-            <h2 style="color:#fff;max-width:24ch"><?= $page->advisorTitle() ?></h2>
-            <p style="color:#d6e3f0;max-width:56ch;margin-top:var(--sp-2)"><?= $page->advisorText() ?></p>
-            <a class="btn btn--on-navy btn--lg" style="margin-top:var(--sp-4)" href="<?= $urlAdv ?>"><?= t('nav.advisor') ?></a>
+        <div class="advisor-cta">
+            <div class="advisor-cta__text">
+                <h2><?= $page->advisorTitle() ?></h2>
+                <p><?= $page->advisorText() ?></p>
+            </div>
+            <a class="btn btn--on-navy btn--lg advisor-cta__btn" href="<?= $urlAdv ?>"><?= t('nav.advisor') ?></a>
         </div>
     </div>
 </section>

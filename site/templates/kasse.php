@@ -12,6 +12,9 @@ $pays = [
     'kreditkarte' => $en ? 'Credit card' : 'Kreditkarte',
     'sepa'       => 'SEPA-Lastschrift',
 ];
+if (!empty($invoiceOk)) {
+    $pays['rechnung'] = $en ? 'Invoice purchase (returning customer)' : 'Kauf auf Rechnung (Bestandskunde)';
+}
 ?>
 <?php snippet('header') ?>
 
@@ -47,14 +50,19 @@ $pays = [
             <input type="hidden" name="csrf" value="<?= csrf() ?>">
             <div class="checkout-grid">
                 <div class="checkout-form">
+<?php if ($user): ?>
+                    <div class="checkout-account checkout-account--in"><?= $en ? 'Signed in as' : 'Angemeldet als' ?> <strong><?= esc($user->email()) ?></strong> · <a href="<?= url($en ? 'en/account' : 'konto') ?>"><?= t('account.title') ?></a></div>
+<?php else: ?>
+                    <div class="checkout-account"><?= $en ? 'Already a customer?' : 'Bereits Kunde?' ?> <a href="<?= url($en ? 'en/login' : 'anmelden') ?>"><?= $en ? 'Sign in for a faster checkout' : 'Anmelden für schnelleren Checkout' ?></a> · <a href="<?= url($en ? 'en/register' : 'registrieren') ?>"><?= t('auth.register.title') ?></a></div>
+<?php endif ?>
                     <h2><?= $en ? 'Delivery address' : 'Lieferadresse' ?></h2>
                     <div class="field<?= isset($invalid['name']) ? ' has-error' : '' ?>"><label for="k-name"><?= $en ? 'Full name' : 'Name' ?> *</label><input id="k-name" name="name" value="<?= esc($data['name']) ?>" required></div>
                     <div class="field<?= isset($invalid['email']) ? ' has-error' : '' ?>"><label for="k-email">E-Mail *</label><input id="k-email" type="email" name="email" value="<?= esc($data['email']) ?>" required></div>
                     <div class="field"><label for="k-phone"><?= $en ? 'Phone' : 'Telefon' ?></label><input id="k-phone" name="phone" value="<?= esc($data['phone']) ?>"></div>
                     <div class="field<?= isset($invalid['street']) ? ' has-error' : '' ?>"><label for="k-street"><?= $en ? 'Street & number' : 'Straße & Nr.' ?> *</label><input id="k-street" name="street" value="<?= esc($data['street']) ?>" required></div>
                     <div class="field-row">
-                        <div class="field<?= isset($invalid['zip']) ? ' has-error' : '' ?>"><label for="k-zip"><?= $en ? 'ZIP' : 'PLZ' ?> *</label><input id="k-zip" name="zip" value="<?= esc($data['zip']) ?>" required></div>
-                        <div class="field<?= isset($invalid['city']) ? ' has-error' : '' ?>"><label for="k-city"><?= $en ? 'City' : 'Ort' ?> *</label><input id="k-city" name="city" value="<?= esc($data['city']) ?>" required></div>
+                        <div class="field<?= isset($invalid['zip']) ? ' has-error' : '' ?>"><label for="k-zip"><?= $en ? 'ZIP' : 'PLZ' ?> *</label><input id="k-zip" name="zip" value="<?= esc($data['zip']) ?>" inputmode="numeric" data-zip data-zip-country="de" required></div>
+                        <div class="field<?= isset($invalid['city']) ? ' has-error' : '' ?>"><label for="k-city"><?= $en ? 'City' : 'Ort' ?> *</label><input id="k-city" name="city" value="<?= esc($data['city']) ?>" data-city required></div>
                     </div>
                     <div class="field"><label for="k-country"><?= $en ? 'Country' : 'Land' ?></label><input id="k-country" name="country" value="<?= esc($data['country']) ?>"></div>
 

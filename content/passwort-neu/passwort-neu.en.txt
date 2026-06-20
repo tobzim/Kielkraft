@@ -1,0 +1,13 @@
+Title: New password
+
+----
+
+Slug: new-password
+
+----
+
+Metatitle: New password | Kielkraft
+
+----
+
+Metadescription: Set a new password for your Kielkraft account.

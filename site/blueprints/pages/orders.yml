@@ -7,5 +7,5 @@ sections:
     type: pages
     template: order
     sortBy: date desc
-    info: "{{ page.total }} € · {{ page.status }} · {{ page.customerName }}"
+    info: "{{ page.total }} € · {{ page.orderStatus }} · {{ page.customerName }}"
     empty: Noch keine Bestellungen.

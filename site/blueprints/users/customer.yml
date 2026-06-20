@@ -1,0 +1,36 @@
+title: Kunde
+icon: user
+
+permissions:
+  access:
+    panel: false
+    site: false
+    account: true
+
+columns:
+  - width: 1/2
+    fields:
+      firstname: { label: Vorname, type: text, width: 1/2 }
+      lastname: { label: Nachname, type: text, width: 1/2 }
+      accountType:
+        label: Kundentyp
+        type: select
+        default: private
+        options:
+          private: Privatkunde
+          business: Geschäftskunde
+      company: { label: Firma, type: text }
+      vatId: { label: USt-IdNr., type: text }
+      phone: { label: Telefon, type: tel }
+  - width: 1/2
+    fields:
+      street: { label: Straße & Nr., type: text }
+      zip: { label: PLZ, type: text, width: 1/2 }
+      city: { label: Ort, type: text, width: 1/2 }
+      country: { label: Land, type: text, default: Deutschland }
+      invoiceEligible:
+        label: Kauf auf Rechnung freigeschaltet
+        type: toggle
+        default: false
+        help: Wird nach der ersten zugestellten Bestellung automatisch aktiviert.
+      newsletter: { label: Newsletter, type: toggle, default: false }

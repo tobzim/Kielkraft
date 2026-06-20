@@ -44,6 +44,7 @@ $y    = date('Y');
                 <li><a href="<?= url($en ? 'en/warranty' : 'garantie') ?>"><?= t('product.warranty') ?></a></li>
                 <li><a href="<?= url($en ? 'en/about' : 'ueber-uns') ?>"><?= $en ? 'About us' : 'Über uns' ?></a></li>
                 <li><a href="<?= url($en ? 'en/contact' : 'kontakt') ?>"><?= t('nav.contact') ?></a></li>
+                <li><a href="<?= $kirby->user() ? url($en ? 'en/account' : 'konto') : url($en ? 'en/login' : 'anmelden') ?>"><?= $kirby->user() ? t('account.title') : t('nav.login') ?></a></li>
             </ul>
         </div>
 

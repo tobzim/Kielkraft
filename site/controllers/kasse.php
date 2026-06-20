@@ -6,18 +6,33 @@ return function ($kirby, $page) {
     $code = $kirby->language() ? $kirby->language()->code() : 'de';
     $cart = kk_cart_get();
     $alert = null; $success = false; $orderNumber = null; $invalid = [];
+    $user = $kirby->user();
+    $invoiceOk = $user ? $user->content()->get('invoiceEligible')->toBool() : false;
     $data = [
         'name' => '', 'email' => '', 'phone' => '',
         'street' => '', 'zip' => '', 'city' => '', 'country' => 'Deutschland',
         'payment' => 'vorkasse',
     ];
 
+    // Prefill from the logged-in customer's account on first load.
+    if ($user && !$kirby->request()->is('POST')) {
+        $c = $user->content();
+        $fullName = trim($c->get('firstname') . ' ' . $c->get('lastname'));
+        $data['name']    = $fullName !== '' ? $fullName : (string) $user->name();
+        $data['email']   = (string) $user->email();
+        $data['phone']   = (string) $c->get('phone');
+        $data['street']  = (string) $c->get('street');
+        $data['zip']     = (string) $c->get('zip');
+        $data['city']    = (string) $c->get('city');
+        $data['country'] = (string) $c->get('country')->or('Deutschland');
+    }
+
     if ($kirby->request()->is('POST') && get('submit') !== null) {
         if (csrf(get('csrf')) !== true) {
-            return ['alert' => 'csrf', 'success' => false, 'orderNumber' => null, 'invalid' => [], 'data' => $data, 'cart' => $cart];
+            return ['alert' => 'csrf', 'success' => false, 'orderNumber' => null, 'invalid' => [], 'data' => $data, 'cart' => $cart, 'user' => $user, 'invoiceOk' => $invoiceOk];
         }
         if (empty($cart)) {
-            return ['alert' => 'empty', 'success' => false, 'orderNumber' => null, 'invalid' => [], 'data' => $data, 'cart' => $cart];
+            return ['alert' => 'empty', 'success' => false, 'orderNumber' => null, 'invalid' => [], 'data' => $data, 'cart' => $cart, 'user' => $user, 'invoiceOk' => $invoiceOk];
         }
 
         foreach (array_keys($data) as $k) {
@@ -32,6 +47,10 @@ return function ($kirby, $page) {
         ]);
         if (get('terms') === null) {
             $invalid['terms'] = true;
+        }
+        // Invoice purchase is only valid for unlocked returning customers.
+        if ($data['payment'] === 'rechnung' && !$invoiceOk) {
+            $data['payment'] = 'vorkasse';
         }
 
         if (empty($invalid)) {
@@ -57,7 +76,7 @@ return function ($kirby, $page) {
                         'title'         => $orderNumber,
                         'orderNumber'   => $orderNumber,
                         'date'          => date('Y-m-d H:i:s'),
-                        'status'        => 'new',
+                        'orderStatus'   => 'new',
                         'paymentMethod' => $data['payment'],
                         'customerName'  => $data['name'],
                         'customerEmail' => $data['email'],
@@ -99,5 +118,5 @@ return function ($kirby, $page) {
         }
     }
 
-    return compact('alert', 'success', 'orderNumber', 'invalid', 'data', 'cart');
+    return compact('alert', 'success', 'orderNumber', 'invalid', 'data', 'cart', 'user', 'invoiceOk');
 };

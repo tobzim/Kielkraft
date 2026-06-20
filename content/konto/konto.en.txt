@@ -1,0 +1,13 @@
+Title: My account
+
+----
+
+Slug: account
+
+----
+
+Metatitle: My account | Kielkraft
+
+----
+
+Metadescription: Your orders, address details and account settings at Kielkraft.

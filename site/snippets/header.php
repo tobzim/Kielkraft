@@ -7,7 +7,7 @@ if (headers_sent() === false) {
         . "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; "
         . "font-src 'self'; style-src 'self' 'unsafe-inline'; "
         . "script-src 'self' https://www.googletagmanager.com; "
-        . "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; "
+        . "connect-src 'self' https://api.zippopotam.us https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; "
         . "frame-src https://www.googletagmanager.com");
 }
 $lang = $kirby->language();
@@ -25,6 +25,8 @@ $navGuide = $u('ratgeber', 'guide');
 $navContact = $u('kontakt', 'contact');
 $navCart = $u('warenkorb', 'cart');
 $navAccount = $u('konto', 'account');
+$navLogin = $u('anmelden', 'login');
+$currentUser = $kirby->user();
 
 $catElectric = page('elektro-aussenborder');
 $catPetrol   = page('benzin-aussenborder');
@@ -93,7 +95,7 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
             </form>
 
             <div class="header-actions">
-                <a class="iconlink" href="<?= $navAccount ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span><?= t('nav.account') ?></span></a>
+                <a class="iconlink" href="<?= $currentUser ? $navAccount : $navLogin ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span><?= $currentUser ? esc($currentUser->content()->get('firstname')->or(t('nav.account'))) : t('nav.login') ?></span></a>
                 <a class="cart-btn" href="<?= $navCart ?>">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
                     <span class="cart-btn__meta"><span class="cart-btn__label"><?= t('cart.title') ?></span><span class="cart-btn__total price" data-cart-total><?= mv_eur(kk_cart_subtotal()) ?></span></span>

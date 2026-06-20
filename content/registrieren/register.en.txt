@@ -1,0 +1,13 @@
+Title: Create account
+
+----
+
+Slug: register
+
+----
+
+Metatitle: Create account | Kielkraft
+
+----
+
+Metadescription: Create your Kielkraft account for faster checkout, your order history and invoice purchase as a returning customer.
