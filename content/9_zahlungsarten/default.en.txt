@@ -6,13 +6,41 @@ Slug: payment
 
 ----
 
-Intro: Secure payment with all common methods.
+Intro: Pay securely – with the method that suits you. All prices incl. VAT; freight is shown transparently before you buy.
 
 ----
 
 Text:
 
-PayPal, Klarna, credit card, Apple Pay, Google Pay and SEPA via a secure checkout. Invoice purchase is available for unlocked returning customers.
+## Payment methods you can choose
+
+The following payment methods are available at checkout:
+
+- **Advance payment / bank transfer** – you receive the bank details with your order confirmation by e-mail. We prepare dispatch once payment is received.
+- **Credit card** – Visa, Mastercard, American Express
+- **PayPal**
+- **Klarna** – pay by invoice or in instalments, subject to availability and a credit check by Klarna
+- **Apple Pay** and **Google Pay**
+- **SEPA direct debit**
+- **Invoice purchase** – exclusively for unlocked returning customers (see below)
+
+## Secure processing
+
+Online payments (credit card, PayPal, Klarna, Apple Pay, Google Pay, SEPA) are processed by a certified payment service provider with SSL encryption. Sensitive payment data such as card numbers is handled exclusively by the payment provider and is not stored by us. Depending on the method, the provider’s buyer protection also applies (e.g. PayPal, Klarna).
+
+Please note: we are currently finalising online payment. Until it goes live, we process orders securely by advance payment – you receive the bank details immediately with your order confirmation by e-mail. After your order we confirm payment and the expected delivery date.
+
+## Invoice purchase for returning customers
+
+After your first fully completed order we unlock invoice purchase for your account. From then on you can choose “invoice purchase” at checkout. The payment term is stated on the invoice. You can see your unlock status any time in (link: konto text: My account).
+
+## Due date and retention of title
+
+Unless agreed otherwise, the purchase price is due on conclusion of the contract. The goods remain our property until paid in full (retention of title). Our (link: agb text: terms) are decisive.
+
+## Prices
+
+All prices include statutory VAT. Freight costs are shown transparently in the cart and at checkout before you buy.
 
 ----
 
@@ -20,4 +48,4 @@ Metatitle: Payment methods | Kielkraft
 
 ----
 
-Metadescription: Secure payment with all common methods.
+Metadescription: Payment methods at Kielkraft – advance payment, credit card, PayPal, Klarna, Apple Pay, Google Pay, SEPA and invoice purchase for returning customers. Secure via a certified payment provider.

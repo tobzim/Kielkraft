@@ -125,6 +125,11 @@ return [
         'account.invoice.on'      => 'Invoice purchase enabled',
         'account.invoice.off'     => 'Invoice purchase is enabled after your first completed order.',
         'account.shop'            => 'Continue shopping',
+        'account.benefits.title'  => 'Your benefits with a Kielkraft account',
+        'account.benefits.orders' => 'View your order history and documents any time',
+        'account.benefits.checkout' => 'Faster checkout with saved addresses',
+        'account.benefits.invoice' => 'Invoice purchase for unlocked returning customers',
+        'account.benefits.manage' => 'Manage your profile and addresses in one place',
 
         // Order status labels
         'order.status.new'        => 'Received',

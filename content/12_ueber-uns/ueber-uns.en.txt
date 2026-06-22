@@ -12,11 +12,33 @@ Intro: A specialist for outboard motors – with real product knowledge, honest 
 
 Text:
 
-Kielkraft specialises in outboard motors by Tohatsu (petrol/4-stroke) and ePropulsion (electric). Instead of a cluttered general store we offer a curated selection, deep product knowledge and honest buying advice – so you get exactly the motor that fits your boat and your use.
+Kielkraft specialises in outboard motors by **Tohatsu** (petrol/4-stroke) and **ePropulsion** (electric). Instead of a cluttered general store we offer a curated selection, deep product knowledge and honest buying advice – so you get exactly the motor that fits your boat and your use.
 
-We are the seller and invoicing party; the heavy freight shipment is handled by experienced logistics partners. Warranty, withdrawal and service stay with us – not with the partner. Every unit is official new goods with manufacturer warranty.
+## A brand of Boostboards GmbH & Co. KG
 
-(Placeholder: add company details, team and expertise here.)
+Kielkraft is a brand of **Boostboards GmbH & Co. KG**, based in Hamburg. We combine advice, sales and service around modern boat propulsion – from the quiet electric outboard for tenders, dinghies and lakes to the rugged 4-stroke petrol engine.
+
+## Seller and contact – also after the sale
+
+We are the seller and invoicing party. The heavy freight shipment is handled by experienced logistics partners directly from the warehouse. Important for you: **warranty, withdrawal and service stay with us** – not with the partner. Every unit is official new goods with manufacturer warranty.
+
+## What we stand for
+
+- **Specialisation, not randomness** – two strong brands that we genuinely know.
+- **Honest prices** – transparent freight and final prices, no hidden surcharges, best-price guarantee.
+- **Real reachability** – phone, WhatsApp and e-mail with a clear response time.
+- **Reliability** – official new goods, correct warranty handling, secure payment.
+
+## Company details
+
+**Boostboards GmbH & Co. KG**
+Groten Hoff 21, 22359 Hamburg, Germany
+Represented by: Sebastian Keye
+Register court: Amtsgericht Hamburg, HRA 131421
+VAT ID: DE442130574
+Phone: +49 40 60 90 199 69 · E-mail: info@boostboards.de
+
+You can find the full mandatory details in the (link: impressum text: imprint).
 
 ----
 
@@ -24,4 +46,4 @@ Metatitle: About Kielkraft – outboard specialist | Kielkraft
 
 ----
 
-Metadescription: Kielkraft specialises in Tohatsu and ePropulsion outboards: curated selection, honest advice, transparent freight, real reachability.
+Metadescription: Kielkraft specialises in Tohatsu and ePropulsion outboards and is a brand of Boostboards GmbH & Co. KG (Hamburg): curated selection, honest advice, transparent freight, real reachability.

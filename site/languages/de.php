@@ -125,6 +125,11 @@ return [
         'account.invoice.on'      => 'Kauf auf Rechnung freigeschaltet',
         'account.invoice.off'     => 'Kauf auf Rechnung wird nach deiner ersten abgeschlossenen Bestellung freigeschaltet.',
         'account.shop'            => 'Weiter einkaufen',
+        'account.benefits.title'  => 'Deine Vorteile mit einem Kielkraft-Konto',
+        'account.benefits.orders' => 'Bestellhistorie und Belege jederzeit einsehen',
+        'account.benefits.checkout' => 'Schnellerer Checkout mit gespeicherten Adressen',
+        'account.benefits.invoice' => 'Kauf auf Rechnung für freigeschaltete Bestandskunden',
+        'account.benefits.manage' => 'Profil und Adressen zentral verwalten',
 
         // Order status labels
         'order.status.new'        => 'Eingegangen',

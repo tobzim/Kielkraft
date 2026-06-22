@@ -6,13 +6,45 @@ Slug: shipping
 
 ----
 
-Intro: Shipping and freight – transparent, not hidden.
+Intro: Outboards are bulky goods – we deliver by forwarder and show you the freight costs transparently before you buy. No hidden surcharges.
 
 ----
 
 Text:
 
-Outboards are delivered as bulky freight by forwarder. Placeholder: freight matrix by weight and region plus delivery times. Li-ion batteries (ePropulsion) are dangerous goods and shipped accordingly.
+## Delivery by forwarder
+
+Outboard motors are heavy, bulky goods. We therefore ship them as forwarder freight – securely packed and insured in transit. Small parts and accessories may arrive separately as a parcel.
+
+## Freight costs – transparent, not hidden
+
+Freight depends on the weight and size of the motor and on the delivery region. You see the exact freight cost **before you buy** in the cart and at checkout – including VAT and with no later surcharges.
+
+If you order several items, we charge freight as **one combined delivery** rather than per item. Models we deliver free of freight are marked as “free freight” on the product and in the cart.
+
+## Delivery time
+
+The estimated delivery time is shown on every product page and in your order confirmation. As soon as the shipment leaves our warehouse or logistics partner, you receive a dispatch confirmation. The forwarder then arranges the delivery date with you.
+
+## Forwarder notification and receipt of goods
+
+Before delivery, the forwarder calls you to arrange a date – please provide a reachable phone number. On arrival, check the shipment for visible transport damage and note any damage directly on the delivery receipt. This makes a fast resolution easier.
+
+## Delivery by logistics partners
+
+Kielkraft is the seller and invoicing party. The heavy freight shipment is handled for us by experienced logistics and shipping partners directly from the warehouse. Important for you: warranty, withdrawal and service always stay with us – not with the partner.
+
+## Lithium batteries as dangerous goods
+
+The lithium-ion batteries of the ePropulsion models are classified as dangerous goods (UN 3480/3481). We ship them in compliance with the applicable regulations. This can affect packaging and, in individual cases, the shipping route and transit time. Please follow the transport and storage notes in the user manual.
+
+## Delivery area
+
+We deliver within Germany. Deliveries to other EU countries, to islands or abroad may involve different freight, customs and import costs – please contact us before ordering and we will quote the terms.
+
+## Withdrawal and returns
+
+Your right of withdrawal and the return of bulky goods are governed by the (link: widerruf text: right of withdrawal). The details shown in the cart, at checkout and in our (link: agb text: terms) are decisive for your order.
 
 ----
 
@@ -20,4 +52,4 @@ Metatitle: Shipping & freight | Kielkraft
 
 ----
 
-Metadescription: Shipping and freight – transparent, not hidden.
+Metadescription: Outboard shipping by forwarder – freight transparent before you buy, delivery times, forwarder notification, dangerous-goods battery shipping and delivery areas at Kielkraft.

@@ -1,23 +1,47 @@
-Title: Garantie
+Title: Garantie & Gewährleistung
 
 ----
 
-Intro: Herstellergarantie und Gewährleistung.
+Intro: Offizielle Neuware mit voller Herstellergarantie – plus deine gesetzlichen Rechte. Hier erfährst du, was das konkret für dich bedeutet.
 
 ----
 
 Text:
 
-Platzhalter. Es gelten die jeweils aktuellen Garantiebedingungen von Tohatsu bzw. ePropulsion sowie die gesetzliche Gewährleistung. Alle Geräte sind offizielle Neuware.
+## Deine gesetzlichen Rechte (Gewährleistung)
+
+Unabhängig von jeder Herstellergarantie gilt für alle Geräte die **gesetzliche Gewährleistung von 24 Monaten** ab Erhalt der Ware (Mängelhaftung nach den §§ 434 ff. BGB). Diese Rechte stehen dir immer zu und werden durch eine zusätzliche Herstellergarantie **nicht eingeschränkt**.
+
+## Herstellergarantie – zusätzlich und freiwillig
+
+Zusätzlich zur Gewährleistung gewähren die Hersteller eine freiwillige Garantie nach ihren jeweils gültigen Garantiebedingungen. Garantiegeber ist der jeweilige Hersteller.
+
+**Tohatsu (Benzin / 4-Takt)**
+Für die private Freizeitnutzung gewährt Tohatsu in Deutschland bis zu **5 Jahre (60 Monate)** Garantie nach Maßgabe seiner Garantiebedingungen. Voraussetzung sind u. a. die ordnungsgemäße Registrierung, die Auslieferungsinspektion sowie die fristgerechte Wartung durch eine autorisierte Tohatsu-Fachwerkstatt gemäß Service-Plan. Bei gewerblicher Nutzung gelten kürzere Fristen.
+
+**ePropulsion (Elektro)**
+ePropulsion gewährt grundsätzlich **24 Monate** Garantie auf Motor und Akku. Für die Spirit-Reihe ist nach kostenloser Registrierung beim Hersteller eine **Verlängerung auf bis zu 5 Jahre** möglich. Es gelten die jeweils aktuellen Garantiebedingungen von ePropulsion.
+
+Die genauen Bedingungen, Fristen, Ausschlüsse und das Vorgehen im Garantiefall ergeben sich aus den Garantieerklärungen der Hersteller, die der Ware beiliegen bzw. auf den Hersteller-Websites veröffentlicht sind.
+
+## So sicherst du dir die volle Garantielaufzeit
+
+1. **Registrieren:** Melde deinen Motor nach dem Kauf beim Hersteller bzw. Importeur an. Wir unterstützen dich dabei und stellen das Garantie- und Inspektionsheft bereit.
+2. **Inspektion & Wartung:** Lass die vorgeschriebene Auslieferungsinspektion und die fälligen Wartungen fristgerecht von einer autorisierten Fachwerkstatt durchführen und im Garantieheft dokumentieren.
+3. **Nachweise aufbewahren:** Bewahre Rechnung, Garantieheft und Servicenachweise gut auf.
+
+## Offizielle Neuware
+
+Alle Motoren sind **offizielle, fabrikneue Ware** aus autorisierten Bezugswegen – die Grundvoraussetzung für die Herstellergarantie. Wir verkaufen keine Grau-Importe.
+
+## Im Garantie- oder Gewährleistungsfall
+
+Melde dich einfach bei uns – über das (link: kontakt text: Kontaktformular), telefonisch oder per E-Mail. Wir klären die Abwicklung gemeinsam und koordinieren mit Hersteller bzw. autorisierter Werkstatt. Gewährleistung, Widerruf und Service liegen bei Kielkraft – nicht beim Logistikpartner.
 
 ----
 
-IsPlaceholder: true
+Metatitle: Garantie & Gewährleistung | Kielkraft
 
 ----
 
-Metatitle: Garantie | Kielkraft
-
-----
-
-Metadescription: Herstellergarantie und Gewährleistung.
+Metadescription: Garantie bei Kielkraft – 24 Monate gesetzliche Gewährleistung plus Herstellergarantie (Tohatsu bis 5 Jahre, ePropulsion bis 5 Jahre nach Registrierung). Offizielle Neuware, faire Abwicklung.

@@ -2,17 +2,45 @@ Title: Versand & Fracht
 
 ----
 
-Intro: Versand und Fracht – transparent statt versteckt.
+Intro: Außenborder sind Sperrgut – wir liefern per Spedition und zeigen dir die Frachtkosten transparent vor dem Kauf. Keine versteckten Aufschläge.
 
 ----
 
 Text:
 
-Außenborder werden als Sperrgut per Spedition geliefert. Platzhalter: Frachtkostenmatrix nach Gewicht und Region sowie Lieferzeiten. Li-Ion-Akkus (ePropulsion) gelten als Gefahrgut und werden gefahrgutkonform versandt.
+## Lieferung per Spedition
 
-----
+Außenbordmotoren sind schwere, sperrige Güter. Wir versenden sie deshalb als Speditionsware – sicher verpackt und transportversichert. Kleinteile und Zubehör können separat als Paketsendung kommen.
 
-IsPlaceholder: true
+## Frachtkosten – transparent statt versteckt
+
+Die Fracht richtet sich nach Gewicht und Größe des Motors sowie nach der Lieferregion. Du siehst die genauen Frachtkosten **vor dem Kauf** im Warenkorb und an der Kasse – inklusive Mehrwertsteuer und ohne nachträgliche Aufschläge.
+
+Bestellst du mehrere Artikel, berechnen wir die Fracht als **eine Sammellieferung** und nicht je Position. Modelle, die wir frachtfrei liefern, sind direkt am Produkt und im Warenkorb als „frachtfrei" ausgewiesen.
+
+## Lieferzeit
+
+Die voraussichtliche Lieferzeit findest du auf jeder Produktseite und in deiner Bestellbestätigung. Sobald die Sendung unser Lager bzw. unseren Logistikpartner verlässt, erhältst du eine Versandbestätigung. Die Spedition stimmt den Liefertermin anschließend mit dir ab.
+
+## Speditionsavis und Warenannahme
+
+Vor der Zustellung meldet sich die Spedition telefonisch zur Terminabsprache – bitte hinterlege eine erreichbare Telefonnummer. Prüfe die Sendung bei Anlieferung auf sichtbare Transportschäden und vermerke etwaige Schäden direkt auf dem Ablieferbeleg. Das erleichtert eine schnelle Abwicklung.
+
+## Lieferung durch Logistikpartner
+
+Kielkraft ist Verkäufer und Rechnungssteller. Die Auslieferung der schweren Speditionsware übernehmen für uns erfahrene Logistik- und Versandpartner direkt ab Lager. Wichtig für dich: Gewährleistung, Widerruf und Service bleiben in jedem Fall bei uns – nicht beim Partner.
+
+## Lithium-Akkus als Gefahrgut
+
+Die Lithium-Ionen-Akkus der ePropulsion-Modelle gelten als Gefahrgut (UN 3480/3481). Wir versenden sie gefahrgutkonform nach den geltenden Vorschriften. Das kann Verpackung und – in Einzelfällen – Versandweg und Laufzeit beeinflussen. Bitte beachte die Hinweise zu Transport und Lagerung in der Bedienungsanleitung.
+
+## Liefergebiet
+
+Wir liefern innerhalb Deutschlands. Lieferungen in weitere EU-Länder, auf Inseln oder ins Ausland können abweichende Fracht-, Zoll- und Einfuhrkosten verursachen – sprich uns dazu bitte vor der Bestellung an, dann nennen wir dir die Konditionen.
+
+## Widerruf und Rücksendung
+
+Dein Widerrufsrecht und die Rücksendung sperriger Ware sind im (link: widerruf text: Widerruf) geregelt. Maßgeblich für deine Bestellung sind die Angaben im Warenkorb, an der Kasse und in unseren (link: agb text: AGB).
 
 ----
 
@@ -20,4 +48,4 @@ Metatitle: Versand & Fracht | Kielkraft
 
 ----
 
-Metadescription: Versand und Fracht – transparent statt versteckt.
+Metadescription: Außenborder-Versand per Spedition – Frachtkosten transparent vor dem Kauf, Lieferzeiten, Speditionsavis, gefahrgutkonformer Akku-Versand und Liefergebiete bei Kielkraft.

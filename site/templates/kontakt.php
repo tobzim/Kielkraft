@@ -11,6 +11,12 @@ $en   = $code === 'en';
                 <span class="eyebrow"><?= t('nav.contact') ?></span>
                 <h1><?= $page->title() ?></h1>
                 <p class="section__lead"><?= $page->intro() ?></p>
+                <ul class="contact-help">
+                    <li><?= $en ? 'Model choice & shaft length (S/L/UL)' : 'Modellwahl & Schaftlänge (S/L/UL)' ?></li>
+                    <li><?= $en ? 'Electric vs. petrol, range & power' : 'Elektro vs. Benzin, Reichweite & Leistung' ?></li>
+                    <li><?= $en ? 'Delivery time, freight & best-price guarantee' : 'Lieferzeit, Fracht & Tiefpreis-Garantie' ?></li>
+                    <li><?= $en ? 'Warranty, registration & service' : 'Garantie, Registrierung & Service' ?></li>
+                </ul>
 
 <?php if ($success): ?>
                 <div class="form-alert form-alert--ok"><?= $en ? 'Thank you! Your message has been sent.' : 'Danke! Deine Nachricht wurde gesendet. Wir melden uns zeitnah.' ?></div>
@@ -61,8 +67,9 @@ $en   = $code === 'en';
                     <li><strong>WhatsApp</strong><a href="https://wa.me/4940609019969" rel="nofollow">+49 40 60 90 199 69</a></li>
                     <li><strong>E-Mail</strong><a href="mailto:info@boostboards.de">info@boostboards.de</a></li>
                     <li><strong><?= $en ? 'Address' : 'Anschrift' ?></strong>Boostboards GmbH &amp; Co. KG<br>Groten Hoff 21<br>22359 Hamburg</li>
+                    <li><strong><?= $en ? 'Response time' : 'Reaktionszeit' ?></strong><?= $en ? 'Usually within one working day' : 'In der Regel innerhalb eines Werktags' ?></li>
                 </ul>
-                <p class="contact-note"><?= $en ? 'Kielkraft is a brand of Boostboards GmbH & Co. KG.' : 'Kielkraft ist eine Marke der Boostboards GmbH & Co. KG.' ?></p>
+                <p class="contact-note"><?= $en ? 'Kielkraft is a brand of Boostboards GmbH & Co. KG.' : 'Kielkraft ist eine Marke der Boostboards GmbH & Co. KG.' ?> <a href="<?= url($en ? 'en/imprint' : 'impressum') ?>"><?= t('footer.imprint') ?></a></p>
             </aside>
         </div>
     </div>

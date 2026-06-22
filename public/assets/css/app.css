@@ -676,6 +676,25 @@
 .checkout-account a { font-weight: 700; }
 .checkout-account--in { background: #f3fbf6; border-color: #b6e3c9; color: #146c43; }
 .checkout-account--in a { color: #146c43; text-decoration: underline; }
+
+/* Contact help topics */
+.contact-help { list-style: none; margin: var(--sp-4) 0 0; display: grid; gap: 8px; }
+.contact-help li { position: relative; padding-left: 26px; color: var(--body); font-size: var(--fs-200); }
+.contact-help li::before { content: ""; position: absolute; left: 0; top: 3px; width: 16px; height: 16px;
+    background: var(--green); border-radius: 50%;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/12px no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/12px no-repeat; }
+
+/* Login: account benefits */
+.auth-benefits { max-width: 520px; margin: var(--sp-5) auto 0; padding: var(--sp-5);
+    background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r-md); }
+.auth-benefits h2 { font-size: var(--fs-300); margin-bottom: var(--sp-3); }
+.auth-benefits ul { list-style: none; display: grid; gap: 10px; }
+.auth-benefits li { position: relative; padding-left: 26px; color: var(--body); font-size: var(--fs-200); }
+.auth-benefits li::before { content: ""; position: absolute; left: 0; top: 3px; width: 16px; height: 16px;
+    background: var(--navy); border-radius: 50%;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/12px no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/12px no-repeat; }
 .account-summary { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: var(--sp-5); }
 .account-summary h3 { font-size: var(--fs-300); margin-bottom: var(--sp-3); }
 .account-summary address { font-style: normal; line-height: 1.7; color: var(--body); }

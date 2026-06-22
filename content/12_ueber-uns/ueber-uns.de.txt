@@ -8,15 +8,33 @@ Intro: Spezialist für Außenbordmotoren – mit echter Produktkenntnis, ehrlich
 
 Text:
 
-Kielkraft ist auf Außenbordmotoren von Tohatsu (Benzin/4-Takt) und ePropulsion (Elektro) spezialisiert. Statt eines unübersichtlichen Gemischtwarenladens bieten wir eine kuratierte Auswahl, tiefe Produktkenntnis und eine ehrliche Kaufberatung – damit du genau den Motor bekommst, der zu deinem Boot und deinem Einsatz passt.
+Kielkraft ist auf Außenbordmotoren von **Tohatsu** (Benzin/4-Takt) und **ePropulsion** (Elektro) spezialisiert. Statt eines unübersichtlichen Gemischtwarenladens bieten wir eine kuratierte Auswahl, tiefe Produktkenntnis und eine ehrliche Kaufberatung – damit du genau den Motor bekommst, der zu deinem Boot und deinem Einsatz passt.
 
-Wir sind Verkäufer und Rechnungssteller; die Auslieferung der schweren Speditionsware übernehmen erfahrene Logistikpartner. Gewährleistung, Widerruf und Service liegen bei uns – nicht beim Partner. Alle Geräte sind offizielle Neuware mit Herstellergarantie.
+## Eine Marke der Boostboards GmbH & Co. KG
 
-(Platzhalter: Firmenangaben, Team und Expertise hier ergänzen.)
+Kielkraft ist eine Marke der **Boostboards GmbH & Co. KG** mit Sitz in Hamburg. Wir bündeln Beratung, Verkauf und Service rund um moderne Bootsantriebe – vom leisen Elektro-Außenborder für Tender, Dinghy und Seen bis zum robusten 4-Takt-Benziner.
 
-----
+## Verkäufer und Ansprechpartner – auch nach dem Kauf
 
-IsPlaceholder: true
+Wir sind Verkäufer und Rechnungssteller. Die Auslieferung der schweren Speditionsware übernehmen erfahrene Logistikpartner direkt ab Lager. Wichtig für dich: **Gewährleistung, Widerruf und Service bleiben bei uns** – nicht beim Partner. Alle Geräte sind offizielle Neuware mit Herstellergarantie.
+
+## Wofür wir stehen
+
+- **Spezialisierung statt Beliebigkeit** – zwei starke Marken, die wir wirklich kennen.
+- **Ehrliche Preise** – transparente Fracht- und Endpreise, keine versteckten Aufschläge, Tiefpreis-Garantie.
+- **Echte Erreichbarkeit** – Telefon, WhatsApp und E-Mail mit klarer Reaktionszeit.
+- **Verlässlichkeit** – offizielle Neuware, korrekte Garantieabwicklung, sichere Zahlung.
+
+## Unternehmensangaben
+
+**Boostboards GmbH & Co. KG**
+Groten Hoff 21, 22359 Hamburg
+Vertreten durch: Sebastian Keye
+Registergericht: Amtsgericht Hamburg, HRA 131421
+USt-IdNr.: DE442130574
+Telefon: +49 40 60 90 199 69 · E-Mail: info@boostboards.de
+
+Die vollständigen Pflichtangaben findest du im (link: impressum text: Impressum).
 
 ----
 
@@ -24,4 +42,4 @@ Metatitle: Über Kielkraft – Spezialist für Außenborder | Kielkraft
 
 ----
 
-Metadescription: Kielkraft ist Spezialist für Tohatsu- und ePropulsion-Außenborder: kuratierte Auswahl, ehrliche Beratung, transparente Fracht, echte Erreichbarkeit.
+Metadescription: Kielkraft ist Spezialist für Tohatsu- und ePropulsion-Außenborder und eine Marke der Boostboards GmbH & Co. KG (Hamburg): kuratierte Auswahl, ehrliche Beratung, transparente Fracht, echte Erreichbarkeit.

@@ -2,17 +2,41 @@ Title: Zahlungsarten
 
 ----
 
-Intro: Sichere Zahlung mit allen gängigen Methoden.
+Intro: Sicher bezahlen – mit der Methode, die zu dir passt. Alle Preise inkl. MwSt., die Frachtkosten siehst du transparent vor dem Kauf.
 
 ----
 
 Text:
 
-PayPal, Klarna, Kreditkarte, Apple Pay, Google Pay und SEPA über einen sicheren Checkout. Kauf auf Rechnung ist für freigeschaltete Bestandskunden verfügbar.
+## Diese Zahlarten kannst du wählen
 
-----
+An der Kasse stehen dir folgende Zahlungsarten zur Verfügung:
 
-IsPlaceholder: true
+- **Vorkasse / Überweisung** – du erhältst die Bankverbindung mit der Bestellbestätigung per E-Mail. Nach Zahlungseingang bereiten wir den Versand vor.
+- **Kreditkarte** – Visa, Mastercard, American Express
+- **PayPal**
+- **Klarna** – Rechnung oder Ratenkauf nach Verfügbarkeit und Bonitätsprüfung von Klarna
+- **Apple Pay** und **Google Pay**
+- **SEPA-Lastschrift**
+- **Kauf auf Rechnung** – exklusiv für freigeschaltete Bestandskunden (siehe unten)
+
+## Sichere Abwicklung
+
+Die Online-Zahlungen (Kreditkarte, PayPal, Klarna, Apple Pay, Google Pay, SEPA) werden über einen zertifizierten Zahlungsdienstleister mit SSL-Verschlüsselung abgewickelt. Sensible Zahlungsdaten wie Kartennummern werden ausschließlich beim Zahlungsdienstleister verarbeitet und nicht bei uns gespeichert. Je nach Methode greift zusätzlich der Käuferschutz des Anbieters (z. B. PayPal, Klarna).
+
+Hinweis: Wir richten die Online-Zahlung gerade final ein. Bis zur Freischaltung wickeln wir Bestellungen sicher per Vorkasse ab – die Bankverbindung erhältst du sofort mit der Bestellbestätigung per E-Mail. Nach deiner Bestellung bestätigen wir dir Zahlung und voraussichtlichen Liefertermin.
+
+## Kauf auf Rechnung für Bestandskunden
+
+Nach deiner ersten vollständig abgeschlossenen Bestellung schalten wir den Kauf auf Rechnung für dein Konto frei. Ab dann kannst du an der Kasse „Kauf auf Rechnung" wählen. Das Zahlungsziel ist auf der Rechnung angegeben. Den Freischaltstatus siehst du jederzeit in (link: konto text: Mein Konto).
+
+## Fälligkeit und Eigentumsvorbehalt
+
+Soweit nichts anderes vereinbart ist, ist der Kaufpreis mit Vertragsschluss fällig. Die Ware bleibt bis zur vollständigen Bezahlung unser Eigentum (Eigentumsvorbehalt). Maßgeblich sind unsere (link: agb text: AGB).
+
+## Preise
+
+Alle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer. Die Frachtkosten weisen wir vor dem Kauf transparent im Warenkorb und an der Kasse aus.
 
 ----
 
@@ -20,4 +44,4 @@ Metatitle: Zahlungsarten | Kielkraft
 
 ----
 
-Metadescription: Sichere Zahlung mit allen gängigen Methoden.
+Metadescription: Zahlungsarten bei Kielkraft – Vorkasse, Kreditkarte, PayPal, Klarna, Apple Pay, Google Pay, SEPA und Kauf auf Rechnung für Bestandskunden. Sicher über zertifizierten Zahlungsdienstleister.

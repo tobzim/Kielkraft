@@ -40,6 +40,16 @@ $en   = $code === 'en';
 
             <p class="auth-card__alt"><?= t('auth.login.no_account') ?> <a href="<?= url($en ? 'en/register' : 'registrieren') ?>"><?= t('auth.login.register_now') ?></a></p>
         </div>
+
+        <div class="auth-benefits">
+            <h2><?= t('account.benefits.title') ?></h2>
+            <ul>
+                <li><?= t('account.benefits.orders') ?></li>
+                <li><?= t('account.benefits.checkout') ?></li>
+                <li><?= t('account.benefits.invoice') ?></li>
+                <li><?= t('account.benefits.manage') ?></li>
+            </ul>
+        </div>
     </div>
 </section>
 

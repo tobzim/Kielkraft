@@ -1,4 +1,4 @@
-Title: Warranty
+Title: Warranty & guarantee
 
 ----
 
@@ -6,18 +6,46 @@ Slug: warranty
 
 ----
 
-Intro: Manufacturer warranty and statutory warranty.
+Intro: Official new goods with full manufacturer warranty – plus your statutory rights. Here is what that means for you in practice.
 
 ----
 
 Text:
 
-Placeholder. The current warranty terms of Tohatsu or ePropulsion apply, plus the statutory warranty. All units are official new goods.
+## Your statutory rights
+
+Independently of any manufacturer warranty, the **statutory warranty of 24 months** from receipt of the goods applies to all units (liability for defects under German law, §§ 434 ff. BGB). These rights are always available to you and are **not limited** by any additional manufacturer guarantee.
+
+## Manufacturer guarantee – additional and voluntary
+
+In addition to your statutory rights, the manufacturers grant a voluntary guarantee under their respective current guarantee terms. The guarantor is the respective manufacturer.
+
+**Tohatsu (petrol / 4-stroke)**
+For private recreational use, Tohatsu grants up to **5 years (60 months)** of warranty in Germany under its guarantee terms. Conditions include proper registration, the delivery inspection and on-time servicing by an authorised Tohatsu workshop according to the service plan. Shorter periods apply to commercial use.
+
+**ePropulsion (electric)**
+ePropulsion generally grants **24 months** of warranty on motor and battery. For the Spirit range, an **extension to up to 5 years** is possible after free registration with the manufacturer. The respective current ePropulsion guarantee terms apply.
+
+The exact terms, periods, exclusions and the procedure in a warranty case follow from the manufacturers’ guarantee statements, which are enclosed with the goods or published on the manufacturers’ websites.
+
+## How to secure the full warranty period
+
+1. **Register:** register your motor with the manufacturer or importer after purchase. We support you with this and provide the warranty and inspection booklet.
+2. **Inspection & servicing:** have the required delivery inspection and the due services carried out on time by an authorised workshop and documented in the warranty booklet.
+3. **Keep your records:** keep your invoice, warranty booklet and service records safe.
+
+## Official new goods
+
+All motors are **official, brand-new goods** from authorised supply channels – the basic requirement for the manufacturer warranty. We do not sell grey imports.
+
+## In a warranty or guarantee case
+
+Just get in touch – via the (link: kontakt text: contact form), by phone or by e-mail. We sort out the process together and coordinate with the manufacturer or authorised workshop. Warranty, withdrawal and service stay with Kielkraft – not with the logistics partner.
 
 ----
 
-Metatitle: Warranty | Kielkraft
+Metatitle: Warranty & guarantee | Kielkraft
 
 ----
 
-Metadescription: Manufacturer warranty and statutory warranty.
+Metadescription: Warranty at Kielkraft – 24 months statutory warranty plus manufacturer guarantee (Tohatsu up to 5 years, ePropulsion up to 5 years after registration). Official new goods, fair handling.
