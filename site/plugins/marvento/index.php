@@ -172,6 +172,47 @@ if (!function_exists('kk_related_products')) {
     }
 }
 
+/** Branded customer e-mail on order status change (paid / shipped / delivered). */
+if (!function_exists('kk_send_order_status_mail')) {
+    function kk_send_order_status_mail($order, string $status): void
+    {
+        $email = (string) $order->customerEmail();
+        if ($email === '') { return; }
+        $map = [
+            'paid'      => ['Zahlungseingang bestätigt', 'wir haben deine Zahlung erhalten und bereiten den Versand vor. Du erhältst eine Versandbestätigung, sobald deine Bestellung unterwegs ist.'],
+            'shipped'   => ['Deine Bestellung ist unterwegs', 'gute Nachrichten – deine Bestellung wurde versendet. Die Spedition meldet sich zur Terminabsprache.'],
+            'delivered' => ['Deine Bestellung wurde zugestellt', 'deine Bestellung wurde zugestellt. Wir wünschen dir viel Freude auf dem Wasser! Bei Fragen zu Garantie oder Service sind wir für dich da.'],
+        ];
+        if (!isset($map[$status])) { return; }
+        [$heading, $intro] = $map[$status];
+
+        $orderNo  = (string) $order->content()->get('orderNumber')->or($order->title());
+        $name     = (string) $order->customerName();
+        $fn       = strtok(trim($name), ' ') ?: $name;
+        $tracking = (string) $order->content()->get('tracking');
+
+        $html = '<p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:#3a4a5c;">Hallo ' . esc($fn) . ', ' . esc($intro) . '</p>'
+            . kk_email_panel('<strong>Bestellnummer:</strong> ' . esc($orderNo)
+                . ($status === 'shipped' && $tracking !== '' ? '<br><strong>Sendungsnummer:</strong> ' . esc($tracking) : ''))
+            . kk_email_button('Bestellung im Konto ansehen', url('konto'));
+
+        try {
+            kirby()->email([
+                'to'       => $email,
+                'from'     => option('kielkraft.mailFrom', 'info@boostboards.de'),
+                'fromName' => option('kielkraft.mailFromName', 'Kielkraft'),
+                'subject'  => 'Kielkraft – ' . $heading . ' (' . $orderNo . ')',
+                'body'     => [
+                    'html' => kk_email_shell($heading, $html, $heading),
+                    'text' => "Hallo $fn,\n\n$intro\n\nBestellnummer: $orderNo"
+                        . ($status === 'shipped' && $tracking !== '' ? "\nSendungsnummer: $tracking" : '')
+                        . "\n\nKielkraft",
+                ],
+            ]);
+        } catch (Throwable $e) { /* non-critical */ }
+    }
+}
+
 /* ---------------------------------------------------------------------------
  * Session cart (lightweight; no commercial shop plugin required yet)
  * ------------------------------------------------------------------------- */
@@ -462,16 +503,29 @@ Kirby::plugin('kielkraft/core', [
     ],
 
     'hooks' => [
-        // Auto-unlock "Kauf auf Rechnung" once a customer's order is set to delivered.
-        'page.update:after' => function ($newPage) {
+        // On order status change: notify the customer + unlock invoice purchase on delivery.
+        'page.update:after' => function ($newPage, $oldPage) {
             if ($newPage->intendedTemplate()->name() !== 'order') { return; }
-            if ((string) $newPage->content()->get('orderStatus') !== 'delivered') { return; }
-            $email = (string) $newPage->customerEmail();
-            if ($email === '') { return; }
-            $user = kirby()->users()->findBy('email', $email);
-            if ($user && $user->invoiceEligible()->toBool() === false) {
-                kirby()->impersonate('kirby');
-                $user->update(['invoiceEligible' => 'true']);
+            $new = (string) $newPage->content()->get('orderStatus');
+            $old = $oldPage ? (string) $oldPage->content()->get('orderStatus') : '';
+            if ($new === $old) { return; }   // only on a real status change
+
+            // Branded status e-mail to the customer
+            if (in_array($new, ['paid', 'shipped', 'delivered'], true)) {
+                kk_send_order_status_mail($newPage, $new);
+            }
+
+            // Auto-unlock "Kauf auf Rechnung" once the order is delivered
+            if ($new === 'delivered') {
+                $email = (string) $newPage->customerEmail();
+                if ($email !== '') {
+                    $user = kirby()->users()->findBy('email', $email);
+                    if ($user && $user->invoiceEligible()->toBool() === false) {
+                        kirby()->impersonate('kirby');
+                        $user->update(['invoiceEligible' => 'true']);
+                        kirby()->impersonate(null);
+                    }
+                }
             }
         },
     ],
