@@ -92,17 +92,79 @@ return function ($kirby, $page) {
                     ],
                 ]);
 
+                $en = $code === 'en';
+                $payLabels = [
+                    'vorkasse'    => $en ? 'Bank transfer (advance)' : 'Vorkasse / Überweisung',
+                    'paypal'      => 'PayPal',
+                    'klarna'      => 'Klarna',
+                    'kreditkarte' => $en ? 'Credit card' : 'Kreditkarte',
+                    'sepa'        => 'SEPA-Lastschrift',
+                    'rechnung'    => $en ? 'Invoice purchase' : 'Kauf auf Rechnung',
+                ];
+                $payLabel = $payLabels[$data['payment']] ?? $data['payment'];
+                $fn = strtok(trim($data['name']), ' ') ?: $data['name'];
+
+                // Plain-text fallback part (multipart e-mail)
                 $body = "Bestellnummer: $orderNumber\n\n$lines\nZwischensumme: " . mv_eur($sub, $code)
                     . "\nFracht: " . mv_eur($ship, $code) . "\nGesamt: " . mv_eur($total, $code)
-                    . "\n\nZahlart: " . $data['payment']
+                    . "\n\nZahlart: " . $payLabel
                     . "\n\n" . $data['name'] . "\n" . $data['street'] . "\n" . $data['zip'] . ' ' . $data['city'] . "\n" . $data['country']
                     . ($data['phone'] ? "\nTel: " . $data['phone'] : '');
 
-                $from  = option('kielkraft.mailFrom', 'info@boostboards.de');
-                $inbox = option('kielkraft.contactTo', 'info@boostboards.de');
+                // Branded HTML parts
+                $rows = '';
+                foreach ($items as $it) {
+                    $nm = esc($it['title']) . ($it['variant'] ? ' <span style="color:#6b7c8c;">(' . esc($it['variant']) . ')</span>' : '');
+                    $rows .= '<tr><td style="border-top:1px solid #edf1f5;padding:9px 0;font-size:14px;color:#16263a;">' . (int) $it['qty'] . '&times; ' . $nm
+                        . '</td><td align="right" style="border-top:1px solid #edf1f5;padding:9px 0;font-size:14px;color:#16263a;white-space:nowrap;">' . mv_eur($it['price'] * $it['qty'], $code) . '</td></tr>';
+                }
+                $itemsTable = '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;">'
+                    . $rows
+                    . '<tr><td style="border-top:2px solid #e1e8ee;padding:10px 0 2px;font-size:13px;color:#6b7c8c;">' . ($en ? 'Subtotal' : 'Zwischensumme') . '</td><td align="right" style="border-top:2px solid #e1e8ee;padding:10px 0 2px;font-size:13px;color:#6b7c8c;">' . mv_eur($sub, $code) . '</td></tr>'
+                    . '<tr><td style="padding:2px 0;font-size:13px;color:#6b7c8c;">' . ($en ? 'Freight' : 'Fracht') . '</td><td align="right" style="padding:2px 0;font-size:13px;color:#6b7c8c;">' . ($ship > 0 ? mv_eur($ship, $code) : ($en ? 'free' : 'frachtfrei')) . '</td></tr>'
+                    . '<tr><td style="padding:5px 0 0;font-size:16px;font-weight:800;color:#16263a;">' . ($en ? 'Total' : 'Gesamt') . '</td><td align="right" style="padding:5px 0 0;font-size:16px;font-weight:800;color:#16263a;">' . mv_eur($total, $code) . '</td></tr>'
+                    . '</table>';
+                $addr = esc($data['name']) . '<br>' . esc($data['street']) . '<br>' . esc($data['zip']) . ' ' . esc($data['city']) . '<br>' . esc($data['country']) . ($data['phone'] ? '<br>Tel: ' . esc($data['phone']) : '');
+                $badge = '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 18px;"><tr><td style="background:#eef4fb;border:1px solid #d7e6f5;border-radius:8px;padding:8px 14px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0f4e97;">' . ($en ? 'Order number' : 'Bestellnummer') . ': <strong>' . esc($orderNumber) . '</strong></td></tr></table>';
+                $nextStep = $data['payment'] === 'vorkasse'
+                    ? ($en ? 'For advance payment you will receive the bank details in a separate e-mail. We prepare dispatch once payment is received.' : 'Bei Vorkasse erhältst du die Bankverbindung in einer separaten E-Mail. Nach Zahlungseingang bereiten wir den Versand vor.')
+                    : ($en ? 'We will confirm payment and the expected delivery date shortly.' : 'Wir bestätigen dir Zahlung und voraussichtlichen Liefertermin in Kürze.');
+                $btn = $user
+                    ? kk_email_button($en ? 'View order in your account' : 'Bestellung im Konto ansehen', url($en ? 'en/account' : 'konto'))
+                    : kk_email_button($en ? 'Continue to the shop' : 'Weiter zum Shop', url($en ? 'en' : ''));
+
+                $custHtml = '<p style="margin:0 0 16px;font-size:15px;line-height:1.6;color:#3a4a5c;">'
+                    . ($en ? 'Hello ' : 'Hallo ') . esc($fn)
+                    . ($en ? ', thank you for your order at Kielkraft. We have received it and will be in touch with the payment or dispatch confirmation.' : ', vielen Dank für deine Bestellung bei Kielkraft. Wir haben sie erhalten und melden uns mit der Zahlungs- bzw. Versandbestätigung.')
+                    . '</p>' . $badge
+                    . '<p style="margin:16px 0 4px;font-size:13px;font-weight:700;color:#16263a;">' . ($en ? 'Your order' : 'Deine Bestellung') . '</p>'
+                    . $itemsTable
+                    . kk_email_panel('<strong>' . ($en ? 'Payment' : 'Zahlart') . ':</strong> ' . esc($payLabel) . '<br><strong>' . ($en ? 'Delivery address' : 'Lieferadresse') . ':</strong><br>' . $addr)
+                    . '<p style="margin:4px 0 0;font-size:14px;line-height:1.6;color:#3a4a5c;">' . $nextStep . '</p>'
+                    . $btn;
+
+                $shopHtml = '<p style="margin:0 0 16px;font-size:15px;line-height:1.6;color:#3a4a5c;">Es ist eine neue Bestellung eingegangen.</p>' . $badge
+                    . kk_email_panel('<strong>Kunde:</strong> ' . esc($data['name']) . '<br><strong>E-Mail:</strong> ' . esc($data['email']) . ($data['phone'] ? '<br><strong>Tel:</strong> ' . esc($data['phone']) : '') . '<br><strong>Lieferadresse:</strong><br>' . esc($data['street']) . ', ' . esc($data['zip']) . ' ' . esc($data['city']) . ', ' . esc($data['country']) . '<br><strong>Zahlart:</strong> ' . esc($payLabel))
+                    . '<p style="margin:16px 0 4px;font-size:13px;font-weight:700;color:#16263a;">Positionen</p>'
+                    . $itemsTable;
+
+                $from     = option('kielkraft.mailFrom', 'info@boostboards.de');
+                $fromName = option('kielkraft.mailFromName', 'Kielkraft');
+                $inbox    = option('kielkraft.contactTo', 'info@boostboards.de');
                 try {
-                    $kirby->email(['to' => $data['email'], 'from' => $from, 'replyTo' => $inbox, 'subject' => 'Kielkraft – Bestellbestätigung ' . $orderNumber, 'body' => "Vielen Dank für deine Bestellung bei Kielkraft.\n\n" . $body]);
-                    $kirby->email(['to' => $inbox, 'from' => $from, 'replyTo' => $data['email'], 'subject' => 'Neue Bestellung ' . $orderNumber, 'body' => $body]);
+                    $kirby->email([
+                        'to' => $data['email'], 'from' => $from, 'fromName' => $fromName, 'replyTo' => $inbox,
+                        'subject' => ($en ? 'Kielkraft – order confirmation ' : 'Kielkraft – Bestellbestätigung ') . $orderNumber,
+                        'body' => [
+                            'html' => kk_email_shell($en ? 'Thank you for your order!' : 'Vielen Dank für deine Bestellung!', $custHtml, ($en ? 'Order ' : 'Bestellung ') . $orderNumber),
+                            'text' => ($en ? "Thank you for your order at Kielkraft.\n\n" : "Vielen Dank für deine Bestellung bei Kielkraft.\n\n") . $body,
+                        ],
+                    ]);
+                    $kirby->email([
+                        'to' => $inbox, 'from' => $from, 'fromName' => $fromName, 'replyTo' => $data['email'],
+                        'subject' => 'Neue Bestellung ' . $orderNumber,
+                        'body' => ['html' => kk_email_shell('Neue Bestellung ' . $orderNumber, $shopHtml), 'text' => $body],
+                    ]);
                 } catch (Throwable $mailEx) {
                     // order is placed even if mail fails; mail is retried/handled by the shop
                 }

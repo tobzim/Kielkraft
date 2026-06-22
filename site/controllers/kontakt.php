@@ -34,15 +34,20 @@ return function ($kirby, $page) {
             try {
                 $inbox = option('kielkraft.contactTo', 'info@boostboards.de');
                 $from  = option('kielkraft.mailFrom', 'info@boostboards.de');
+                $html = kk_email_panel('<strong>Name:</strong> ' . esc($data['name'])
+                        . '<br><strong>E-Mail:</strong> ' . esc($data['email'])
+                        . ($data['subject'] !== '' ? '<br><strong>Betreff:</strong> ' . esc($data['subject']) : ''))
+                    . '<p style="margin:8px 0 0;font-size:14px;line-height:1.7;color:#16263a;white-space:pre-line;">' . esc($data['message']) . '</p>';
                 $kirby->email([
-                    'to'      => $inbox,
-                    'from'    => $from,
-                    'replyTo' => $data['email'],
-                    'subject' => 'Kontaktanfrage: ' . ($data['subject'] !== '' ? $data['subject'] : 'Kielkraft'),
-                    'body'    => "Name: {$data['name']}\n" .
-                                 "E-Mail: {$data['email']}\n" .
-                                 "Betreff: {$data['subject']}\n\n" .
-                                 "{$data['message']}\n",
+                    'to'       => $inbox,
+                    'from'     => $from,
+                    'fromName' => option('kielkraft.mailFromName', 'Kielkraft'),
+                    'replyTo'  => $data['email'],
+                    'subject'  => 'Kontaktanfrage: ' . ($data['subject'] !== '' ? $data['subject'] : 'Kielkraft'),
+                    'body'     => [
+                        'html' => kk_email_shell('Neue Kontaktanfrage', $html),
+                        'text' => "Name: {$data['name']}\nE-Mail: {$data['email']}\nBetreff: {$data['subject']}\n\n{$data['message']}\n",
+                    ],
                 ]);
                 $success = true;
                 $data = ['name' => '', 'email' => '', 'subject' => '', 'message' => ''];

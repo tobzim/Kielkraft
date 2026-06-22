@@ -38,6 +38,66 @@ if (!function_exists('mv_asset')) {
 }
 
 /* ---------------------------------------------------------------------------
+ * Transactional e-mail building blocks (CI-branded, email-client safe:
+ * table layout, inline styles, web-safe fonts, light background)
+ * ------------------------------------------------------------------------- */
+if (!function_exists('kk_email_shell')) {
+    function kk_email_shell(string $heading, string $bodyHtml, string $preheader = ''): string
+    {
+        $imp = url('impressum'); $dat = url('datenschutz'); $agb = url('agb');
+        $pre = $preheader !== ''
+            ? '<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;opacity:0;">' . htmlspecialchars($preheader) . '</div>'
+            : '';
+        return <<<HTML
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="x-apple-disable-message-reformatting"></head>
+<body style="margin:0;padding:0;background:#eef2f6;">
+$pre
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef2f6;"><tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;background:#ffffff;border:1px solid #e1e8ee;border-radius:12px;overflow:hidden;">
+<tr><td style="background:#0B2F55;padding:20px 28px;">
+<span style="font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.5px;color:#ffffff;">Kielkraft<sup style="font-size:11px;font-weight:700;">&trade;</sup></span>
+</td></tr>
+<tr><td style="padding:30px 28px 6px;font-family:Arial,Helvetica,sans-serif;">
+<h1 style="margin:0 0 14px;font-size:21px;line-height:1.3;color:#16263a;font-weight:800;">$heading</h1>
+$bodyHtml
+</td></tr>
+<tr><td style="padding:22px 28px 30px;font-family:Arial,Helvetica,sans-serif;">
+<div style="border-top:1px solid #edf1f5;padding-top:16px;">
+<p style="margin:0 0 6px;font-size:12px;line-height:1.6;color:#6b7c8c;">Kielkraft ist eine Marke der Boostboards GmbH &amp; Co. KG &middot; Groten Hoff 21 &middot; 22359 Hamburg</p>
+<p style="margin:0 0 6px;font-size:12px;line-height:1.6;color:#6b7c8c;">Tel: +49 40 60 90 199 69 &middot; <a href="mailto:info@boostboards.de" style="color:#0f4e97;text-decoration:none;">info@boostboards.de</a></p>
+<p style="margin:0;font-size:12px;line-height:1.6;color:#6b7c8c;"><a href="$imp" style="color:#0f4e97;text-decoration:none;">Impressum</a> &middot; <a href="$dat" style="color:#0f4e97;text-decoration:none;">Datenschutz</a> &middot; <a href="$agb" style="color:#0f4e97;text-decoration:none;">AGB</a></p>
+</div>
+</td></tr>
+</table>
+</td></tr></table>
+</body></html>
+HTML;
+    }
+}
+
+if (!function_exists('kk_email_button')) {
+    function kk_email_button(string $label, string $href): string
+    {
+        $href = htmlspecialchars($href, ENT_QUOTES);
+        return '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:20px 0 6px;"><tr>'
+            . '<td style="border-radius:8px;background:#0B2F55;"><a href="' . $href . '" '
+            . 'style="display:inline-block;padding:13px 28px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:8px;">'
+            . $label . '</a></td></tr></table>';
+    }
+}
+
+if (!function_exists('kk_email_panel')) {
+    function kk_email_panel(string $html): string
+    {
+        return '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
+            . 'style="background:#f7fafc;border:1px solid #e1e8ee;border-radius:8px;margin:6px 0 14px;"><tr>'
+            . '<td style="padding:14px 16px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.7;color:#16263a;">'
+            . $html . '</td></tr></table>';
+    }
+}
+
+/* ---------------------------------------------------------------------------
  * Session cart (lightweight; no commercial shop plugin required yet)
  * ------------------------------------------------------------------------- */
 if (!function_exists('kk_cart_get')) {

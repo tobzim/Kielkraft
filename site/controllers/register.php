@@ -66,11 +66,28 @@ return function ($kirby, $page, $site) {
                 $user->loginPasswordless();
 
                 try {
+                    $en = $code === 'en';
+                    $benefits = $en
+                        ? ['View your order history any time', 'Faster checkout with saved addresses', 'Invoice purchase for unlocked returning customers', 'Manage your profile and addresses']
+                        : ['Bestellhistorie jederzeit einsehen', 'Schnellerer Checkout mit gespeicherten Adressen', 'Kauf auf Rechnung für freigeschaltete Bestandskunden', 'Profil und Adressen verwalten'];
+                    $li = '';
+                    foreach ($benefits as $b) {
+                        $li .= '<tr><td style="padding:4px 0;font-size:14px;line-height:1.5;color:#3a4a5c;">&bull;&nbsp;&nbsp;' . esc($b) . '</td></tr>';
+                    }
+                    $html = '<p style="margin:0 0 16px;font-size:15px;line-height:1.6;color:#3a4a5c;">'
+                        . ($en ? 'Hello ' : 'Hallo ') . esc($data['firstname'])
+                        . ($en ? ', your Kielkraft account has been created. You can sign in any time with your e-mail address.' : ', dein Kielkraft-Konto wurde angelegt. Du kannst dich jederzeit mit deiner E-Mail-Adresse anmelden.')
+                        . '</p><table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 4px;">' . $li . '</table>'
+                        . kk_email_button($en ? 'Sign in' : 'Zum Login', url($en ? 'en/login' : 'anmelden'));
                     $kirby->email([
-                        'to'      => $data['email'],
-                        'from'    => option('kielkraft.mailFrom', 'info@boostboards.de'),
-                        'subject' => 'Willkommen bei Kielkraft',
-                        'body'    => "Hallo {$data['firstname']},\n\ndein Kielkraft-Konto wurde angelegt. Du kannst dich jederzeit mit deiner E-Mail-Adresse anmelden.\n\nViele Grüße\nKielkraft",
+                        'to'       => $data['email'],
+                        'from'     => option('kielkraft.mailFrom', 'info@boostboards.de'),
+                        'fromName' => option('kielkraft.mailFromName', 'Kielkraft'),
+                        'subject'  => $en ? 'Welcome to Kielkraft' : 'Willkommen bei Kielkraft',
+                        'body'     => [
+                            'html' => kk_email_shell($en ? 'Welcome to Kielkraft' : 'Willkommen bei Kielkraft', $html, $en ? 'Your account is ready' : 'Dein Konto ist bereit'),
+                            'text' => ($en ? 'Hello ' : 'Hallo ') . $data['firstname'] . ($en ? ",\n\nyour Kielkraft account has been created. You can sign in any time with your e-mail address.\n\nKind regards\nKielkraft" : ",\n\ndein Kielkraft-Konto wurde angelegt. Du kannst dich jederzeit mit deiner E-Mail-Adresse anmelden.\n\nViele Grüße\nKielkraft"),
+                        ],
                     ]);
                 } catch (Throwable $e) { /* welcome mail is non-critical */ }
 
