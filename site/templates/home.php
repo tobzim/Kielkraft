@@ -34,6 +34,21 @@ $pf = function ($pr) use ($code) {
     <h1 class="sr-only"><?= $page->heroHeadline()->or($site->title()) ?></h1>
     <div class="hero__viewport">
         <div class="hero__track" data-hero-track>
+            <article class="hero__slide hero__slide--brand is-active" data-hero-slide role="group" aria-roledescription="slide" aria-label="1 / <?= $heroN + 1 ?>">
+                <div class="hero__brandmedia"><img src="<?= url('assets/img/hero-petrol.webp') ?>" alt="" fetchpriority="high"></div>
+                <div class="hero__brandscrim"></div>
+                <div class="container hero__brand-inner">
+                    <div class="hero__brand-content">
+                        <span class="hero__eyebrow hero__eyebrow--sale"><?= $page->heroEyebrow() ?></span>
+                        <h2 class="hero__title"><?= $page->heroHeadline() ?></h2>
+                        <p class="hero__lead"><?= $page->heroLead() ?></p>
+                        <div class="hero__cta">
+                            <a class="btn btn--on-navy btn--lg" href="<?= $urlP ?>"><?= $en ? 'Browse all models' : 'Alle Modelle ansehen' ?></a>
+                            <a class="btn btn--ghost btn--lg" href="<?= $urlAdv ?>"><?= t('nav.advisor') ?></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
 <?php $hi = 0; foreach ($heroSel as $pr): $hi++;
             $cover = $pr->image();
             $hv    = $pr->variants()->toStructure()->first();
@@ -43,7 +58,7 @@ $pf = function ($pr) use ($code) {
             $hship = (float) $pr->shippingCost()->or(0)->value();
             $isE   = $pr->antrieb()->value() === 'elektro';
 ?>
-            <article class="hero__slide hero__slide--<?= $isE ? 'cool' : 'warm' ?><?= $hi === 1 ? ' is-active' : '' ?>" data-hero-slide role="group" aria-roledescription="slide" aria-label="<?= $hi ?> / <?= $heroN ?>"<?= $hi === 1 ? '' : ' aria-hidden="true"' ?>>
+            <article class="hero__slide hero__slide--<?= $isE ? 'cool' : 'warm' ?>" data-hero-slide role="group" aria-roledescription="slide" aria-label="<?= $hi + 1 ?> / <?= $heroN + 1 ?>" aria-hidden="true">
                 <div class="container hero__inner">
                     <div class="hero__content">
 <?php if ($pct > 0): ?>
@@ -75,8 +90,13 @@ $pf = function ($pr) use ($code) {
                         </div>
                     </div>
                     <div class="hero__media">
-<?php if ($cover): ?>
-                        <img src="<?= $cover->resize(900)->url() ?>" alt="<?= $cover->alt()->or($pr->title())->esc() ?>"<?= $hi === 1 ? ' fetchpriority="high"' : ' loading="lazy"' ?> width="900" height="675">
+<?php
+                        $cutRel = 'assets/img/products/' . $pr->slug() . '-cut.webp';
+                        $cutAbs = kirby()->root('index') . '/' . $cutRel;
+                        $imgSrc = is_file($cutAbs) ? mv_asset($cutRel) : ($cover ? $cover->resize(900)->url() : null);
+?>
+<?php if ($imgSrc): ?>
+                        <img src="<?= $imgSrc ?>" alt="<?= $cover ? $cover->alt()->or($pr->title())->esc() : $pr->title()->esc() ?>" loading="lazy">
 <?php else: ?>
                         <span class="hero__ph"><?= $pr->title()->esc() ?></span>
 <?php endif ?>
@@ -90,7 +110,7 @@ $pf = function ($pr) use ($code) {
     <button class="hero__nav hero__nav--prev" type="button" data-hero-prev aria-label="<?= $en ? 'Previous' : 'Vorheriges' ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
     <button class="hero__nav hero__nav--next" type="button" data-hero-next aria-label="<?= $en ? 'Next' : 'Nächstes' ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
     <div class="hero__dots" data-hero-dots role="tablist" aria-label="<?= $en ? 'Slides' : 'Folien' ?>">
-<?php for ($d = 0; $d < $heroN; $d++): ?>
+<?php for ($d = 0; $d < $heroN + 1; $d++): ?>
         <button class="hero__dot<?= $d === 0 ? ' is-active' : '' ?>" type="button" data-hero-dot="<?= $d ?>" aria-label="<?= ($en ? 'Slide ' : 'Folie ') . ($d + 1) ?>"<?= $d === 0 ? ' aria-current="true"' : '' ?>></button>
 <?php endfor ?>
     </div>
