@@ -24,6 +24,7 @@ $navAdv = $u('kaufberater', 'buying-advisor');
 $navGuide = $u('ratgeber', 'guide');
 $navContact = $u('kontakt', 'contact');
 $navCart = $u('warenkorb', 'cart');
+$navSearch = $u('suche', 'search');
 $navAccount = $u('konto', 'account');
 $navLogin = $u('anmelden', 'login');
 $currentUser = $kirby->user();
@@ -83,14 +84,15 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
                 <span class="brand__lockup"><?= $site->title()->or('Kielkraft') ?><span class="brand__tm">&trade;</span></span>
             </a>
 
-            <form class="search" action="<?= $navP ?>" method="get" role="search">
+            <form class="search" action="<?= $navSearch ?>" method="get" role="search" data-search data-all="<?= $en ? 'Show all results' : 'Alle Ergebnisse anzeigen' ?>" autocomplete="off">
                 <select class="search__cat" name="cat" aria-label="<?= $en ? 'Category' : 'Kategorie' ?>">
                     <option value=""><?= $en ? 'All' : 'Alle' ?></option>
                     <option value="elektro"><?= t('nav.electric') ?></option>
                     <option value="benzin"><?= t('nav.petrol') ?></option>
                 </select>
-                <input class="search__input" type="search" name="q" placeholder="<?= $en ? 'Search for model, hp, brand…' : 'Modell, PS, Marke suchen…' ?>" aria-label="<?= t('kielkraft.search') ?>">
+                <input class="search__input" type="search" name="q" placeholder="<?= $en ? 'Search for model, hp, brand…' : 'Modell, PS, Marke suchen…' ?>" aria-label="<?= t('kielkraft.search') ?>" data-search-input role="combobox" aria-expanded="false" aria-autocomplete="list">
                 <button class="search__btn" type="submit" aria-label="<?= t('kielkraft.search') ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+                <div class="search-suggest" data-search-suggest hidden></div>
             </form>
 
             <div class="header-actions">

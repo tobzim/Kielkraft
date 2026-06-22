@@ -100,6 +100,36 @@ if (!function_exists('kk_email_panel')) {
 }
 
 /* ---------------------------------------------------------------------------
+ * Product search (used by the /suche page and the /search.json autocomplete).
+ * AND-matches every query word against title, brand, drive, power and meta.
+ * ------------------------------------------------------------------------- */
+if (!function_exists('kk_search_products')) {
+    function kk_search_products(string $q, string $cat = '')
+    {
+        $products = kirby()->site()->index()->filterBy('intendedTemplate', 'product')->listed();
+        if ($cat === 'elektro' || $cat === 'benzin') {
+            $products = $products->filterBy('antrieb', $cat);
+        }
+        $q = trim($q);
+        if ($q === '') {
+            return $products->sortBy('powerPs', 'asc');
+        }
+        $words = array_filter(preg_split('/\s+/', mb_strtolower($q)));
+        return $products->filter(function ($p) use ($words) {
+            $hay = mb_strtolower(implode(' ', [
+                (string) $p->title(), (string) $p->brand(), (string) $p->antrieb(),
+                $p->powerPs() . ' ps', $p->powerKw() . ' kw',
+                (string) $p->metaDescription(), (string) $p->tagline(),
+            ]));
+            foreach ($words as $w) {
+                if (mb_strpos($hay, $w) === false) { return false; }
+            }
+            return true;
+        })->sortBy('powerPs', 'asc');
+    }
+}
+
+/* ---------------------------------------------------------------------------
  * Session cart (lightweight; no commercial shop plugin required yet)
  * ------------------------------------------------------------------------- */
 if (!function_exists('kk_cart_get')) {
@@ -346,6 +376,35 @@ Kirby::plugin('kielkraft/core', [
                     'total'     => kk_cart_total(),
                     'formatted' => mv_eur(kk_cart_subtotal()),
                 ]);
+            },
+        ],
+
+        // ---- Search autocomplete (JSON) ----
+        [
+            'pattern' => 'search.json',
+            'action'  => function () {
+                $code = kirby()->language() ? kirby()->language()->code() : 'de';
+                $hits = kk_search_products((string) get('q'), (string) get('cat'))->limit(6);
+                $out = [];
+                foreach ($hits as $p) {
+                    $slug = $p->slug();
+                    $cut  = kirby()->root('index') . '/assets/img/products/' . $slug . '-cut.webp';
+                    $cover = $p->image();
+                    $img = is_file($cut)
+                        ? url('assets/img/products/' . $slug . '-cut.webp')
+                        : ($cover ? $cover->resize(120)->url() : '');
+                    $v = $p->variants()->toStructure()->first();
+                    $price = $v && $v->price()->isNotEmpty() ? (float) $v->price()->value() : (float) $p->priceFrom()->value();
+                    $out[] = [
+                        'title' => (string) $p->title(),
+                        'brand' => (string) $p->brand(),
+                        'ps'    => (string) $p->powerPs(),
+                        'price' => mv_eur($price, $code),
+                        'url'   => $p->url(),
+                        'img'   => $img,
+                    ];
+                }
+                return Response::json(['results' => $out]);
             },
         ],
 
