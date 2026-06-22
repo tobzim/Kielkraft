@@ -7,6 +7,11 @@ $cat  = $page->parent();
 $gallery = $page->gallery()->toFiles();
 $cover = $page->image();
 $cross = $page->crossSell()->toPages();
+$crossAuto = false;
+if ($cross->count() === 0) {
+    $cross = kk_related_products($page, 4);
+    $crossAuto = true;
+}
 ?>
 <?php snippet('header') ?>
 <?php $ga4Item = kk_ga4_item($page); ?>
@@ -114,7 +119,7 @@ $cross = $page->crossSell()->toPages();
 <?php if ($cross->count() > 0): ?>
 <section class="section--tight">
     <div class="container">
-        <div class="section__head"><h2 class="section__title"><?= $en ? 'Goes well with' : 'Passendes Zubehör' ?></h2></div>
+        <div class="section__head"><h2 class="section__title"><?= $crossAuto ? ($en ? 'Similar models' : 'Ähnliche Modelle') : ($en ? 'Goes well with' : 'Passendes Zubehör') ?></h2></div>
         <div class="pgrid">
 <?php foreach ($cross->limit(4) as $c): ?>
             <?php snippet('product-card', ['product' => $c]) ?>

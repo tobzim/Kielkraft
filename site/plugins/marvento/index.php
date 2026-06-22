@@ -148,6 +148,30 @@ if (!function_exists('kk_ga4_item')) {
     }
 }
 
+/**
+ * Auto cross-sell: related products by closest power, same drive first,
+ * then the other drive. Used as a fallback when no manual cross-sell is set.
+ */
+if (!function_exists('kk_related_products')) {
+    function kk_related_products($product, int $limit = 4)
+    {
+        $all = kirby()->site()->index()->filterBy('intendedTemplate', 'product')->listed()->not($product);
+        $ps  = (float) $product->powerPs()->value();
+        $sortByPower = function ($coll) use ($ps) {
+            $arr = $coll->values();
+            usort($arr, fn ($a, $b) => abs((float) $a->powerPs()->value() - $ps) <=> abs((float) $b->powerPs()->value() - $ps));
+            return $arr;
+        };
+        $drive   = $product->antrieb()->value();
+        $other   = $drive === 'elektro' ? 'benzin' : 'elektro';
+        $ordered = array_merge(
+            $sortByPower($all->filterBy('antrieb', $drive)),
+            $sortByPower($all->filterBy('antrieb', $other))
+        );
+        return new \Kirby\Cms\Pages(array_slice($ordered, 0, $limit));
+    }
+}
+
 /* ---------------------------------------------------------------------------
  * Session cart (lightweight; no commercial shop plugin required yet)
  * ------------------------------------------------------------------------- */
