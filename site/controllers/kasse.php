@@ -67,6 +67,23 @@ return function ($kirby, $page) {
                     $lines .= $it['qty'] . 'x ' . $it['title'] . ($it['variant'] ? ' (' . $it['variant'] . ')' : '') . ' – ' . mv_eur($it['price'] * $it['qty'], $code) . "\n";
                 }
 
+                // Invoice: Lexware Office if configured, else in-house CI PDF
+                $invoice = kk_invoice_create([
+                    'orderNumber' => $orderNumber,
+                    'date'        => date('Y-m-d H:i:s'),
+                    'payment'     => $data['payment'],
+                    'lang'        => $code,
+                    'customer'    => [
+                        'name' => $data['name'], 'email' => $data['email'], 'phone' => $data['phone'],
+                        'street' => $data['street'], 'zip' => $data['zip'], 'city' => $data['city'], 'country' => $data['country'],
+                    ],
+                    'items'    => $items,
+                    'shipping' => $ship,
+                    'total'    => $total,
+                ]);
+                $invoiceNumber = $invoice['number'] ?? '';
+                $attachments   = !empty($invoice['path']) ? [$invoice['path']] : [];
+
                 $kirby->impersonate('kirby');
                 $slug = strtolower(str_replace(['-', ' '], ['', ''], $orderNumber)) . substr(md5($data['email'] . microtime()), 0, 5);
                 page('orders')->createChild([
@@ -75,6 +92,7 @@ return function ($kirby, $page) {
                     'content'  => [
                         'title'         => $orderNumber,
                         'orderNumber'   => $orderNumber,
+                        'invoiceNumber' => $invoiceNumber,
                         'date'          => date('Y-m-d H:i:s'),
                         'orderStatus'   => 'new',
                         'paymentMethod' => $data['payment'],
@@ -141,6 +159,7 @@ return function ($kirby, $page) {
                     . $itemsTable
                     . kk_email_panel('<strong>' . ($en ? 'Payment' : 'Zahlart') . ':</strong> ' . esc($payLabel) . '<br><strong>' . ($en ? 'Delivery address' : 'Lieferadresse') . ':</strong><br>' . $addr)
                     . '<p style="margin:4px 0 0;font-size:14px;line-height:1.6;color:#3a4a5c;">' . $nextStep . '</p>'
+                    . ($attachments ? '<p style="margin:10px 0 0;font-size:13px;color:#6b7c8c;">' . ($en ? 'Your invoice ' : 'Deine Rechnung ') . esc($invoiceNumber) . ($en ? ' is attached as a PDF.' : ' findest du als PDF im Anhang.') . '</p>' : '')
                     . $btn;
 
                 $shopHtml = '<p style="margin:0 0 16px;font-size:15px;line-height:1.6;color:#3a4a5c;">Es ist eine neue Bestellung eingegangen.</p>' . $badge
@@ -155,6 +174,7 @@ return function ($kirby, $page) {
                     $kirby->email([
                         'to' => $data['email'], 'from' => $from, 'fromName' => $fromName, 'replyTo' => $inbox,
                         'subject' => ($en ? 'Kielkraft – order confirmation ' : 'Kielkraft – Bestellbestätigung ') . $orderNumber,
+                        'attachments' => $attachments,
                         'body' => [
                             'html' => kk_email_shell($en ? 'Thank you for your order!' : 'Vielen Dank für deine Bestellung!', $custHtml, ($en ? 'Order ' : 'Bestellung ') . $orderNumber),
                             'text' => ($en ? "Thank you for your order at Kielkraft.\n\n" : "Vielen Dank für deine Bestellung bei Kielkraft.\n\n") . $body,
@@ -163,6 +183,7 @@ return function ($kirby, $page) {
                     $kirby->email([
                         'to' => $inbox, 'from' => $from, 'fromName' => $fromName, 'replyTo' => $data['email'],
                         'subject' => 'Neue Bestellung ' . $orderNumber,
+                        'attachments' => $attachments,
                         'body' => ['html' => kk_email_shell('Neue Bestellung ' . $orderNumber, $shopHtml), 'text' => $body],
                     ]);
                 } catch (Throwable $mailEx) {

@@ -3,6 +3,8 @@
 use Kirby\Cms\App as Kirby;
 use Kirby\Http\Response;
 
+require_once __DIR__ . '/invoice.php';
+
 /**
  * Format a price for the active (or given) language.
  * de: 1.395  ·  en: 1,395  (decimals only when present)

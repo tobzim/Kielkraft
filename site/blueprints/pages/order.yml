@@ -26,6 +26,7 @@ columns:
         type: fields
         fields:
           orderNumber: { label: Bestellnummer, type: text }
+          invoiceNumber: { label: Rechnungsnummer, type: text }
           date: { label: Datum, type: date, time: true }
           orderStatus:
             label: Status

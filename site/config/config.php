@@ -71,7 +71,14 @@ return [
     // App-level settings consumed by Kielkraft code (shop, invoicing, partner)
     'kielkraft' => [
         'env'             => mv_env('APP_ENV', 'production'),
-        'invoiceProvider' => mv_env('INVOICE_PROVIDER', 'fallback'),
+        'invoiceProvider' => mv_env('INVOICE_PROVIDER', 'fallback'),   // fallback | lexoffice
+        'lexofficeApiKey' => mv_env('LEXOFFICE_API_KEY', ''),
+        'invoiceNumberPrefix' => mv_env('INVOICE_NUMBER_PREFIX', 'KIE'),
+        'invoiceVatRate'  => (float) mv_env('INVOICE_VAT_RATE', 19),
+        'invoiceBankHolder' => mv_env('INVOICE_BANK_HOLDER', 'Boostboards GmbH & Co. KG'),
+        'invoiceIban'     => mv_env('INVOICE_IBAN', ''),
+        'invoiceBic'      => mv_env('INVOICE_BIC', ''),
+        'invoiceBank'     => mv_env('INVOICE_BANK', ''),
         'mailFrom'        => mv_env('MAIL_FROM', 'bestellung@kielkraft.de'),
         'mailFromName'    => mv_env('MAIL_FROM_NAME', 'Kielkraft'),
         'contactTo'       => mv_env('MAIL_CONTACT_TO', 'info@boostboards.de'),
