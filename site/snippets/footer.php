@@ -13,9 +13,8 @@ $y    = date('Y');
     </div>
     <div class="container site-footer__grid">
         <div>
-            <a class="brand" href="<?= $site->url($code) ?>" style="margin-bottom:var(--sp-4)">
-                <img class="brand__mark" src="<?= url('assets/img/logo.svg') ?>" alt="" width="34" height="34">
-                <span class="brand__name" style="color:#fff"><?= $site->title()->or('Kielkraft') ?></span>
+            <a class="brand brand--invert" href="<?= $site->url($code) ?>" style="margin-bottom:var(--sp-4)">
+                <span class="brand__lockup"><?= $site->title()->or('Kielkraft') ?><span class="brand__tm">&trade;</span></span>
             </a>
             <p style="max-width:34ch"><?= t('kielkraft.tagline') ?></p>
             <p style="margin-top:var(--sp-3);font-size:var(--fs-200);line-height:1.6">

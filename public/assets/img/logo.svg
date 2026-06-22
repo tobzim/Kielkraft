@@ -1,8 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Kielkraft">
-  <rect width="48" height="48" rx="11" fill="#0B2F55"/>
-  <!-- K monogram (keel + power) -->
-  <path d="M16.5 12 V36" fill="none" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round"/>
-  <path d="M30.5 12 L18.5 24 L30.5 36" fill="none" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- waterline -->
-  <path d="M11.5 40.5 c4 -2.6 8 -2.6 12 0 c4 2.6 8 2.6 12 0" fill="none" stroke="#5BB0E8" stroke-width="2.4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" role="img" aria-label="Kielkraft">
+  <rect width="260" height="80" rx="10" fill="#0B2F55"/>
+  <text x="22" y="55" font-family="Archivo, 'Arial Black', Arial, sans-serif" font-weight="800" font-size="44" letter-spacing="-2" fill="#ffffff">Kielkraft</text>
+  <text x="227" y="29" font-family="Archivo, Arial, sans-serif" font-weight="700" font-size="13" fill="#ffffff">™</text>
 </svg>

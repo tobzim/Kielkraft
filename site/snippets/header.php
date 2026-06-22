@@ -80,8 +80,7 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
     <div class="headbar">
         <div class="container headbar__row">
             <a class="brand" href="<?= $site->url($code) ?>" aria-label="<?= $site->title()->or('Kielkraft') ?>">
-                <img class="brand__mark" src="<?= url('assets/img/logo.svg') ?>" alt="" width="34" height="34">
-                <span class="brand__name"><?= $site->title()->or('Kielkraft') ?></span>
+                <span class="brand__lockup"><?= $site->title()->or('Kielkraft') ?><span class="brand__tm">&trade;</span></span>
             </a>
 
             <form class="search" action="<?= $navP ?>" method="get" role="search">

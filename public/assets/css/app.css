@@ -46,9 +46,16 @@
 
 .headbar { background: var(--surface); border-bottom: 1px solid var(--line); }
 .headbar__row { display: flex; align-items: center; gap: var(--sp-5); min-height: 72px; }
-.brand { display: inline-flex; align-items: center; gap: var(--sp-2); flex: 0 0 auto; }
-.brand__mark { height: 34px; width: auto; }
-.brand__name { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; color: var(--navy); letter-spacing: -0.02em; }
+.brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.brand__lockup { display: inline-flex; align-items: flex-start; background: var(--navy); color: #fff;
+    font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; line-height: 1;
+    letter-spacing: -0.03em; padding: .4em .58em .44em; border-radius: 5px;
+    transition: background var(--dur) var(--ease); }
+.brand:hover .brand__lockup { background: var(--navy-700); }
+.brand__tm { font-size: .4em; font-weight: 700; letter-spacing: 0; margin-left: .18em; margin-top: .12em; }
+.brand--invert .brand__lockup { background: #fff; color: var(--navy); }
+.brand--invert:hover .brand__lockup { background: #eaf0f6; }
+@media (max-width: 480px) { .brand__lockup { font-size: 1.12rem; } }
 
 .search { flex: 1 1 auto; max-width: 620px; display: flex; align-items: stretch;
     border: 2px solid var(--navy); border-radius: var(--r-md); overflow: hidden; background: #fff; }
