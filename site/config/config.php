@@ -74,6 +74,7 @@ return [
         'invoiceProvider' => mv_env('INVOICE_PROVIDER', 'fallback'),
         'mailFrom'        => mv_env('MAIL_FROM', 'bestellung@kielkraft.de'),
         'mailFromName'    => mv_env('MAIL_FROM_NAME', 'Kielkraft'),
+        'contactTo'       => mv_env('MAIL_CONTACT_TO', 'info@boostboards.de'),
         'partnerBcc'      => mv_env('PARTNER_ORDER_BCC', null),
     ],
 
