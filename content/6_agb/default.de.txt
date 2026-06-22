@@ -1,18 +1,92 @@
-Title: AGB
+Title: Allgemeine Geschäftsbedingungen
 
 ----
 
-Intro: Allgemeine Geschäftsbedingungen.
+Intro: AGB der Boostboards GmbH & Co. KG (Marke Kielkraft) für Bestellungen über diesen Online-Shop.
 
 ----
 
 Text:
 
-Platzhalter. Vertragsschluss, Preise, Zahlung, Lieferung per Spedition, Eigentumsvorbehalt und Gewährleistung. Bitte anwaltlich finalisieren.
+## 1. Geltungsbereich, Anbieter
+
+(1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Bestellungen, die Sie über diesen Online-Shop bei der Boostboards GmbH & Co. KG, Groten Hoff 21, 22359 Hamburg (nachfolgend „wir"/„Kielkraft") abschließen.
+
+(2) Verbraucher im Sinne dieser AGB ist jede natürliche Person, die ein Rechtsgeschäft zu Zwecken abschließt, die überwiegend weder ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zugerechnet werden können (§ 13 BGB). Unternehmer ist eine natürliche oder juristische Person oder eine rechtsfähige Personengesellschaft, die bei Abschluss des Geschäfts in Ausübung ihrer gewerblichen oder selbständigen beruflichen Tätigkeit handelt (§ 14 BGB).
+
+(3) Abweichende Bedingungen des Kunden erkennen wir nicht an, es sei denn, wir hätten ihrer Geltung ausdrücklich schriftlich zugestimmt.
+
+## 2. Vertragsschluss
+
+(1) Die Darstellung der Produkte im Online-Shop stellt kein rechtlich bindendes Angebot, sondern eine unverbindliche Aufforderung zur Bestellung dar.
+
+(2) Mit dem Anklicken des Bestellbuttons („zahlungspflichtig bestellen") geben Sie ein verbindliches Angebot zum Kauf der im Warenkorb enthaltenen Waren ab.
+
+(3) Der Eingang Ihrer Bestellung wird unverzüglich per E-Mail bestätigt. Diese Eingangsbestätigung stellt noch keine Annahme Ihres Angebots dar. Ein Kaufvertrag kommt erst zustande, wenn wir Ihr Angebot durch eine ausdrückliche Auftragsbestätigung, durch Versand der Ware oder – bei Vorkasse – durch unsere Aufforderung zur Zahlung annehmen.
+
+(4) Den Vertragstext speichern wir; die Bestelldaten und diese AGB senden wir Ihnen per E-Mail zu. Angemeldete Kunden können vergangene Bestellungen im Kundenkonto einsehen.
+
+(5) Der Vertragsschluss erfolgt in deutscher Sprache.
+
+## 3. Preise und Versandkosten
+
+(1) Alle Preise sind Endpreise und enthalten die gesetzliche Mehrwertsteuer. Maßgeblich ist der zum Zeitpunkt der Bestellung im Shop angegebene Preis.
+
+(2) Zuzüglich zum angegebenen Produktpreis können Versand-/Frachtkosten anfallen. Die jeweilige Höhe der Versandkosten weisen wir Ihnen vor Abgabe der Bestellung transparent im Warenkorb und an der Kasse aus. Näheres regelt unsere Seite (link: versand text: Versand & Fracht).
+
+## 4. Zahlung, Fälligkeit, Eigentumsvorbehalt
+
+(1) Die verfügbaren Zahlungsarten werden im Bestellvorgang angezeigt; Einzelheiten finden Sie unter (link: zahlungsarten text: Zahlungsarten).
+
+(2) Soweit nichts anderes vereinbart ist, ist der Kaufpreis mit Vertragsschluss zur Zahlung fällig. Bei Vorkasse teilen wir Ihnen die Bankverbindung mit der Bestellbestätigung mit.
+
+(3) Der Kauf auf Rechnung steht ausgewählten, freigeschalteten Bestandskunden zur Verfügung. Bei Zahlungsverzug gelten die gesetzlichen Bestimmungen.
+
+(4) Die gelieferte Ware bleibt bis zur vollständigen Bezahlung unser Eigentum (Eigentumsvorbehalt).
+
+## 5. Lieferung
+
+(1) Außenbordmotoren werden in der Regel als Speditionsware geliefert. Lieferungen erfolgen innerhalb Deutschlands; Lieferungen in andere Gebiete nach vorheriger Absprache.
+
+(2) Die voraussichtliche Lieferzeit ist auf der jeweiligen Produktseite und in der Bestellbestätigung angegeben. Angaben zu Lieferzeiten sind unverbindlich, soweit nicht ausnahmsweise ein verbindlicher Liefertermin zugesagt wurde.
+
+(3) Ist ein bestelltes Produkt nicht verfügbar oder kann es aus von uns nicht zu vertretenden Gründen nicht geliefert werden, informieren wir Sie unverzüglich und erstatten bereits erbrachte Zahlungen.
+
+(4) Beim Versand an Verbraucher geht die Gefahr des zufälligen Untergangs und der zufälligen Verschlechterung der Ware mit Übergabe an den Verbraucher oder eine empfangsberechtigte Person über (§ 446 BGB).
+
+## 6. Widerrufsrecht
+
+Verbrauchern steht ein gesetzliches Widerrufsrecht zu. Die Einzelheiten ergeben sich aus unserer (link: widerruf text: Widerrufsbelehrung) einschließlich des Muster-Widerrufsformulars.
+
+## 7. Mängelhaftung und Garantien
+
+(1) Es gilt die gesetzliche Mängelhaftung (Gewährleistung) nach den §§ 434 ff. BGB. Für Verbraucher beträgt die Verjährungsfrist bei neu hergestellten Sachen zwei Jahre ab Ablieferung.
+
+(2) Zusätzlich können Herstellergarantien bestehen. Diese gewähren die jeweiligen Hersteller nach ihren Garantiebedingungen; die gesetzlichen Rechte bleiben hiervon unberührt. Einzelheiten finden Sie unter (link: garantie text: Garantie & Gewährleistung).
+
+(3) Alle gelieferten Geräte sind offizielle Neuware.
+
+## 8. Haftung
+
+(1) Für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie aus der Verletzung wesentlicher Vertragspflichten (Kardinalpflichten) und bei Vorsatz oder grober Fahrlässigkeit haften wir nach den gesetzlichen Bestimmungen.
+
+(2) Bei der leicht fahrlässigen Verletzung wesentlicher Vertragspflichten ist unsere Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Im Übrigen ist die Haftung für leichte Fahrlässigkeit ausgeschlossen.
+
+(3) Die Haftung nach dem Produkthaftungsgesetz bleibt unberührt.
+
+## 9. Streitbeilegung
+
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+
+## 10. Schlussbestimmungen
+
+(1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Bei Verbrauchern gilt diese Rechtswahl nur, soweit hierdurch der durch zwingende Bestimmungen des Rechts des Staates des gewöhnlichen Aufenthalts gewährte Schutz nicht entzogen wird.
+
+(2) Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
 
 ----
 
-IsPlaceholder: true
+IsPlaceholder: false
 
 ----
 
@@ -20,4 +94,4 @@ Metatitle: AGB | Kielkraft
 
 ----
 
-Metadescription: Allgemeine Geschäftsbedingungen.
+Metadescription: Allgemeine Geschäftsbedingungen der Boostboards GmbH & Co. KG (Marke Kielkraft) – Vertragsschluss, Preise, Zahlung, Lieferung per Spedition, Eigentumsvorbehalt, Gewährleistung und Haftung.

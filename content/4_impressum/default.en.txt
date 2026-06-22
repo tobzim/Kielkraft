@@ -6,7 +6,7 @@ Slug: imprint
 
 ----
 
-Intro: Information pursuant to § 5 DDG.
+Intro: Information pursuant to § 5 German Digital Services Act (DDG).
 
 ----
 
@@ -36,9 +36,12 @@ Register number: HRA 131421
 VAT identification number pursuant to § 27a German VAT Act:<br>
 DE442130574
 
-## Online dispute resolution
+## Responsible for content
 
-EU Commission online dispute resolution platform (ODR): https://ec.europa.eu/consumers/odr
+Responsible for journalistic and editorial content pursuant to § 18 (2) of the German Interstate Media Treaty (MStV):<br>
+Sebastian Keye, address as above.
+
+## Consumer dispute resolution
 
 We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.
 
@@ -48,4 +51,4 @@ Metatitle: Imprint | Kielkraft
 
 ----
 
-Metadescription: Imprint of Boostboards GmbH & Co. KG (Kielkraft brand), Groten Hoff 21, 22359 Hamburg.
+Metadescription: Imprint of Boostboards GmbH & Co. KG (Kielkraft brand), Groten Hoff 21, 22359 Hamburg – information pursuant to § 5 DDG.

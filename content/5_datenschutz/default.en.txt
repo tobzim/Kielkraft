@@ -6,34 +6,92 @@ Slug: privacy
 
 ----
 
-Intro: Information on the processing of personal data (GDPR).
+Intro: Information on the processing of personal data pursuant to Art. 13 and 14 GDPR.
 
 ----
 
 Text:
 
-## Controller
+## 1. Controller
+
+The controller for data processing on this website is:
 
 Boostboards GmbH & Co. KG (Kielkraft brand)<br>
 Groten Hoff 21, 22359 Hamburg, Germany<br>
 E-mail: info@boostboards.de · Phone: +49 40 60 90 199 69
 
-## What this notice covers
+## 2. General information
 
-This privacy notice outlines which personal data we process when you visit and use this shop, for which purposes and on which legal basis. The points below describe the structure – the full, legally binding text will be added (see note below).
+We process personal data only where necessary to provide a functional website and our content and services, or where you have given consent. Legal bases are in particular Art. 6(1)(a) GDPR (consent), (b) (contract/pre-contract), (c) (legal obligation) and (f) (legitimate interests). Personal data is deleted once the purpose of storage no longer applies and no statutory retention obligations prevent deletion.
 
-- **Server / log data** on page visits (Art. 6(1)(f) GDPR)
-- **Order processing and customer account** (Art. 6(1)(b) GDPR)
-- **Payment service providers** (e.g. Stripe, PayPal, Klarna)
-- **Invoicing / accounting** (e.g. lexoffice/sevDesk) and statutory retention
-- **Shipping / logistics partners** for delivery (dropshipping)
-- **Transactional e-mail** via an e-mail service provider
-- **Contact form** (Art. 6(1)(a)/(b) GDPR)
-- **Analytics** only with consent (consent banner)
+## 3. Hosting and server log files
 
-## Your rights
+Our website is hosted by Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Germany; the servers are located in Germany. A data processing agreement (Art. 28 GDPR) is in place with the provider.
 
-Access, rectification, erasure, restriction, data portability and objection, plus the right to lodge a complaint with a supervisory authority.
+On every visit, the server automatically collects information transmitted by your browser (server log files): IP address, date and time of access, page/file requested, data volume transferred, notification of successful retrieval, browser type and version, operating system and referrer URL. The legal basis is Art. 6(1)(f) GDPR; our legitimate interest lies in the secure and stable operation of the website. Log files are stored for a maximum of 7 days and then deleted, unless security-relevant incidents require longer retention.
+
+## 4. SSL/TLS encryption
+
+For security, this site uses SSL/TLS encryption. You can recognise an encrypted connection by the “https://” in your browser’s address bar.
+
+## 5. Cookies and consent management
+
+We use technically necessary cookies or comparable technologies (e.g. for session management, the shopping cart and to store your cookie decision). The legal basis is § 25(2) TDDDG and Art. 6(1)(f) GDPR. Non-essential services (in particular analytics) are only used with your consent via our consent banner (§ 25(1) TDDDG, Art. 6(1)(a) GDPR). You can withdraw your consent at any time with effect for the future.
+
+## 6. Contacting us
+
+If you contact us via the contact form, by e-mail, phone or WhatsApp, we process the data you provide (e.g. name, contact details, message) in order to handle your request. The legal basis is Art. 6(1)(b) GDPR (pre-contractual/contractual) or (f) GDPR (handling of general enquiries). The data is deleted once your request has been conclusively handled and no retention obligations apply.
+
+## 7. Customer account and order processing
+
+To create a customer account and process your order, we process the data required for this (e.g. salutation/name, address, e-mail, phone, company and VAT ID where applicable, order and payment data). The legal basis is Art. 6(1)(b) GDPR. You can have your customer account deleted at any time. Data subject to commercial or tax retention periods (in particular invoices) is retained until those periods expire (generally 6 or 10 years, §§ 257 HGB, 147 AO) and processing is restricted until then.
+
+## 8. Disclosure to shipping and logistics partners
+
+We sell on a direct-shipping basis: to deliver the goods, we pass the data required for this (name, delivery address, and phone number/e-mail for delivery notification where applicable) to the commissioned shipping or logistics company or the delivering partner. The legal basis is Art. 6(1)(b) GDPR.
+
+## 9. Payment service providers
+
+Depending on the payment method chosen, we pass the data required for payment processing to the respective payment service provider. The legal basis is Art. 6(1)(b) GDPR. The provider’s privacy notices also apply:
+
+- **Credit card, Apple Pay, Google Pay, SEPA:** Stripe Payments Europe, Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Ireland
+- **PayPal:** PayPal (Europe) S.à r.l. et Cie, S.C.A., 22–24 Boulevard Royal, L-2449 Luxembourg
+- **Klarna:** Klarna Bank AB (publ), Sveavägen 46, 111 34 Stockholm, Sweden
+
+If you select PayPal or Klarna, data may be transmitted to the respective provider for risk and credit assessment.
+
+## 10. Invoicing and accounting
+
+For invoicing and accounting we process the required master and order data and, where applicable, use an accounting/invoicing service as a processor. The legal basis is Art. 6(1)(b) and (c) GDPR in conjunction with statutory retention obligations.
+
+## 11. Transactional e-mail
+
+We send order confirmations and other e-mails required for performing the contract via an e-mail/dispatch service with which a data processing agreement is in place. The legal basis is Art. 6(1)(b) GDPR.
+
+## 12. Newsletter
+
+If you subscribe to our newsletter, we process your e-mail address on the basis of your consent (Art. 6(1)(a) GDPR). Subscription uses the double opt-in procedure. You can unsubscribe at any time via the unsubscribe link or by message to us; withdrawal does not affect the lawfulness of processing carried out until then.
+
+## 13. Analytics (Google Analytics 4 / Google Tag Manager)
+
+Only with your consent, we use Google Analytics 4 and Google Tag Manager provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, to analyse and improve the use of our website on a pseudonymous basis. Usage data (e.g. shortened IP address, device/browser information, pages visited) is processed; IP anonymisation is enabled. The legal basis is Art. 6(1)(a) GDPR. A data transfer to the USA (Google LLC) is possible; Google is certified under the EU-US Data Privacy Framework, and standard contractual clauses additionally apply. You can withdraw your consent at any time via the consent banner with effect for the future.
+
+## 14. Your rights as a data subject
+
+You have the right to access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to withdraw consent given with effect for the future (Art. 7(3) GDPR).
+
+**Right to object (Art. 21 GDPR):** Where we process data on the basis of Art. 6(1)(f) GDPR, you may object at any time on grounds relating to your particular situation.
+
+## 15. Right to lodge a complaint
+
+You have the right to lodge a complaint with a data protection supervisory authority. The authority responsible for us is:
+
+Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit (HmbBfDI)<br>
+Ludwig-Erhard-Straße 22, 20459 Hamburg, Germany
+
+## 16. Up-to-dateness
+
+We adapt this privacy notice as soon as changes to processing or to the legal situation require. The version published here applies in each case.
 
 ----
 
@@ -41,4 +99,4 @@ Metatitle: Privacy | Kielkraft
 
 ----
 
-Metadescription: Privacy notice of Kielkraft (Boostboards GmbH & Co. KG) on the processing of personal data.
+Metadescription: Privacy notice of Kielkraft (Boostboards GmbH & Co. KG) pursuant to Art. 13 GDPR – hosting, order processing, payment providers, shipping partners, cookies, analytics and your rights.

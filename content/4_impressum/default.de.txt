@@ -2,7 +2,7 @@ Title: Impressum
 
 ----
 
-Intro: Angaben gemäß § 5 DDG.
+Intro: Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG).
 
 ----
 
@@ -27,14 +27,17 @@ E-Mail: info@boostboards.de
 Registergericht: Amtsgericht Hamburg<br>
 Registernummer: HRA 131421
 
-## Umsatzsteuer-ID
+## Umsatzsteuer-Identifikationsnummer
 
 Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br>
 DE442130574
 
-## Online-Streitbeilegung
+## Verantwortlich für den Inhalt
 
-Plattform der EU-Kommission zur Online-Streitbeilegung (OS): https://ec.europa.eu/consumers/odr
+Verantwortlich für journalistisch-redaktionelle Inhalte gemäß § 18 Abs. 2 Medienstaatsvertrag (MStV):<br>
+Sebastian Keye, Anschrift wie oben.
+
+## Verbraucherstreitbeilegung
 
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
 
@@ -48,4 +51,4 @@ Metatitle: Impressum | Kielkraft
 
 ----
 
-Metadescription: Impressum der Boostboards GmbH & Co. KG (Marke Kielkraft), Groten Hoff 21, 22359 Hamburg.
+Metadescription: Impressum der Boostboards GmbH & Co. KG (Marke Kielkraft), Groten Hoff 21, 22359 Hamburg – Angaben gemäß § 5 DDG.

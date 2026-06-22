@@ -6,13 +6,89 @@ Slug: terms
 
 ----
 
-Intro: General terms and conditions.
+Intro: Terms and conditions of Boostboards GmbH & Co. KG (Kielkraft brand) for orders placed via this online shop.
 
 ----
 
 Text:
 
-Placeholder. Conclusion of contract, prices, payment, freight delivery, retention of title and warranty. To be finalised by a lawyer.
+The German version of these terms is legally authoritative. This English text is provided for convenience.
+
+## 1. Scope, provider
+
+(1) These general terms and conditions (GTC) apply to all orders you place via this online shop with Boostboards GmbH & Co. KG, Groten Hoff 21, 22359 Hamburg, Germany (“we”/“Kielkraft”).
+
+(2) A consumer within the meaning of these GTC is any natural person who enters into a legal transaction for purposes that are predominantly outside their trade, business or profession (§ 13 German Civil Code, BGB). An entrepreneur is a natural or legal person or a partnership with legal capacity acting in the exercise of its trade, business or profession (§ 14 BGB).
+
+(3) We do not accept any conflicting terms of the customer unless we have expressly agreed to their validity in writing.
+
+## 2. Conclusion of contract
+
+(1) The presentation of products in the online shop does not constitute a legally binding offer but a non-binding invitation to order.
+
+(2) By clicking the order button (“buy now, payment obligatory”) you submit a binding offer to purchase the goods in your cart.
+
+(3) Receipt of your order is confirmed without delay by e-mail. This confirmation of receipt does not yet constitute acceptance of your offer. A purchase contract is only concluded when we accept your offer by an express order confirmation, by dispatching the goods or – for advance payment – by our request for payment.
+
+(4) We store the contract text; we send you the order data and these GTC by e-mail. Registered customers can view past orders in their customer account.
+
+(5) The contract is concluded in German.
+
+## 3. Prices and shipping costs
+
+(1) All prices are final prices and include statutory VAT. The price stated in the shop at the time of the order applies.
+
+(2) In addition to the stated product price, shipping/freight costs may apply. We show the respective shipping costs transparently in the cart and at checkout before you submit your order. Further details are set out on our (link: versand text: shipping & freight) page.
+
+## 4. Payment, due date, retention of title
+
+(1) The available payment methods are shown during the order process; details can be found under (link: zahlungsarten text: payment methods).
+
+(2) Unless agreed otherwise, the purchase price is due for payment on conclusion of the contract. For advance payment, we provide the bank details with the order confirmation.
+
+(3) Invoice purchase is available to selected, unlocked returning customers. In the event of default, the statutory provisions apply.
+
+(4) The delivered goods remain our property until paid in full (retention of title).
+
+## 5. Delivery
+
+(1) Outboard motors are generally delivered as forwarder freight. Deliveries are made within Germany; deliveries to other areas by prior arrangement.
+
+(2) The estimated delivery time is stated on the relevant product page and in the order confirmation. Delivery time information is non-binding unless a binding delivery date has exceptionally been promised.
+
+(3) If an ordered product is unavailable or cannot be delivered for reasons beyond our control, we will inform you without delay and refund any payments already made.
+
+(4) When shipping to consumers, the risk of accidental loss and accidental deterioration of the goods passes on handover to the consumer or an authorised recipient (§ 446 BGB).
+
+## 6. Right of withdrawal
+
+Consumers have a statutory right of withdrawal. The details are set out in our (link: widerruf text: withdrawal policy) including the model withdrawal form.
+
+## 7. Liability for defects and guarantees
+
+(1) The statutory liability for defects (§§ 434 ff. BGB) applies. For consumers, the limitation period for newly manufactured goods is two years from delivery.
+
+(2) Manufacturer guarantees may additionally exist. These are granted by the respective manufacturers under their guarantee terms; your statutory rights remain unaffected. Details can be found under (link: garantie text: warranty & guarantee).
+
+(3) All delivered units are official new goods.
+
+## 8. Liability
+
+(1) For damage arising from injury to life, body or health, from the breach of essential contractual obligations (cardinal obligations) and in cases of intent or gross negligence, we are liable in accordance with the statutory provisions.
+
+(2) In the event of slightly negligent breach of essential contractual obligations, our liability is limited to the foreseeable damage typical for the contract. Otherwise, liability for slight negligence is excluded.
+
+(3) Liability under the German Product Liability Act remains unaffected.
+
+## 9. Dispute resolution
+
+We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+
+## 10. Final provisions
+
+(1) The law of the Federal Republic of Germany applies, excluding the UN Convention on Contracts for the International Sale of Goods. For consumers, this choice of law applies only to the extent that it does not deprive them of the protection afforded by mandatory provisions of the law of their country of habitual residence.
+
+(2) Should individual provisions of these GTC be or become invalid, the validity of the remaining provisions remains unaffected.
 
 ----
 
@@ -20,4 +96,4 @@ Metatitle: Terms and conditions | Kielkraft
 
 ----
 
-Metadescription: General terms and conditions.
+Metadescription: Terms and conditions of Boostboards GmbH & Co. KG (Kielkraft brand) – conclusion of contract, prices, payment, freight delivery, retention of title, warranty and liability.

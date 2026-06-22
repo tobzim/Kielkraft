@@ -2,38 +2,96 @@ Title: Datenschutz
 
 ----
 
-Intro: Informationen zur Verarbeitung personenbezogener Daten (DSGVO).
+Intro: Informationen zur Verarbeitung personenbezogener Daten gemäß Art. 13 und 14 DSGVO.
 
 ----
 
 Text:
 
-## Verantwortlicher
+## 1. Verantwortlicher
+
+Verantwortlich für die Datenverarbeitung auf dieser Website ist:
 
 Boostboards GmbH & Co. KG (Marke Kielkraft)<br>
-Groten Hoff 21, 22359 Hamburg<br>
+Groten Hoff 21, 22359 Hamburg, Deutschland<br>
 E-Mail: info@boostboards.de · Telefon: +49 40 60 90 199 69
 
-## Worüber diese Erklärung informiert
+## 2. Allgemeines zur Datenverarbeitung
 
-Diese Datenschutzerklärung erläutert, welche personenbezogenen Daten wir beim Besuch und bei der Nutzung dieses Shops verarbeiten, zu welchen Zwecken und auf welcher Rechtsgrundlage. Die nachstehenden Punkte umreißen die Struktur – der vollständige, rechtsverbindliche Text wird ergänzt (siehe Hinweis unten).
+Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist oder Sie eingewilligt haben. Rechtsgrundlagen sind insbesondere Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), lit. b (Vertrag/Anbahnung), lit. c (rechtliche Verpflichtung) und lit. f (berechtigtes Interesse). Personenbezogene Daten werden gelöscht, sobald der Zweck der Speicherung entfällt und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
 
-- **Server-/Logdaten** beim Seitenaufruf (Art. 6 Abs. 1 lit. f DSGVO)
-- **Bestellabwicklung und Kundenkonto** (Art. 6 Abs. 1 lit. b DSGVO)
-- **Zahlungsdienstleister** (z. B. Stripe, PayPal, Klarna) zur Zahlungsabwicklung
-- **Rechnungs-/Buchhaltung** (z. B. lexoffice/sevDesk) und gesetzliche Aufbewahrung
-- **Versand-/Logistikpartner** zur Auslieferung (Dropshipping)
-- **Transaktions-E-Mails** über einen E-Mail-Dienst
-- **Kontaktformular** (Art. 6 Abs. 1 lit. a/b DSGVO)
-- **Reichweitenmessung** nur nach Einwilligung (Consent-Banner)
+## 3. Hosting und Server-Logfiles
 
-## Ihre Rechte
+Unsere Website wird bei der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Deutschland, gehostet; die Server stehen in Deutschland. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO).
 
-Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch sowie ein Beschwerderecht bei einer Aufsichtsbehörde.
+Bei jedem Aufruf erhebt der Server automatisch Informationen, die Ihr Browser übermittelt (Server-Logfiles): IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite/Datei, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp und -version, Betriebssystem und Referrer-URL. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt im sicheren und stabilen Betrieb der Website. Die Logfiles werden für maximal 7 Tage gespeichert und danach gelöscht, sofern keine sicherheitsrelevanten Vorfälle eine längere Aufbewahrung erfordern.
+
+## 4. SSL-/TLS-Verschlüsselung
+
+Diese Seite nutzt zur Sicherheit der Übertragung eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am „https://" in der Adresszeile Ihres Browsers.
+
+## 5. Cookies und Einwilligungsverwaltung
+
+Wir verwenden technisch notwendige Cookies bzw. vergleichbare Techniken (z. B. zur Sitzungsverwaltung, für den Warenkorb und zur Speicherung Ihrer Cookie-Entscheidung). Rechtsgrundlage ist § 25 Abs. 2 TDDDG sowie Art. 6 Abs. 1 lit. f DSGVO. Nicht notwendige Dienste (insbesondere Reichweitenmessung) setzen wir nur nach Ihrer Einwilligung über unser Consent-Banner ein (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO). Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.
+
+## 6. Kontaktaufnahme
+
+Wenn Sie uns über das Kontaktformular, per E-Mail, Telefon oder WhatsApp kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Daten (z. B. Name, Kontaktdaten, Nachricht), um Ihre Anfrage zu bearbeiten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertraglich/vertraglich) bzw. lit. f DSGVO (Bearbeitung allgemeiner Anfragen). Die Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine Aufbewahrungspflichten bestehen.
+
+## 7. Kundenkonto und Bestellabwicklung
+
+Zur Eröffnung eines Kundenkontos und zur Abwicklung Ihrer Bestellung verarbeiten wir die dafür erforderlichen Daten (z. B. Anrede/Name, Anschrift, E-Mail, Telefon, ggf. Firma und USt-IdNr., Bestell- und Zahlungsdaten). Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Ein Kundenkonto können Sie jederzeit löschen lassen. Daten, die handels- oder steuerrechtlichen Aufbewahrungsfristen unterliegen (insbesondere Rechnungen), bewahren wir bis zum Ablauf dieser Fristen (i. d. R. 6 bzw. 10 Jahre, §§ 257 HGB, 147 AO) auf und schränken die Verarbeitung bis dahin ein.
+
+## 8. Weitergabe an Versand- und Logistikpartner
+
+Wir verkaufen im Direktversand: Zur Auslieferung der Ware geben wir die hierfür erforderlichen Daten (Name, Lieferanschrift, ggf. Telefonnummer/E-Mail zur Avisierung) an das beauftragte Versand- bzw. Logistikunternehmen oder den ausliefernden Partner weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
+
+## 9. Zahlungsdienstleister
+
+Je nach gewählter Zahlart geben wir die zur Zahlungsabwicklung erforderlichen Daten an den jeweiligen Zahlungsdienstleister weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Es gelten zusätzlich die Datenschutzhinweise des jeweiligen Anbieters:
+
+- **Kreditkarte, Apple Pay, Google Pay, SEPA:** Stripe Payments Europe, Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Irland
+- **PayPal:** PayPal (Europe) S.à r.l. et Cie, S.C.A., 22–24 Boulevard Royal, L-2449 Luxemburg
+- **Klarna:** Klarna Bank AB (publ), Sveavägen 46, 111 34 Stockholm, Schweden
+
+Bei Auswahl von PayPal oder Klarna kann zur Risiko- und Bonitätsprüfung eine Datenübermittlung an den jeweiligen Anbieter erfolgen.
+
+## 10. Rechnungsstellung und Buchhaltung
+
+Zur Rechnungsstellung und Buchhaltung verarbeiten wir die erforderlichen Stamm- und Bestelldaten und setzen hierfür ggf. einen Buchhaltungs-/Rechnungsdienst als Auftragsverarbeiter ein. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b und lit. c DSGVO i. V. m. den gesetzlichen Aufbewahrungspflichten.
+
+## 11. Versand von Transaktions-E-Mails
+
+Bestellbestätigungen und sonstige für die Vertragsabwicklung erforderlichen E-Mails versenden wir über einen E-Mail-/Versanddienst, mit dem ein Auftragsverarbeitungsvertrag besteht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
+
+## 12. Newsletter
+
+Wenn Sie unseren Newsletter abonnieren, verarbeiten wir Ihre E-Mail-Adresse auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Die Anmeldung erfolgt im Double-Opt-in-Verfahren. Sie können den Newsletter jederzeit über den Abmeldelink oder per Nachricht an uns abbestellen; der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.
+
+## 13. Reichweitenmessung (Google Analytics 4 / Google Tag Manager)
+
+Nur nach Ihrer Einwilligung setzen wir Google Analytics 4 und den Google Tag Manager der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, ein, um die Nutzung unserer Website pseudonym auszuwerten und zu verbessern. Dabei werden Nutzungsdaten (z. B. gekürzte IP-Adresse, Geräte-/Browserinformationen, besuchte Seiten) verarbeitet; die IP-Anonymisierung ist aktiviert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO. Eine Datenübermittlung in die USA (Google LLC) ist möglich; Google ist unter dem EU-US Data Privacy Framework zertifiziert, ergänzend bestehen Standardvertragsklauseln. Ihre Einwilligung können Sie jederzeit über das Consent-Banner mit Wirkung für die Zukunft widerrufen.
+
+## 14. Ihre Rechte als betroffene Person
+
+Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie auf Widerruf erteilter Einwilligungen mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO).
+
+**Widerspruchsrecht (Art. 21 DSGVO):** Soweit wir Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeiten, können Sie aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch einlegen.
+
+## 15. Beschwerderecht bei der Aufsichtsbehörde
+
+Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Für uns zuständig ist:
+
+Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit (HmbBfDI)<br>
+Ludwig-Erhard-Straße 22, 20459 Hamburg
+
+## 16. Aktualität
+
+Wir passen diese Datenschutzerklärung an, sobald Änderungen der Verarbeitung oder der Rechtslage dies erfordern. Es gilt jeweils die hier veröffentlichte Fassung.
 
 ----
 
-IsPlaceholder: true
+IsPlaceholder: false
 
 ----
 
@@ -41,4 +99,4 @@ Metatitle: Datenschutz | Kielkraft
 
 ----
 
-Metadescription: Datenschutzhinweise von Kielkraft (Boostboards GmbH & Co. KG) zur Verarbeitung personenbezogener Daten.
+Metadescription: Datenschutzerklärung von Kielkraft (Boostboards GmbH & Co. KG) nach Art. 13 DSGVO – Hosting, Bestellabwicklung, Zahlungsdienstleister, Versandpartner, Cookies, Analytics und Ihre Rechte.
