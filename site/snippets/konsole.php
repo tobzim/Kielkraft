@@ -54,7 +54,7 @@ $wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
         <div class="kgauge"><span><?= $product->weightKg() ?></span><em>kg</em></div>
     </div>
 
-    <form method="post" action="<?= url('cart/add') ?>" data-cart-form>
+    <form method="post" action="<?= url('cart/add') ?>" data-cart-form data-ga-name="<?= $product->title()->esc() ?>" data-ga-brand="<?= $product->brand()->esc() ?>" data-ga-cat="<?= $isElectric ? 'Elektro' : 'Benzin' ?>" data-ga-price="<?= $basePrice ?>">
         <input type="hidden" name="csrf" value="<?= csrf() ?>">
         <input type="hidden" name="product" value="<?= $product->id() ?>">
         <input type="hidden" name="lang" value="<?= $code ?>">

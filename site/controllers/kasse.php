@@ -5,7 +5,7 @@ use Kirby\Data\Yaml;
 return function ($kirby, $page) {
     $code = $kirby->language() ? $kirby->language()->code() : 'de';
     $cart = kk_cart_get();
-    $alert = null; $success = false; $orderNumber = null; $invalid = [];
+    $alert = null; $success = false; $orderNumber = null; $invalid = []; $ga4 = null;
     $user = $kirby->user();
     $invoiceOk = $user ? $user->content()->get('invoiceEligible')->toBool() : false;
     $data = [
@@ -190,6 +190,12 @@ return function ($kirby, $page) {
                     // order is placed even if mail fails; mail is retried/handled by the shop
                 }
 
+                $ga4Items = [];
+                foreach ($items as $it) {
+                    $ga4Items[] = ['item_id' => $it['sku'], 'item_name' => $it['title'], 'item_variant' => $it['variant'], 'price' => round((float) $it['price'], 2), 'quantity' => (int) $it['qty']];
+                }
+                $ga4 = ['event' => 'purchase', 'params' => ['transaction_id' => $orderNumber, 'currency' => 'EUR', 'value' => round($total, 2), 'shipping' => round($ship, 2), 'items' => $ga4Items]];
+
                 kk_cart_save([]);
                 $cart = [];
                 $success = true;
@@ -201,5 +207,5 @@ return function ($kirby, $page) {
         }
     }
 
-    return compact('alert', 'success', 'orderNumber', 'invalid', 'data', 'cart', 'user', 'invoiceOk');
+    return compact('alert', 'success', 'orderNumber', 'invalid', 'data', 'cart', 'user', 'invoiceOk', 'ga4');
 };

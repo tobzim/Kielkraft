@@ -205,8 +205,47 @@
       g.async = true; g.src = "https://www.googletagmanager.com/gtm.js?id=" + gtm;
       document.head.appendChild(g);
     }
+    kkFireEcom();
   }
   try { if (localStorage.getItem("mv-consent") === "all") loadAnalytics(); } catch (e) {}
+
+  /* --- GA4 enhanced e-commerce (consent-gated) --- */
+  function kkGa4(name, params) {
+    if (window.__kkAnalyticsLoaded && typeof window.gtag === "function") {
+      window.gtag("event", name, params || {});
+      return true;
+    }
+    return false;
+  }
+  // Fire the page's primary e-commerce event (view_item / begin_checkout / purchase)
+  function kkFireEcom() {
+    if (window.__kkEcomFired) return;
+    var el = document.getElementById("kk-ecom");
+    if (!el) return;
+    var data;
+    try { data = JSON.parse(el.textContent); } catch (e) { return; }
+    if (data && data.event && kkGa4(data.event, data.params)) { window.__kkEcomFired = true; }
+  }
+  kkFireEcom();
+  // add_to_cart: fire just before the buy form submits
+  document.querySelectorAll("[data-cart-form]").forEach(function (form) {
+    form.addEventListener("submit", function () {
+      var d = form.dataset || {};
+      var skuEl = form.querySelector("[data-cart-sku]");
+      kkGa4("add_to_cart", {
+        currency: "EUR",
+        value: parseFloat(d.gaPrice || "0") || 0,
+        items: [{
+          item_id: (skuEl && skuEl.value) || d.gaId || "",
+          item_name: d.gaName || "",
+          item_brand: d.gaBrand || "",
+          item_category: d.gaCat || "",
+          price: parseFloat(d.gaPrice || "0") || 0,
+          quantity: 1
+        }]
+      });
+    });
+  });
 
   var consent = document.querySelector("[data-consent]");
   if (consent) {

@@ -17,6 +17,19 @@ if (!empty($invoiceOk)) {
 }
 ?>
 <?php snippet('header') ?>
+<?php
+$ecom = $ga4 ?? null;
+if (!$ecom && !empty($cartNow)) {
+    $ci = [];
+    foreach ($cartNow as $sku => $it) {
+        $ci[] = ['item_id' => $sku, 'item_name' => $it['title'], 'item_variant' => $it['variant'], 'price' => round((float) $it['price'], 2), 'quantity' => (int) $it['qty']];
+    }
+    $ecom = ['event' => 'begin_checkout', 'params' => ['currency' => 'EUR', 'value' => round($total, 2), 'items' => $ci]];
+}
+?>
+<?php if ($ecom): ?>
+<script type="application/json" id="kk-ecom"><?= json_encode($ecom, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
+<?php endif ?>
 
 <section class="section">
     <div class="container">

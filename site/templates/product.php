@@ -9,6 +9,8 @@ $cover = $page->image();
 $cross = $page->crossSell()->toPages();
 ?>
 <?php snippet('header') ?>
+<?php $ga4Item = kk_ga4_item($page); ?>
+<script type="application/json" id="kk-ecom"><?= json_encode(['event' => 'view_item', 'params' => ['currency' => 'EUR', 'value' => $ga4Item['price'], 'items' => [$ga4Item]]], JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
 
 <div class="container <?= $axis ?>" style="padding-top:var(--sp-5)">
     <nav class="breadcrumb" aria-label="Breadcrumb">

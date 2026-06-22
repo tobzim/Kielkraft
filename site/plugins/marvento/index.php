@@ -129,6 +129,25 @@ if (!function_exists('kk_search_products')) {
     }
 }
 
+/** GA4 enhanced-ecommerce item array for a product page. */
+if (!function_exists('kk_ga4_item')) {
+    function kk_ga4_item($p, ?float $price = null, int $qty = 1): array
+    {
+        $v = $p->variants()->toStructure()->first();
+        if ($price === null) {
+            $price = $v && $v->price()->isNotEmpty() ? (float) $v->price()->value() : (float) $p->priceFrom()->value();
+        }
+        return [
+            'item_id'       => $v ? (string) $v->sku() : $p->slug(),
+            'item_name'     => (string) $p->title(),
+            'item_brand'    => (string) $p->brand(),
+            'item_category' => $p->antrieb()->value() === 'elektro' ? 'Elektro' : 'Benzin',
+            'price'         => round((float) $price, 2),
+            'quantity'      => $qty,
+        ];
+    }
+}
+
 /* ---------------------------------------------------------------------------
  * Session cart (lightweight; no commercial shop plugin required yet)
  * ------------------------------------------------------------------------- */
