@@ -227,6 +227,41 @@ if (!function_exists('kk_cart_get')) {
     function kk_cart_url(): string { return get('lang') === 'en' ? 'en/cart' : 'warenkorb'; }
 }
 
+/** Does the current request expect a JSON response (fetch/AJAX)? */
+if (!function_exists('kk_wants_json')) {
+    function kk_wants_json(): bool
+    {
+        return kirby()->request()->header('X-Requested-With') === 'fetch' || get('json') === '1';
+    }
+}
+
+/** Full cart payload for the mini-cart drawer (JSON). */
+if (!function_exists('kk_cart_json')) {
+    function kk_cart_json(): array
+    {
+        $items = [];
+        foreach (kk_cart_get() as $sku => $it) {
+            $items[] = [
+                'sku'           => (string) $sku,
+                'title'         => $it['title'],
+                'variant'       => $it['variant'],
+                'qty'           => (int) $it['qty'],
+                'lineFormatted' => mv_eur((float) $it['price'] * (int) $it['qty']),
+                'img'           => $it['img'] ?? '',
+                'url'           => $it['url'] ?? '',
+            ];
+        }
+        $ship = kk_cart_shipping();
+        return [
+            'count'             => kk_cart_count(),
+            'subtotalFormatted' => mv_eur(kk_cart_subtotal()),
+            'shippingFormatted' => $ship > 0 ? mv_eur($ship) : '',
+            'totalFormatted'    => mv_eur(kk_cart_total()),
+            'items'             => $items,
+        ];
+    }
+}
+
 /**
  * Normalised product-feed items (one per orderable variant) for all export
  * channels (Google Shopping, Meta/Facebook, Idealo, generic CSV).
@@ -397,9 +432,10 @@ Kirby::plugin('kielkraft/core', [
             'pattern' => 'cart/add',
             'method'  => 'POST',
             'action'  => function () {
-                if (csrf(get('csrf')) !== true) { go('/'); }
+                $json = kk_wants_json();
+                if (csrf(get('csrf')) !== true) { return $json ? Response::json(['ok' => false], 403) : go('/'); }
                 $p = page(get('product'));
-                if (!$p) { go(kk_cart_url()); }
+                if (!$p) { return $json ? Response::json(['ok' => false], 404) : go(kk_cart_url()); }
                 $qty = max(1, (int) get('qty', 1));
                 $sku = (string) get('sku');
                 $v = $p->variants()->toStructure()->filter(fn ($x) => (string) $x->sku()->value() === $sku)->first();
@@ -420,7 +456,14 @@ Kirby::plugin('kielkraft/core', [
                     ];
                 }
                 kk_cart_save($cart);
+                if ($json) { return Response::json(['ok' => true] + kk_cart_json()); }
                 go(kk_cart_url());
+            },
+        ],
+        [
+            'pattern' => 'cart/data.json',
+            'action'  => function () {
+                return Response::json(kk_cart_json());
             },
         ],
         [
@@ -448,6 +491,7 @@ Kirby::plugin('kielkraft/core', [
                     unset($cart[(string) get('sku')]);
                     kk_cart_save($cart);
                 }
+                if (kk_wants_json()) { return Response::json(['ok' => true] + kk_cart_json()); }
                 go(kk_cart_url());
             },
         ],

@@ -64,6 +64,25 @@ $y    = date('Y');
     </div>
 </footer>
 
+<div class="minicart" data-minicart data-empty="<?= $en ? 'Your cart is empty.' : 'Dein Warenkorb ist leer.' ?>" data-remove="<?= $en ? 'Remove' : 'Entfernen' ?>" hidden>
+    <div class="minicart__overlay" data-minicart-close></div>
+    <aside class="minicart__panel" role="dialog" aria-modal="true" aria-label="<?= t('cart.title') ?>">
+        <header class="minicart__head">
+            <strong><?= t('cart.title') ?></strong>
+            <button class="minicart__close" type="button" data-minicart-close aria-label="<?= t('kielkraft.close') ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        </header>
+        <div class="minicart__body" data-minicart-body></div>
+        <footer class="minicart__foot" data-minicart-foot hidden>
+            <div class="minicart__row"><span><?= t('cart.subtotal') ?></span><span data-minicart-subtotal></span></div>
+            <div class="minicart__row minicart__row--ship" data-minicart-shiprow hidden><span><?= $en ? 'Freight' : 'Fracht' ?></span><span data-minicart-shipping></span></div>
+            <div class="minicart__row minicart__row--total"><span><?= $en ? 'Total' : 'Gesamt' ?></span><span data-minicart-total></span></div>
+            <a class="btn btn--cta btn--lg btn--block" href="<?= url($en ? 'en/checkout' : 'kasse') ?>"><?= t('cart.checkout') ?></a>
+            <a class="minicart__viewcart" href="<?= url($en ? 'en/cart' : 'warenkorb') ?>"><?= $en ? 'View full cart' : 'Warenkorb ansehen' ?></a>
+        </footer>
+        <input type="hidden" data-minicart-csrf value="<?= csrf() ?>">
+    </aside>
+</div>
+
 <?php snippet('consent') ?>
 <script defer src="<?= mv_asset('assets/js/app.js') ?>"></script>
 </body>

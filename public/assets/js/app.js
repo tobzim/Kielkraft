@@ -57,7 +57,8 @@
   document.querySelectorAll("[data-add-to-cart]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var form = document.querySelector("[data-cart-form]");
-      if (form) form.submit();
+      if (!form) return;
+      if (form.requestSubmit) { form.requestSubmit(); } else { form.submit(); }
     });
   });
 
@@ -434,4 +435,74 @@
     catSel && catSel.addEventListener("change", function () { lastQ = ""; query(); });
     document.addEventListener("click", function (e) { if (!form.contains(e.target)) close(); });
   });
+
+  /* --- Mini-cart drawer (AJAX) --- */
+  var mc = document.querySelector("[data-minicart]");
+  if (mc && window.fetch) {
+    var mcBody = mc.querySelector("[data-minicart-body]");
+    var mcFoot = mc.querySelector("[data-minicart-foot]");
+    var mcCsrf = (mc.querySelector("[data-minicart-csrf]") || {}).value || "";
+    var emptyMsg = mc.getAttribute("data-empty") || "";
+    var removeLbl = mc.getAttribute("data-remove") || "Remove";
+
+    function mcEsc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
+    function mcOpen() { mc.hidden = false; document.body.style.overflow = "hidden"; requestAnimationFrame(function () { mc.classList.add("is-open"); }); }
+    function mcClose() { mc.classList.remove("is-open"); document.body.style.overflow = ""; setTimeout(function () { mc.hidden = true; }, 260); }
+
+    function mcRender(d) {
+      if (!d) return;
+      document.querySelectorAll("[data-cart-count]").forEach(function (b) { b.textContent = d.count; });
+      document.querySelectorAll("[data-cart-total]").forEach(function (t) { t.textContent = d.subtotalFormatted; });
+      if (!d.items || !d.items.length) {
+        mcBody.innerHTML = '<p class="minicart__empty">' + mcEsc(emptyMsg) + "</p>";
+        mcFoot.hidden = true;
+        return;
+      }
+      mcBody.innerHTML = d.items.map(function (it) {
+        var img = it.img ? '<img src="' + it.img + '" alt="">' : '<span class="minicart-it__ph"></span>';
+        return '<div class="minicart-it">' + img +
+          '<div class="minicart-it__b"><a href="' + it.url + '" class="minicart-it__t">' + mcEsc(it.title) + "</a>" +
+          (it.variant ? '<span class="minicart-it__v">' + mcEsc(it.variant) + "</span>" : "") +
+          '<span class="minicart-it__m">' + it.qty + " &times; &middot; " + it.lineFormatted + "</span></div>" +
+          '<button class="minicart-it__rm" type="button" data-mc-remove="' + mcEsc(it.sku) + '" aria-label="' + mcEsc(removeLbl) + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg></button></div>";
+      }).join("");
+      mc.querySelector("[data-minicart-subtotal]").textContent = d.subtotalFormatted;
+      var shiprow = mc.querySelector("[data-minicart-shiprow]");
+      if (d.shippingFormatted) { mc.querySelector("[data-minicart-shipping]").textContent = d.shippingFormatted; shiprow.hidden = false; }
+      else { shiprow.hidden = true; }
+      mc.querySelector("[data-minicart-total]").textContent = d.totalFormatted;
+      mcFoot.hidden = false;
+    }
+
+    mc.querySelectorAll("[data-minicart-close]").forEach(function (b) { b.addEventListener("click", mcClose); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !mc.hidden) mcClose(); });
+
+    mcBody.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-mc-remove]");
+      if (!btn) return;
+      fetch("/cart/remove", { method: "POST", headers: { "X-Requested-With": "fetch", "Content-Type": "application/x-www-form-urlencoded" },
+        body: "csrf=" + encodeURIComponent(mcCsrf) + "&sku=" + encodeURIComponent(btn.getAttribute("data-mc-remove")) })
+        .then(function (r) { return r.json(); }).then(mcRender).catch(function () {});
+    });
+
+    document.querySelectorAll(".cart-btn").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        mcOpen();
+        fetch("/cart/data.json", { headers: { Accept: "application/json" } })
+          .then(function (r) { return r.json(); }).then(mcRender)
+          .catch(function () { window.location.href = a.getAttribute("href"); });
+      });
+    });
+
+    document.querySelectorAll("[data-cart-form]").forEach(function (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        fetch(form.getAttribute("action"), { method: "POST", headers: { "X-Requested-With": "fetch" }, body: new FormData(form) })
+          .then(function (r) { return r.json(); })
+          .then(function (d) { if (d && d.ok) { mcRender(d); mcOpen(); } else { HTMLFormElement.prototype.submit.call(form); } })
+          .catch(function () { HTMLFormElement.prototype.submit.call(form); });
+      });
+    });
+  }
 })();
