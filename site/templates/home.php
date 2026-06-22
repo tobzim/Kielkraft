@@ -11,6 +11,16 @@ $catP = page('benzin-aussenborder');
 $products = $site->index()->filterBy('intendedTemplate', 'product')->listed();
 $featured = $products->filterBy('bestseller', true)->merge($products)->limit(4);
 
+// Curated, varied hero set: bestseller/sale first, then guarantee an
+// electric + the strongest petrol + a second electric, then fill. merge() dedupes.
+$heroSel = $products->filterBy('bestseller', true)
+    ->merge($products->filterBy('antrieb', 'elektro')->limit(1))
+    ->merge($products->filterBy('antrieb', 'benzin')->sortBy('powerPs', 'desc')->limit(1))
+    ->merge($products->filterBy('antrieb', 'elektro'))
+    ->merge($products)
+    ->limit(4);
+$heroN = $heroSel->count();
+
 $pf = function ($pr) use ($code) {
     $v = $pr->variants()->toStructure()->first();
     $price = $v && $v->price()->isNotEmpty() ? $v->price()->value() : $pr->priceFrom()->value();
@@ -19,6 +29,74 @@ $pf = function ($pr) use ($code) {
 ?>
 <?php snippet('header') ?>
 
+<?php if ($heroN > 0): ?>
+<section class="hero" data-hero aria-roledescription="carousel" aria-label="<?= $en ? 'Featured outboards' : 'Empfohlene Außenborder' ?>">
+    <h1 class="sr-only"><?= $page->heroHeadline()->or($site->title()) ?></h1>
+    <div class="hero__viewport">
+        <div class="hero__track" data-hero-track>
+<?php $hi = 0; foreach ($heroSel as $pr): $hi++;
+            $cover = $pr->image();
+            $hv    = $pr->variants()->toStructure()->first();
+            $price = $hv && $hv->price()->isNotEmpty() ? (float) $hv->price()->value() : (float) $pr->priceFrom()->value();
+            $uvp   = $pr->uvp()->isNotEmpty() ? (float) $pr->uvp()->value() : null;
+            $pct   = ($uvp && $uvp > $price) ? (int) round((1 - $price / $uvp) * 100) : 0;
+            $hship = (float) $pr->shippingCost()->or(0)->value();
+            $isE   = $pr->antrieb()->value() === 'elektro';
+?>
+            <article class="hero__slide hero__slide--<?= $isE ? 'cool' : 'warm' ?><?= $hi === 1 ? ' is-active' : '' ?>" data-hero-slide role="group" aria-roledescription="slide" aria-label="<?= $hi ?> / <?= $heroN ?>"<?= $hi === 1 ? '' : ' aria-hidden="true"' ?>>
+                <div class="container hero__inner">
+                    <div class="hero__content">
+<?php if ($pct > 0): ?>
+                        <span class="hero__eyebrow hero__eyebrow--sale"><?= $en ? 'Deal' : 'Aktion' ?> &middot; &minus;<?= $pct ?>&nbsp;%</span>
+<?php elseif ($pr->bestseller()->toBool()): ?>
+                        <span class="hero__eyebrow hero__eyebrow--top"><?= t('product.bestseller') ?></span>
+<?php else: ?>
+                        <span class="hero__eyebrow hero__eyebrow--<?= $isE ? 'cool' : 'warm' ?>"><?= $pr->brand()->esc() ?> &middot; <?= $isE ? ($en ? 'Electric' : 'Elektro') : ($en ? 'Petrol 4-stroke' : 'Benzin 4-Takt') ?></span>
+<?php endif ?>
+                        <h2 class="hero__title"><?= $pr->title()->esc() ?></h2>
+                        <p class="hero__lead"><?= $isE
+                            ? ($en ? 'Quiet, low-maintenance and emission-free – ideal for tenders, sailing yachts and calm waters.' : 'Leise, wartungsarm und emissionsfrei – ideal für Tender, Segelyachten und ruhige Reviere.')
+                            : ($en ? 'Proven 4-stroke power with long range – reliable on every tour.' : 'Bewährte 4-Takt-Power mit hoher Reichweite – zuverlässig auf jeder Tour.') ?></p>
+                        <div class="hero__specs">
+                            <span><?= $pr->powerPs() ?> PS</span>
+                            <span><?= $pr->powerKw() ?> kW</span>
+                            <span><?= $pr->weightKg() ?> kg</span>
+                        </div>
+                        <div class="hero__price">
+<?php if ($uvp && $uvp > $price): ?>
+                            <span class="hero__old"><?= mv_eur($uvp, $code) ?></span>
+<?php endif ?>
+                            <span class="hero__now"><?= mv_eur($price, $code) ?></span>
+                            <span class="hero__vat"><?= t('product.incl_vat') ?> &middot; <?= $hship > 0 ? ($en ? 'plus freight ' : 'zzgl. Fracht ') . mv_eur($hship, $code) : ($en ? 'free freight' : 'frachtfrei') ?></span>
+                        </div>
+                        <div class="hero__cta">
+                            <a class="btn btn--on-navy btn--lg" href="<?= $pr->url() ?>"><?= $en ? 'View model' : 'Modell ansehen' ?></a>
+                            <a class="btn btn--ghost btn--lg" href="<?= $urlAdv ?>"><?= t('nav.advisor') ?></a>
+                        </div>
+                    </div>
+                    <div class="hero__media">
+<?php if ($cover): ?>
+                        <img src="<?= $cover->resize(900)->url() ?>" alt="<?= $cover->alt()->or($pr->title())->esc() ?>"<?= $hi === 1 ? ' fetchpriority="high"' : ' loading="lazy"' ?> width="900" height="675">
+<?php else: ?>
+                        <span class="hero__ph"><?= $pr->title()->esc() ?></span>
+<?php endif ?>
+                    </div>
+                </div>
+            </article>
+<?php endforeach ?>
+        </div>
+    </div>
+<?php if ($heroN > 1): ?>
+    <button class="hero__nav hero__nav--prev" type="button" data-hero-prev aria-label="<?= $en ? 'Previous' : 'Vorheriges' ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="hero__nav hero__nav--next" type="button" data-hero-next aria-label="<?= $en ? 'Next' : 'Nächstes' ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+    <div class="hero__dots" data-hero-dots role="tablist" aria-label="<?= $en ? 'Slides' : 'Folien' ?>">
+<?php for ($d = 0; $d < $heroN; $d++): ?>
+        <button class="hero__dot<?= $d === 0 ? ' is-active' : '' ?>" type="button" data-hero-dot="<?= $d ?>" aria-label="<?= ($en ? 'Slide ' : 'Folie ') . ($d + 1) ?>"<?= $d === 0 ? ' aria-current="true"' : '' ?>></button>
+<?php endfor ?>
+    </div>
+<?php endif ?>
+</section>
+<?php else: ?>
 <section class="promo">
     <img class="promo__img" src="<?= url('assets/img/hero-petrol.webp') ?>" alt="" fetchpriority="high">
     <div class="promo__scrim"></div>
@@ -36,6 +114,7 @@ $pf = function ($pr) use ($code) {
         </div>
     </div>
 </section>
+<?php endif ?>
 
 <div class="trustbar">
     <div class="container trustbar__row">

@@ -286,4 +286,54 @@
       l.addEventListener("click", function () { activate(l.getAttribute("data-account-link")); });
     });
   }
+
+  /* --- Hero product slider --- */
+  var hero = document.querySelector("[data-hero]");
+  if (hero) {
+    var hTrack = hero.querySelector("[data-hero-track]");
+    var hSlides = Array.prototype.slice.call(hero.querySelectorAll("[data-hero-slide]"));
+    var hDots = Array.prototype.slice.call(hero.querySelectorAll("[data-hero-dot]"));
+    var hPrev = hero.querySelector("[data-hero-prev]");
+    var hNext = hero.querySelector("[data-hero-next]");
+    var hN = hSlides.length, hi = 0, hTimer = null;
+    var hReduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function hGo(to) {
+      hi = (to + hN) % hN;
+      if (hTrack) hTrack.style.transform = "translateX(" + (-hi * 100) + "%)";
+      hSlides.forEach(function (s, k) {
+        s.classList.toggle("is-active", k === hi);
+        if (k === hi) { s.removeAttribute("aria-hidden"); } else { s.setAttribute("aria-hidden", "true"); }
+      });
+      hDots.forEach(function (d, k) {
+        d.classList.toggle("is-active", k === hi);
+        if (k === hi) { d.setAttribute("aria-current", "true"); } else { d.removeAttribute("aria-current"); }
+      });
+    }
+    function hStop() { if (hTimer) { clearInterval(hTimer); hTimer = null; } }
+    function hStart() { if (hReduce || hN < 2) return; hStop(); hTimer = setInterval(function () { hGo(hi + 1); }, 6000); }
+
+    if (hNext) hNext.addEventListener("click", function () { hGo(hi + 1); hStart(); });
+    if (hPrev) hPrev.addEventListener("click", function () { hGo(hi - 1); hStart(); });
+    hDots.forEach(function (d) { d.addEventListener("click", function () { hGo(+d.getAttribute("data-hero-dot")); hStart(); }); });
+    hero.addEventListener("mouseenter", hStop);
+    hero.addEventListener("mouseleave", hStart);
+    hero.addEventListener("focusin", hStop);
+    hero.addEventListener("focusout", hStart);
+    hero.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { hGo(hi - 1); hStart(); }
+      else if (e.key === "ArrowRight") { hGo(hi + 1); hStart(); }
+    });
+    var hX0 = null;
+    hero.addEventListener("touchstart", function (e) { hX0 = e.touches[0].clientX; hStop(); }, { passive: true });
+    hero.addEventListener("touchend", function (e) {
+      if (hX0 === null) return;
+      var dx = e.changedTouches[0].clientX - hX0;
+      if (Math.abs(dx) > 40) hGo(hi + (dx < 0 ? 1 : -1));
+      hX0 = null; hStart();
+    }, { passive: true });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) { hStop(); } else { hStart(); } });
+
+    hGo(0); hStart();
+  }
 })();
