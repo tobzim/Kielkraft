@@ -64,7 +64,7 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
 CMD ["php-fpm"]
 
 # ---- Stage 3: Web (nginx serving baked static assets) ----------------------
-FROM nginx:1.27-alpine AS web
+FROM nginx:1.31-alpine AS web
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --chown=nginx:nginx public /var/www/html/public
 # content/, site/, kirby/, storage/ are intentionally NOT copied here:
