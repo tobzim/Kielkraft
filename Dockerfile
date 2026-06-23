@@ -21,7 +21,7 @@ RUN composer install \
         --ignore-platform-reqs
 
 # ---- Stage 2: Runtime (PHP-FPM application) ---------------------------------
-FROM php:8.2-fpm-alpine AS runtime
+FROM php:8.5-fpm-alpine AS runtime
 
 # PHP extensions: gd (AVIF/WebP) for the image pipeline, intl, zip, mbstring ...
 RUN set -eux; \
