@@ -7,6 +7,11 @@ node_modules
 /kirby
 /storage
 /public/media
+# Customer/order data is DSGVO-relevant and never baked into the image
+# (orders.txt parent page is kept so the order flow works; data lives in volumes)
+/content/orders/_drafts
+/content/orders/*/
+/content/customers
 .env
 .env.*
 docs
