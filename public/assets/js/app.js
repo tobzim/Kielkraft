@@ -153,19 +153,45 @@
     if (aSteps.length) aShow(0);
   }
 
-  /* --- Category listing: sort + filter --- */
+  /* --- Category listing: faceted filter + sort --- */
   var listing = document.querySelector("[data-listing]");
   if (listing) {
     var grid = listing.querySelector("[data-listing-grid]");
     var items = Array.prototype.slice.call(listing.querySelectorAll(".listing-item"));
     var sortSel = listing.querySelector("[data-sort]");
-    var steerSel = listing.querySelector("[data-filter-steuerung]");
     var countEl = listing.querySelector("[data-count]");
     var countWord = countEl ? countEl.textContent.replace(/^\d+\s*/, "") : "";
-    var apply = function () {
-      var steer = steerSel ? steerSel.value : "";
+    var emptyEl = listing.querySelector("[data-listing-empty]");
+    var resetBtn = listing.querySelector("[data-filter-reset]");
+    var filters = Array.prototype.slice.call(listing.querySelectorAll("[data-filter]"));
+
+    // group inputs by their data-filter value (= the item dataset key)
+    var groups = {};
+    filters.forEach(function (f) {
+      var g = f.getAttribute("data-filter");
+      (groups[g] = groups[g] || []).push(f);
+    });
+
+    function matches(it) {
+      for (var g in groups) {
+        var checked = groups[g].filter(function (f) { return f.checked; });
+        if (!checked.length) continue;                 // group inactive = no constraint
+        var hit = checked.some(function (f) {
+          if (f.hasAttribute("data-min")) {             // numeric range facet
+            var v = parseFloat(it.dataset[g] || "0");
+            return v >= parseFloat(f.getAttribute("data-min")) && v <= parseFloat(f.getAttribute("data-max"));
+          }
+          var val = f.getAttribute("data-value");       // token / exact facet
+          return (" " + (it.dataset[g] || "") + " ").indexOf(" " + val + " ") !== -1;
+        });
+        if (!hit) return false;                          // AND across groups
+      }
+      return true;
+    }
+
+    function apply() {
       var visible = items.filter(function (it) {
-        var ok = !steer || (it.getAttribute("data-steuerung") || "").indexOf(steer) !== -1;
+        var ok = matches(it);
         it.classList.toggle("is-hidden", !ok);
         return ok;
       });
@@ -173,13 +199,27 @@
       visible.sort(function (a, b) {
         if (sort === "price-asc") return (+a.dataset.price) - (+b.dataset.price);
         if (sort === "price-desc") return (+b.dataset.price) - (+a.dataset.price);
+        if (sort === "weight") return (+a.dataset.weight) - (+b.dataset.weight);
         return (+a.dataset.power) - (+b.dataset.power);
       });
       if (grid) visible.forEach(function (it) { grid.appendChild(it); });
       if (countEl) countEl.textContent = visible.length + " " + countWord;
-    };
+      if (emptyEl) emptyEl.hidden = visible.length !== 0;
+      if (resetBtn) resetBtn.hidden = !filters.some(function (f) { return f.checked; });
+    }
+
+    filters.forEach(function (f) { f.addEventListener("change", apply); });
     if (sortSel) sortSel.addEventListener("change", apply);
-    if (steerSel) steerSel.addEventListener("change", apply);
+    if (resetBtn) resetBtn.addEventListener("click", function () {
+      filters.forEach(function (f) { f.checked = false; });
+      apply();
+    });
+
+    // Mobile: collapse the filter panel by default
+    var fpanel = listing.querySelector("[data-filters]");
+    if (fpanel && window.matchMedia && window.matchMedia("(max-width: 860px)").matches) {
+      fpanel.removeAttribute("open");
+    }
   }
 
   /* --- Cookie consent + consent-gated analytics (GA4 / GTM) --- */
