@@ -73,8 +73,7 @@ jobs:
           key: ${{ secrets.HETZNER_SSH_KEY }}
           script_stop: true
           script: |
-            set -euo pipefail
-            cd ${{ secrets.SERVICE_PATH }}
+            cd /opt/kielkraft
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
             docker compose -f docker-compose.prod.yml pull
             docker compose -f docker-compose.prod.yml up -d
