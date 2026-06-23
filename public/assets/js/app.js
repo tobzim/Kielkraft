@@ -464,7 +464,7 @@
           '<div class="minicart-it__b"><a href="' + it.url + '" class="minicart-it__t">' + mcEsc(it.title) + "</a>" +
           (it.variant ? '<span class="minicart-it__v">' + mcEsc(it.variant) + "</span>" : "") +
           '<span class="minicart-it__m">' + it.qty + " &times; &middot; " + it.lineFormatted + "</span></div>" +
-          '<button class="minicart-it__rm" type="button" data-mc-remove="' + mcEsc(it.sku) + '" aria-label="' + mcEsc(removeLbl) + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg></button></div>";
+          '<button class="minicart-it__rm" type="button" data-mc-remove="' + mcEsc(it.sku) + '" aria-label="' + mcEsc(removeLbl) + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg></button></div>';
       }).join("");
       mc.querySelector("[data-minicart-subtotal]").textContent = d.subtotalFormatted;
       var shiprow = mc.querySelector("[data-minicart-shiprow]");
