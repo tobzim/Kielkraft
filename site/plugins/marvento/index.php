@@ -331,6 +331,51 @@ if (!function_exists('kk_feed_items')) {
     }
 }
 
+/** Approved (listed) reviews for a product, newest first. */
+if (!function_exists('kk_reviews_for')) {
+    function kk_reviews_for($product)
+    {
+        $parent = page('reviews');
+        if (!$parent) { return new Kirby\Cms\Pages([]); }
+        $pid = is_string($product) ? $product : $product->id();
+        return $parent->children()->listed()
+            ->filter(fn ($r) => (string) $r->product()->value() === $pid)
+            ->sortBy('date', 'desc');
+    }
+}
+
+/** Aggregate rating stats for a product: ['count' => int, 'avg' => float]. */
+if (!function_exists('kk_review_stats')) {
+    function kk_review_stats($product): array
+    {
+        $reviews = kk_reviews_for($product);
+        $count = $reviews->count();
+        if ($count === 0) { return ['count' => 0, 'avg' => 0.0]; }
+        $sum = 0;
+        foreach ($reviews as $r) { $sum += (int) $r->rating()->value(); }
+        return ['count' => $count, 'avg' => round($sum / $count, 1)];
+    }
+}
+
+/** Did this e-mail buy this product in any past order? (honest "verified" badge) */
+if (!function_exists('kk_is_verified_buyer')) {
+    function kk_is_verified_buyer(string $email, string $productId): bool
+    {
+        $email = strtolower(trim($email));
+        if ($email === '') { return false; }
+        $orders = page('orders');
+        if (!$orders) { return false; }
+        foreach ($orders->children() as $o) {
+            if (strtolower((string) $o->customerEmail()) !== $email) { continue; }
+            $items = $o->items()->yaml();
+            foreach ($items as $it) {
+                if (($it['product'] ?? '') === $productId) { return true; }
+            }
+        }
+        return false;
+    }
+}
+
 Kirby::plugin('kielkraft/core', [
     'routes' => [
         [
@@ -542,6 +587,54 @@ Kirby::plugin('kielkraft/core', [
             'action'  => function () {
                 if ($u = kirby()->user()) { $u->logout(); }
                 go(get('lang') === 'en' ? 'en/login' : 'anmelden');
+            },
+        ],
+        [
+            'pattern' => 'reviews/submit',
+            'method'  => 'POST',
+            'action'  => function () {
+                $product = page(get('product'));
+                $back = $product ? $product->url() : site()->url();
+                if (csrf(get('csrf')) !== true) { return go($back); }
+                if (trim((string) get('website')) !== '') { return go($back); } // Honeypot
+
+                $rating = (int) get('rating');
+                $author = trim((string) get('author'));
+                $title  = trim((string) get('title'));
+                $body   = trim((string) get('body'));
+                $email  = strtolower(trim((string) get('email')));
+
+                if (!$product || $rating < 1 || $rating > 5 || $author === '' || mb_strlen($body) < 10) {
+                    return go($back . '?review=error#bewertungen');
+                }
+                $author = mb_substr($author, 0, 60);
+                $title  = mb_substr($title, 0, 120);
+                $body   = mb_substr($body, 0, 2000);
+                $verified = ($email !== '' && kk_is_verified_buyer($email, $product->id()));
+
+                kirby()->impersonate('kirby');
+                $parent = page('reviews');
+                if (!$parent) {
+                    $parent = site()->createChild(['slug' => 'reviews', 'template' => 'reviews', 'content' => ['title' => 'Bewertungen']]);
+                    $parent->changeStatus('unlisted');
+                }
+                $slug = 'r' . substr(md5($product->id() . $email . microtime()), 0, 12);
+                $parent->createChild([
+                    'slug'     => $slug,
+                    'template' => 'review',
+                    'content'  => [
+                        'title'    => $title !== '' ? $title : ($author . ' – ' . $rating . '★'),
+                        'author'   => $author,
+                        'rating'   => $rating,
+                        'body'     => $body,
+                        'verified' => $verified ? 'true' : 'false',
+                        'product'  => $product->id(),
+                        'email'    => $email,
+                        'date'     => date('Y-m-d H:i:s'),
+                    ],
+                ]);
+                kirby()->impersonate(null);
+                return go($back . '?review=thanks#bewertungen');
             },
         ],
     ],

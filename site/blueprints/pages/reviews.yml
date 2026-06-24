@@ -1,0 +1,20 @@
+title: Bewertungen
+icon: star
+
+sections:
+  pending:
+    label: Zu prüfen
+    type: pages
+    template: review
+    status: drafts
+    sortBy: date desc
+    info: "{{ page.rating }}★ · {{ page.author }} · {{ page.product }}"
+    empty: Keine offenen Bewertungen.
+  published:
+    label: Veröffentlicht
+    type: pages
+    template: review
+    status: listed
+    sortBy: date desc
+    info: "{{ page.rating }}★ · {{ page.author }} · {{ page.product }}"
+    empty: Noch keine veröffentlichten Bewertungen.

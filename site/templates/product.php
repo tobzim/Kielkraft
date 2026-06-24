@@ -116,6 +116,8 @@ if ($cross->count() === 0) {
     </div>
 </section>
 
+<?php snippet('reviews', ['product' => $page]) ?>
+
 <?php if ($cross->count() > 0): ?>
 <section class="section--tight">
     <div class="container">

@@ -950,3 +950,55 @@ body:has([data-mini-konsole]) .wa-fab { display: none; }
 .emptybox { border: 1px dashed var(--line); border-radius: var(--r-md); padding: var(--sp-7); text-align: center; color: var(--body); background: var(--surface); }
 .emptybox__cta { display: flex; gap: var(--sp-3); justify-content: center; flex-wrap: wrap; margin-top: var(--sp-4); }
 @media (prefers-reduced-motion: reduce) { .ptool, .cmp-bar { transition: none; } .ptool.is-shake { animation: none; } }
+
+/* === Bewertungen === */
+.reviews { padding-block: var(--sp-8); border-top: 1px solid var(--line); }
+.reviews__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--sp-3); margin-bottom: var(--sp-5); }
+.reviews__head h2 { margin: 0; }
+.reviews__summary { display: inline-flex; align-items: center; gap: var(--sp-3); }
+.reviews__avg { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-600); color: var(--ink); line-height: 1; }
+.reviews__count { color: var(--muted); font-size: var(--fs-200); }
+
+.stars { display: inline-block; position: relative; font-size: 16px; line-height: 1; color: #d4dae2; letter-spacing: 2px; white-space: nowrap; }
+.stars::before { content: "★★★★★"; position: absolute; left: 0; top: 0; width: var(--p, 0); overflow: hidden; color: var(--gold); letter-spacing: 2px; }
+.stars--lg { font-size: 22px; }
+
+.reviews__flash { padding: var(--sp-3) var(--sp-4); border-radius: var(--r-sm); font-weight: 600; margin-bottom: var(--sp-5); }
+.reviews__flash--ok { background: #e8f6ee; color: #14633a; border: 1px solid #b9e3cb; }
+.reviews__flash--err { background: #fde9e7; color: #8a2218; border: 1px solid #f3c1bb; }
+
+.reviews__grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--sp-7); align-items: start; }
+.reviews__list { display: flex; flex-direction: column; gap: var(--sp-4); }
+.reviews__empty { color: var(--muted); padding: var(--sp-5); background: var(--surface-2); border-radius: var(--r-md); }
+
+.review { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: var(--sp-4) var(--sp-5); }
+.review__top { display: flex; align-items: center; gap: var(--sp-3); flex-wrap: wrap; }
+.review__author { font-weight: 700; color: var(--ink); }
+.review__verified { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-100); font-weight: 700; color: var(--green); }
+.review__verified svg { width: 14px; height: 14px; }
+.review__title { margin: var(--sp-2) 0 4px; font-size: var(--fs-300); }
+.review__body { margin: 0; color: var(--body); }
+.review__date { display: block; margin-top: 8px; color: var(--muted); font-size: var(--fs-100); }
+
+.reviews__form { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r-md); padding: var(--sp-5); position: sticky; top: 92px; }
+.reviews__form h3 { margin: 0 0 6px; }
+.reviews__hint { color: var(--muted); font-size: var(--fs-100); margin: 0 0 var(--sp-4); }
+.reviews__legal { color: var(--muted); font-size: var(--fs-100); margin: var(--sp-3) 0 0; text-align: center; }
+.field { display: block; margin-bottom: var(--sp-3); }
+.field span { display: block; font-size: var(--fs-100); font-weight: 700; color: var(--body); margin-bottom: 4px; }
+.field input, .field textarea { width: 100%; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: var(--r-sm); background: #fff; font: inherit; color: var(--ink); }
+.field input:focus, .field textarea:focus { outline: 0; border-color: var(--navy); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.rate { border: 0; padding: 0; margin: 0 0 var(--sp-3); }
+.rate legend { font-weight: 700; font-size: var(--fs-200); margin-bottom: 6px; padding: 0; color: var(--body); }
+.rate__stars { display: inline-flex; flex-direction: row-reverse; justify-content: flex-end; gap: 2px; }
+.rate__stars input { position: absolute; opacity: 0; width: 0; height: 0; }
+.rate__stars label { font-size: 30px; line-height: 1; color: #d4dae2; cursor: pointer; transition: color .12s var(--ease); }
+.rate__stars input:checked ~ label,
+.rate__stars label:hover,
+.rate__stars label:hover ~ label { color: var(--gold); }
+.rate__stars input:focus-visible + label { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+@media (max-width: 820px) { .reviews__grid { grid-template-columns: 1fr; } .reviews__form { position: static; } }
+@media (prefers-reduced-motion: reduce) { .rate__stars label { transition: none; } }

@@ -1,0 +1,46 @@
+title: Bewertung
+icon: star
+
+status:
+  draft:
+    label: Zu prüfen
+    text: Noch nicht öffentlich sichtbar
+  listed:
+    label: Veröffentlicht
+    text: Auf der Produktseite sichtbar
+
+columns:
+  - width: 2/3
+    fields:
+      title:
+        label: Überschrift
+        type: text
+      body:
+        label: Bewertungstext
+        type: textarea
+        buttons: false
+  - width: 1/3
+    fields:
+      rating:
+        label: Sterne
+        type: number
+        min: 1
+        max: 5
+      author:
+        label: Name (öffentlich)
+        type: text
+      verified:
+        label: Verifizierter Kauf
+        type: toggle
+      product:
+        label: Produkt-ID
+        type: text
+        disabled: true
+      date:
+        label: Eingegangen
+        type: text
+        disabled: true
+      email:
+        label: E-Mail (intern, nicht öffentlich)
+        type: text
+        disabled: true

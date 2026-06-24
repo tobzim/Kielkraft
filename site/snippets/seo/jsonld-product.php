@@ -54,6 +54,30 @@ if ($img) {
 if ($product->gtin()->isNotEmpty()) {
     $product_ld['gtin'] = $product->gtin()->value();
 }
+// AggregateRating + Reviews nur mit echten, freigegebenen Bewertungen (keine Fakes).
+if (function_exists('kk_review_stats')) {
+    $rvStats = kk_review_stats($product);
+    if ($rvStats['count'] > 0) {
+        $product_ld['aggregateRating'] = [
+            '@type'       => 'AggregateRating',
+            'ratingValue' => number_format($rvStats['avg'], 1, '.', ''),
+            'reviewCount' => $rvStats['count'],
+            'bestRating'  => 5,
+            'worstRating' => 1,
+        ];
+        $product_ld['review'] = [];
+        foreach (kk_reviews_for($product)->limit(20) as $rv) {
+            $product_ld['review'][] = [
+                '@type'         => 'Review',
+                'reviewRating'  => ['@type' => 'Rating', 'ratingValue' => (int) $rv->rating()->value(), 'bestRating' => 5, 'worstRating' => 1],
+                'author'        => ['@type' => 'Person', 'name' => $rv->author()->value()],
+                'datePublished' => date('Y-m-d', strtotime((string) $rv->date())),
+                'name'          => $rv->title()->value(),
+                'reviewBody'    => $rv->body()->value(),
+            ];
+        }
+    }
+}
 ?>
 <script type="application/ld+json"><?= json_encode($product_ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php if ($product->faq()->toStructure()->count() > 0): ?>

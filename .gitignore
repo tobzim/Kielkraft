@@ -33,3 +33,5 @@ desktop.ini
 npm-debug.log*
 .php-cs-fixer.cache
 .phpunit.result.cache
+# User-generated reviews (personal data) — children only, parent container tracked
+/content/reviews/*/
