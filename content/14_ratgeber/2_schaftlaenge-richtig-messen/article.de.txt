@@ -1,0 +1,67 @@
+Title: Schaftlänge richtig messen: S, L oder UL?
+
+----
+
+Date: 2026-06-24
+
+----
+
+Excerpt: Die häufigste Fehlbestellung beim Außenborder ist die falsche Schaftlänge. In zwei Minuten misst du dein Spiegelmaß richtig – und wählst sicher zwischen Kurz-, Lang- und Ultralangschaft.
+
+----
+
+Text:
+
+Die Schaftlänge entscheidet darüber, wie tief die Antriebseinheit deines Außenborders im Wasser sitzt. Ist sie falsch gewählt, saugt die Pumpe Luft an, der Motor überhitzt oder die Schraube schlägt Spritzwasser statt Vortrieb. Die gute Nachricht: Du brauchst nur ein Maßband.
+
+## Was bedeuten S, L und UL?
+
+Hersteller geben die Schaftlänge als Buchstaben an:
+
+- **S (Short / Kurzschaft)** – ca. 15 Zoll / 38 cm. Für niedrige Spiegel an Schlauchbooten, kleinen Beibooten und vielen Alubooten.
+- **L (Long / Langschaft)** – ca. 20 Zoll / 51 cm. Der häufigste Wert für Festrumpfboote und Segelyachten mit normalem Spiegel.
+- **UL (Ultra-Long / Ultralangschaft)** – ca. 25 Zoll / 63 cm. Für besonders hohe Spiegel, vor allem an Segelyachten.
+
+## So misst du dein Spiegelmaß
+
+Der Spiegel (engl. „transom") ist die Heckplatte, an der der Motor klemmt. Miss senkrecht von der **Oberkante des Spiegels** – dort, wo die Motorhalterung aufliegt – bis zur **Unterkante** des Spiegels am Rumpf.
+
+- Bis ca. **43 cm** → **Kurzschaft (S)**
+- ca. **43–55 cm** → **Langschaft (L)**
+- darüber → **Ultralangschaft (UL)**
+
+Miss an der tatsächlichen Auflagefläche, nicht am höchsten Punkt der Heckkante. Bei Zweifeln zwischen zwei Größen wähle im Sportbootbereich eher den längeren Schaft – ein zu kurzer Schaft ist das größere Problem.
+
+## Faustregel: Antikavitationsplatte
+
+Richtig sitzt der Motor, wenn die **Antikavitationsplatte** (die kleine waagerechte Platte direkt über der Schraube) im Betrieb etwa auf Höhe des Bootsbodens bzw. wenige Zentimeter darunter läuft. Liegt sie zu hoch, zieht die Schraube Luft; liegt sie zu tief, bremst der Schaft.
+
+## Welcher Motor in welcher Länge?
+
+Die meisten unserer (link: benzin-aussenborder text: Tohatsu-Modelle) gibt es als S- und L-Variante; der (link: benzin-aussenborder/tohatsu-mfs6-d-sail-pro text: MFS6 D Sail Pro) ist speziell für hohe Segelyacht-Spiegel auch in L und UL erhältlich. Auf jeder Produktseite wählst du die Schaftlänge direkt in der Kaufbox.
+
+## Immer noch unsicher?
+
+Schick uns dein Spiegelmaß per (link: kontakt text: WhatsApp oder Kontaktformular) – wir sagen dir, welche Variante passt. Oder lass dir vom (link: kaufberater text: Kaufberater) in zwei Minuten ein konkretes Modell empfehlen.
+
+----
+
+Faq:
+
+-
+  q: Was ist schlimmer – zu kurzer oder zu langer Schaft?
+  a: Ein zu kurzer Schaft ist das größere Problem – die Schraube zieht Luft, der Motor verliert Vortrieb und kann überhitzen. Ein leicht zu langer Schaft kostet etwas Geschwindigkeit, ist aber meist unkritisch. Im Zweifel daher eher die längere Variante.
+-
+  q: Wo genau messe ich am Spiegel?
+  a: Senkrecht von der Oberkante des Spiegels, auf der die Motorhalterung aufliegt, bis zur Unterkante am Rumpf. Bis etwa 43 cm Kurzschaft (S), darüber Langschaft (L), bei sehr hohen Spiegeln Ultralangschaft (UL).
+-
+  q: Kann ich einen Kurzschaft-Motor auf einem hohen Spiegel fahren?
+  a: Nein. Der Antrieb säße zu hoch im Wasser, die Schraube würde Luft ansaugen. Wähle die Schaftlänge passend zum gemessenen Spiegelmaß.
+
+----
+
+Metatitle: Schaftlänge messen: S, L oder UL richtig wählen | Kielkraft
+
+----
+
+Metadescription: So misst du das Spiegelmaß deines Bootes und wählst sicher zwischen Kurz-, Lang- und Ultralangschaft (S/L/UL). Mit Faustregel und Maßangaben.

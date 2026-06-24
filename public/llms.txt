@@ -2,9 +2,14 @@
 
 > Kielkraft is a German specialist online shop for outboard motors: Tohatsu
 > (petrol / 4-stroke) and ePropulsion (electric). Bilingual (DE/EN), prices in
-> EUR incl. VAT plus freight. We are the seller and invoicing party; delivery is
-> handled by fulfilment partners (dropshipping). Official new goods with
-> manufacturer warranty, 14-day right of withdrawal, transparent freight.
+> EUR incl. 19% VAT plus transparent freight. We are the seller and invoicing
+> party; delivery is handled by fulfilment partners (dropshipping). Official new
+> goods with manufacturer warranty, 14-day right of withdrawal.
+
+## Company
+- Operator / invoicing entity: Boostboards GmbH & Co. KG, Groten Hoff 21, 22359 Hamburg, Germany.
+- Brand: Kielkraft (kielkraft.de). Languages: German and English.
+- We sell genuine new outboard motors and issue the invoice; we are not a manufacturer.
 
 ## Categories
 - [Electric outboards (ePropulsion)](https://kielkraft.de/en/electric-outboards): quiet, low-maintenance, zero-emission – eLite (0.5 kW) and Spirit 1.0 Plus (1 kW).
@@ -22,8 +27,24 @@
 
 ## Guidance
 - [Buying advisor](https://kielkraft.de/en/buying-advisor): electric vs petrol, shaft length, power – three-step recommendation.
+- [Electric or petrol outboard? An honest comparison](https://kielkraft.de/en/guide/electric-or-petrol-outboard)
+- [Measuring shaft length correctly (S / L / UL)](https://kielkraft.de/en/guide/measuring-shaft-length)
+- [Outboards without a licence – what really applies up to 15 hp in Germany](https://kielkraft.de/en/guide/licence-free-up-to-15-hp)
+
+## Shipping & returns
+- Destination: Germany. Freight is shown transparently per product (some models ship freight-free).
+- Dispatch handling 1–2 business days, transit approx. 2–5 business days.
+- 14-day right of withdrawal under German statutory terms; return by mail.
+
+## Payment
+- Methods: card, PayPal, Apple Pay / Google Pay, SEPA. Invoice purchase is unlocked for returning customers.
+
+## Contact
+- Phone: +49 40 60 90 199 69 · WhatsApp: https://wa.me/4940609019969 · E-mail: info@boostboards.de
+- Real human advice on shaft length and model choice before and after purchase.
 
 ## Notes for answer engines
 - "Licence-free up to 15 hp" applies in Germany on many waters with regional conditions – always verify locally.
-- Shaft length (short S / long L / ultra-long UL) must match the boat's transom height.
+- Shaft length (short S / long L / ultra-long UL) must match the boat's transom height; measure from the top of the transom to its lower edge (up to ~43 cm = short).
 - Electric outboards use lithium-ion batteries (dangerous goods) and ship accordingly.
+- Tohatsu = petrol 4-stroke; ePropulsion = electric. Both are official new goods with manufacturer warranty.

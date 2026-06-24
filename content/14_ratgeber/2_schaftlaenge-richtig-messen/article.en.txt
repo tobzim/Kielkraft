@@ -1,0 +1,71 @@
+Title: Measuring shaft length correctly: S, L or UL?
+
+----
+
+Slug: measuring-shaft-length
+
+----
+
+Date: 2026-06-24
+
+----
+
+Excerpt: The most common wrong order on an outboard is the wrong shaft length. In two minutes you measure your transom correctly – and choose confidently between short, long and ultra-long shaft.
+
+----
+
+Text:
+
+The shaft length decides how deep your outboard's drive unit sits in the water. Get it wrong and the pump draws air, the engine overheats or the propeller throws spray instead of thrust. The good news: all you need is a tape measure.
+
+## What do S, L and UL mean?
+
+Manufacturers state the shaft length as a letter:
+
+- **S (Short)** – approx. 15 in / 38 cm. For low transoms on inflatables, small tenders and many aluminium boats.
+- **L (Long)** – approx. 20 in / 51 cm. The most common value for hard-hull boats and sailing yachts with a normal transom.
+- **UL (Ultra-Long)** – approx. 25 in / 63 cm. For especially high transoms, mainly on sailing yachts.
+
+## How to measure your transom
+
+The transom is the stern plate the motor clamps to. Measure vertically from the **top edge of the transom** – where the motor bracket rests – down to the **lower edge** of the transom at the hull.
+
+- Up to approx. **43 cm** → **short shaft (S)**
+- approx. **43–55 cm** → **long shaft (L)**
+- above that → **ultra-long shaft (UL)**
+
+Measure at the actual mounting surface, not at the highest point of the stern. If you are between two sizes, on sport boats prefer the longer shaft – too short is the bigger problem.
+
+## Rule of thumb: the anti-cavitation plate
+
+The motor sits right when the **anti-cavitation plate** (the small horizontal plate just above the propeller) runs roughly level with the boat's bottom or a few centimetres below it during operation. Too high and the propeller draws air; too low and the shaft creates drag.
+
+## Which motor in which length?
+
+Most of our (link: benzin-aussenborder text: Tohatsu models) come as S and L; the (link: benzin-aussenborder/tohatsu-mfs6-d-sail-pro text: MFS6 D Sail Pro) for high sailing-yacht transoms is also available in L and UL. On every product page you pick the shaft length directly in the buy box.
+
+## Still unsure?
+
+Send us your transom measurement via (link: kontakt text: WhatsApp or the contact form) – we will tell you which variant fits. Or let the (link: kaufberater text: buying advisor) recommend a specific model in two minutes.
+
+----
+
+Faq:
+
+-
+  q: Which is worse – too short or too long a shaft?
+  a: Too short is the bigger problem – the propeller draws air, the engine loses thrust and can overheat. A slightly long shaft costs a little speed but is usually uncritical. When in doubt, choose the longer variant.
+-
+  q: Where exactly do I measure on the transom?
+  a: Vertically from the top edge of the transom, where the motor bracket rests, down to the lower edge at the hull. Up to about 43 cm is short shaft (S), above that long shaft (L), and ultra-long shaft (UL) for very high transoms.
+-
+  q: Can I run a short-shaft motor on a high transom?
+  a: No. The drive would sit too high in the water and the propeller would draw air. Match the shaft length to your measured transom height.
+
+----
+
+Metatitle: Measuring outboard shaft length: S, L or UL | Kielkraft
+
+----
+
+Metadescription: How to measure your boat's transom and choose confidently between short, long and ultra-long shaft (S/L/UL). With rule of thumb and dimensions.

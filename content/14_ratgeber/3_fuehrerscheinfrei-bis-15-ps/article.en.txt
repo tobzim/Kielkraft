@@ -1,0 +1,71 @@
+Title: Outboards without a licence? What applies up to 15 hp in Germany
+
+----
+
+Slug: licence-free-up-to-15-hp
+
+----
+
+Date: 2026-06-24
+
+----
+
+Excerpt: "Licence-free up to 15 hp" – you hear this often. It is broadly true but has important exceptions. We explain the rule honestly and tell you what to watch out for.
+
+----
+
+Text:
+
+Many of our motors deliberately sit at or below 15 hp – for a good reason: on many German waters you may operate boats up to this power **without a recreational boating licence** (Sportbootführerschein). But the rule is not the same everywhere. This guide puts it in context. It is not legal advice – the rules of your specific waters always take precedence.
+
+## The basic rule
+
+On most **inland waters** and in the German **coastal waters** (North and Baltic Sea), no recreational boating licence is required up to **15 hp (11.03 kW)** of drive power. Above that you generally need the Sportbootführerschein Binnen (inland) or See (sea).
+
+This is exactly why our (link: benzin-aussenborder text: Tohatsu line) stops at 15 hp: you get the maximum licence-free power without having to take an exam.
+
+## The important exceptions
+
+The 15 hp limit is widespread but not seamless. Watch out for:
+
+- **Lake Constance (Bodensee)** – its own legal regime applies. For motorboats you usually need the Bodensee boating permit, even below 15 hp.
+- **The Rhine** – special rules apply on the Rhine; check before you set off.
+- **Regional rules** – individual lakes, nature reserves and waterways may ban motorboats entirely, cap power or require registration.
+- **Registration and insurance** – licence-free does not mean rule-free: depending on the water you need a boat registration, and liability insurance is strongly recommended (sometimes mandatory).
+
+## What counts: hp or kW?
+
+What matters is the **rated power in kW**. 15 hp equals roughly 11.03 kW. When buying, check the manufacturer's kW figure – it is listed in the technical data on every product page.
+
+## Electric motors
+
+The power limit in kW also applies to (link: elektro-aussenborder text: electric outboards). Our ePropulsion models are well below it and are therefore licence-free on most waters – here too, regional exceptions apply.
+
+## When in doubt: check briefly
+
+Before you set off, check the rules of your specific waters (waterways authority, state regulation or local notices). For questions about the right motor power, our (link: kaufberater text: buying advisor) or our team on (link: kontakt text: WhatsApp) will help.
+
+----
+
+Faq:
+
+-
+  q: Up to how many hp may I operate licence-free in Germany?
+  a: On many inland and the German coastal waters, up to 15 hp (about 11.03 kW) without a recreational boating licence. However, regional exceptions exist – such as Lake Constance and the Rhine – as well as possible registration and insurance obligations.
+-
+  q: Does the 15 hp limit apply on Lake Constance?
+  a: No. Lake Constance has its own legal regime; for motorboats the Bodensee boating permit is usually required, even below 15 hp. Check the Bodensee shipping regulations.
+-
+  q: Is the limit based on hp or kW?
+  a: The rated power in kW is decisive. 15 hp equals roughly 11.03 kW. You will find the kW figure in the technical data on each product page.
+-
+  q: Do I need insurance for a licence-free motor?
+  a: Liability insurance is strongly recommended and mandatory on some waters. Depending on the area a boat registration is also required. Licence-free does not mean rule-free.
+
+----
+
+Metatitle: Outboards licence-free up to 15 hp in Germany – the rules | Kielkraft
+
+----
+
+Metadescription: Up to 15 hp (11.03 kW) outboards are often licence-free in Germany – with key exceptions (Lake Constance, Rhine) and notes on registration and insurance.
