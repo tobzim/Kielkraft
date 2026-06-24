@@ -24,7 +24,20 @@ foreach ($variants as $v) {
 $avail = $product->availability()->or('instock')->value();
 $availLabel = $avail === 'short' ? ($en ? 'Only a few in stock' : 'Nur wenige verfügbar') : ($avail === 'preorder' ? ($en ? 'Pre-order' : 'Vorbestellung') : ($en ? 'In stock' : 'Lieferbar'));
 
-$wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
+// Ehrliche Lieferprognose: Werktage ab heute (deckt sich mit Schema-deliveryTime).
+$bizAdd = static function (int $days): int {
+    $ts = time();
+    while ($days > 0) {
+        $ts += 86400;
+        if ((int) date('N', $ts) < 6) { $days--; }
+    }
+    return $ts;
+};
+$dFmt = $en ? 'd M' : 'd.m.';
+$deliveryFrom = date($dFmt, $bizAdd(3));
+$deliveryTo   = date($dFmt, $bizAdd(7));
+
+$wa = 'https://wa.me/4940609019969?text=' . rawurlencode(($en ? 'Hi, I have a question about the ' : 'Hallo, ich habe eine Frage zum ') . $product->title()->value());
 ?>
 <aside class="konsole <?= $axis ?>" data-konsole data-variants='<?= htmlspecialchars(json_encode($vjson, JSON_UNESCAPED_UNICODE | JSON_HEX_APOS), ENT_QUOTES) ?>'>
     <div class="konsole__head">
@@ -75,6 +88,17 @@ $wa = 'https://wa.me/49000000000'; // TODO: echte WhatsApp-Nummer
         <span class="dot" aria-hidden="true"></span>
         <span><b><?= $availLabel ?></b> · <?= $product->deliveryTime() ?></span>
     </div>
+<?php if ($avail === 'preorder'): ?>
+    <div class="konsole__deliver">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg>
+        <span><?= $en ? 'Delivery date on request – we contact you right after ordering.' : 'Liefertermin auf Anfrage – wir melden uns direkt nach der Bestellung.' ?></span>
+    </div>
+<?php else: ?>
+    <div class="konsole__deliver">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg>
+        <span><?= $en ? 'Order today &rarr; delivery approx.' : 'Heute bestellt &rarr; Lieferung ca.' ?> <b><?= $deliveryFrom ?>&ndash;<?= $deliveryTo ?></b></span>
+    </div>
+<?php endif ?>
 
     <div class="konsole__cta">
         <button type="submit" name="submit" value="1" class="btn btn--cta btn--lg btn--block"><?= t('product.add_to_cart') ?></button>
