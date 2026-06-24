@@ -129,6 +129,19 @@ if ($cross->count() === 0) {
 </section>
 <?php endif ?>
 
+<?php
+$rvCover = $cover ? $cover->resize(420)->url() : '';
+$rvPrice = mv_eur(($page->variants()->toStructure()->first()?->price()?->value()) ?? $page->priceFrom()->value(), $code);
+$rvData = ['id' => $page->id(), 'title' => $page->title()->value(), 'url' => $page->url(), 'img' => $rvCover, 'price' => $rvPrice];
+?>
+<script type="application/json" data-rv-current><?= json_encode($rvData, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_SLASHES) ?></script>
+<section class="section--tight" data-rv-section hidden>
+    <div class="container">
+        <div class="section__head"><h2 class="section__title"><?= $en ? 'Recently viewed' : 'Zuletzt angesehen' ?></h2></div>
+        <div class="rv-grid" data-rv-grid></div>
+    </div>
+</section>
+
 <!-- Mini console (mobile / on scroll) -->
 <div class="mini-konsole <?= $axis ?>" data-mini-konsole>
     <div class="container mini-konsole__row">

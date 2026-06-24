@@ -881,3 +881,23 @@
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+/* === Schwebender WhatsApp-Button (ueberall ausser PDP) === */
+.wa-fab { position: fixed; right: 18px; bottom: 18px; z-index: 80; width: 56px; height: 56px; border-radius: 50%;
+  display: grid; place-items: center; background: #25d366; color: #fff;
+  box-shadow: 0 8px 22px rgba(37,211,102,.45); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+.wa-fab:hover { transform: translateY(-2px) scale(1.05); box-shadow: 0 12px 28px rgba(37,211,102,.55); color: #fff; }
+.wa-fab svg { width: 32px; height: 32px; }
+body:has([data-mini-konsole]) .wa-fab { display: none; }
+@media (max-width: 560px) { .wa-fab { width: 50px; height: 50px; right: 14px; bottom: 14px; } .wa-fab svg { width: 28px; height: 28px; } }
+@media (prefers-reduced-motion: reduce) { .wa-fab { transition: none; } }
+
+/* === Zuletzt angesehen === */
+.rv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-4); }
+.rv-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; color: var(--ink); transition: box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.rv-card:hover { box-shadow: var(--sh-md); transform: translateY(-3px); border-color: #c9d6e2; }
+.rv-card__media { aspect-ratio: 4 / 3; background: #fff; display: grid; place-items: center; padding: var(--sp-3); }
+.rv-card__media img { width: 100%; height: 100%; object-fit: contain; }
+.rv-card__title { padding: var(--sp-3) var(--sp-3) 0; font-weight: 700; font-size: var(--fs-200); line-height: 1.25; }
+.rv-card__price { padding: 4px var(--sp-3) var(--sp-3); font-weight: 800; font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) { .rv-grid { grid-template-columns: repeat(2, 1fr); } }

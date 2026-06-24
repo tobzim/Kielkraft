@@ -572,4 +572,41 @@
       ro.observe(el);
     });
   })();
+
+  /* --- Recently viewed (localStorage; rein clientseitig) --- */
+  (function () {
+    var KEY = "kk_rv";
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+    var list = [];
+    try { list = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) { list = []; }
+    if (!Array.isArray(list)) list = [];
+
+    var cur = null;
+    var curEl = document.querySelector("[data-rv-current]");
+    if (curEl) { try { cur = JSON.parse(curEl.textContent); } catch (e) {} }
+    if (cur && cur.id) {
+      list = list.filter(function (x) { return x && x.id !== cur.id; });
+      list.unshift(cur);
+      if (list.length > 10) list = list.slice(0, 10);
+      try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) {}
+    }
+
+    var grid = document.querySelector("[data-rv-grid]");
+    var section = document.querySelector("[data-rv-section]");
+    if (!grid || !section) return;
+    var others = list.filter(function (x) { return x && x.url && (!cur || x.id !== cur.id); }).slice(0, 4);
+    if (!others.length) return;
+    grid.innerHTML = others.map(function (x) {
+      var media = x.img ? '<img src="' + esc(x.img) + '" alt="" loading="lazy">' : "";
+      return '<a class="rv-card" href="' + esc(x.url) + '">' +
+        '<span class="rv-card__media">' + media + "</span>" +
+        '<span class="rv-card__title">' + esc(x.title) + "</span>" +
+        '<span class="rv-card__price">' + esc(x.price) + "</span></a>";
+    }).join("");
+    section.hidden = false;
+  })();
 })();
