@@ -553,7 +553,8 @@
     var sel = "[data-reveal], .section__head, .pcard, .feature, .gauge, .ratgeber-card, .guide-card, .step, .featurelist > *";
     var els = [].slice.call(document.querySelectorAll(sel));
     if (!els.length) return;
-    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var vh = window.innerHeight || document.documentElement.clientHeight || 0;
+    if (vh < 2) return; // kein echter Viewport (z.B. headless): nichts verstecken, alles sichtbar lassen
     var ro = new IntersectionObserver(function (entries, obs) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add("is-in"); obs.unobserve(e.target); }
@@ -608,5 +609,145 @@
         '<span class="rv-card__price">' + esc(x.price) + "</span></a>";
     }).join("");
     section.hidden = false;
+  })();
+
+  /* --- Collections: Merkliste (Wishlist) + Vergleich (Compare) --- */
+  (function () {
+    var cfg = {};
+    var cfgEl = document.getElementById("kk-config");
+    if (cfgEl) { try { cfg = JSON.parse(cfgEl.textContent); } catch (e) { cfg = {}; } }
+    var rows = cfg.rows || {};
+    var WL = "kk_wl", CMP = "kk_cmp", CMP_MAX = 3;
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+    function read(k) { try { var a = JSON.parse(localStorage.getItem(k) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+    function write(k, a) { try { localStorage.setItem(k, JSON.stringify(a)); } catch (e) {} }
+    function has(a, id) { return a.some(function (x) { return x && x.id === id; }); }
+
+    function updateWlCount() {
+      var n = read(WL).length;
+      document.querySelectorAll("[data-wl-count]").forEach(function (el) { el.textContent = n; el.hidden = n === 0; });
+    }
+
+    function markCards() {
+      var wl = read(WL), cmp = read(CMP);
+      document.querySelectorAll(".pcard[data-product]").forEach(function (card) {
+        var data; try { data = JSON.parse(card.getAttribute("data-product")); } catch (e) { return; }
+        if (!data) return;
+        var w = card.querySelector("[data-wl-toggle]");
+        var c = card.querySelector("[data-cmp-toggle]");
+        if (w) { var on = has(wl, data.id); w.setAttribute("aria-pressed", on ? "true" : "false"); w.classList.toggle("is-on", on); }
+        if (c) { var on2 = has(cmp, data.id); c.setAttribute("aria-pressed", on2 ? "true" : "false"); c.classList.toggle("is-on", on2); }
+      });
+    }
+
+    var bar = null;
+    function updateCmpBar() {
+      var cmp = read(CMP);
+      var onComparePage = !!document.querySelector("[data-cmp-mount]");
+      var onPdp = !!document.querySelector("[data-mini-konsole]");
+      if (!cmp.length || onComparePage || onPdp) { if (bar) bar.hidden = true; return; }
+      if (!bar) { bar = document.createElement("div"); bar.className = "cmp-bar"; document.body.appendChild(bar); }
+      bar.hidden = false;
+      bar.innerHTML =
+        '<span class="cmp-bar__count">' + cmp.length + "</span>" +
+        '<a class="btn btn--cta btn--sm" href="' + esc(cfg.compareUrl || "#") + '">' + esc(cfg.compareLabel || "Compare") + "</a>" +
+        '<button type="button" class="cmp-bar__clear" data-cmp-clear>' + esc(cfg.clearLabel || "Clear") + "</button>";
+    }
+
+    function renderWishlist() {
+      var grid = document.querySelector("[data-wl-grid]");
+      var empty = document.querySelector("[data-wl-empty]");
+      if (!grid) return;
+      var wl = read(WL);
+      if (!wl.length) { grid.hidden = true; if (empty) empty.hidden = false; grid.innerHTML = ""; return; }
+      if (empty) empty.hidden = true;
+      grid.hidden = false;
+      grid.innerHTML = wl.map(function (x) {
+        var media = x.img ? '<img src="' + esc(x.img) + '" alt="" loading="lazy">' : "";
+        return '<div class="rv-card rv-card--rm">' +
+          '<button type="button" class="rv-card__rm" data-wl-remove="' + esc(x.id) + '" aria-label="' + esc(cfg.removeLabel || "Remove") + '">&times;</button>' +
+          '<a class="rv-card__media" href="' + esc(x.url) + '">' + media + "</a>" +
+          '<a class="rv-card__title" href="' + esc(x.url) + '">' + esc(x.title) + "</a>" +
+          '<span class="rv-card__price">' + esc(x.price) + "</span></div>";
+      }).join("");
+    }
+
+    function renderCompare() {
+      var mount = document.querySelector("[data-cmp-mount]");
+      var empty = document.querySelector("[data-cmp-empty]");
+      if (!mount) return;
+      var cmp = read(CMP);
+      if (!cmp.length) { mount.hidden = true; if (empty) empty.hidden = false; mount.innerHTML = ""; return; }
+      if (empty) empty.hidden = true;
+      mount.hidden = false;
+      var cols = cmp.slice(0, CMP_MAX);
+      function row(label, key) {
+        return "<tr><th>" + esc(label) + "</th>" + cols.map(function (x) { return "<td>" + esc(x[key] != null ? x[key] : "–") + "</td>"; }).join("") + "</tr>";
+      }
+      var head = "<tr><th></th>" + cols.map(function (x) {
+        var media = x.img ? '<img src="' + esc(x.img) + '" alt="">' : "";
+        return '<td><button type="button" class="cmp-col__rm" data-cmp-remove="' + esc(x.id) + '" aria-label="' + esc(cfg.removeLabel || "Remove") + '">&times;</button>' +
+          '<a class="cmp-col__media" href="' + esc(x.url) + '">' + media + '</a>' +
+          '<a class="cmp-col__title" href="' + esc(x.url) + '">' + esc(x.title) + "</a></td>";
+      }).join("") + "</tr>";
+      var body =
+        row(rows.drive || "Drive", "drive") +
+        row(rows.brand || "Brand", "brand") +
+        row(rows.ps || "Power", "ps") +
+        row(rows.kw || "kW", "kw") +
+        row(rows.kg || "Weight", "kg") +
+        row(rows.avail || "Availability", "avail") +
+        '<tr class="cmp-row--price"><th>' + esc(rows.price || "Price") + "</th>" + cols.map(function (x) { return "<td><strong>" + esc(x.price) + "</strong></td>"; }).join("") + "</tr>" +
+        "<tr><th></th>" + cols.map(function (x) { return '<td><a class="btn btn--cta btn--sm" href="' + esc(x.url) + '">' + esc(cfg.detailsLabel || "Details") + "</a></td>"; }).join("") + "</tr>";
+      mount.innerHTML = '<div class="cmp-scroll"><table class="cmp-table"><tbody>' + head + body + "</tbody></table></div>";
+    }
+
+    function toggle(key, data, max) {
+      var list = read(key);
+      if (has(list, data.id)) { list = list.filter(function (x) { return x.id !== data.id; }); }
+      else { if (max && list.length >= max) { return { full: true }; } list.push(data); }
+      write(key, list);
+      return { full: false };
+    }
+
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest) return;
+      var wlBtn = e.target.closest("[data-wl-toggle]");
+      var cmpBtn = e.target.closest("[data-cmp-toggle]");
+      var wlRm = e.target.closest("[data-wl-remove]");
+      var cmpRm = e.target.closest("[data-cmp-remove]");
+      var clr = e.target.closest("[data-cmp-clear]");
+
+      if (wlBtn) {
+        var card = wlBtn.closest(".pcard"); if (!card) return;
+        var data; try { data = JSON.parse(card.getAttribute("data-product")); } catch (er) { return; }
+        toggle(WL, data); updateWlCount(); markCards();
+      } else if (cmpBtn) {
+        var card2 = cmpBtn.closest(".pcard"); if (!card2) return;
+        var data2; try { data2 = JSON.parse(card2.getAttribute("data-product")); } catch (er) { return; }
+        var res = toggle(CMP, data2, CMP_MAX);
+        if (res.full) { cmpBtn.classList.add("is-shake"); setTimeout(function () { cmpBtn.classList.remove("is-shake"); }, 400); if (cfg.maxLabel) cmpBtn.setAttribute("title", cfg.maxLabel); }
+        markCards(); updateCmpBar();
+      } else if (wlRm) {
+        e.preventDefault();
+        var id = wlRm.getAttribute("data-wl-remove");
+        write(WL, read(WL).filter(function (x) { return x.id !== id; }));
+        updateWlCount(); renderWishlist(); markCards();
+      } else if (cmpRm) {
+        e.preventDefault();
+        var id2 = cmpRm.getAttribute("data-cmp-remove");
+        write(CMP, read(CMP).filter(function (x) { return x.id !== id2; }));
+        renderCompare(); markCards(); updateCmpBar();
+      } else if (clr) {
+        write(CMP, []); updateCmpBar(); renderCompare(); markCards();
+      }
+    });
+
+    updateWlCount(); markCards(); updateCmpBar(); renderWishlist(); renderCompare();
   })();
 })();

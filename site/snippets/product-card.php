@@ -13,8 +13,29 @@ $multi = $variants->count() > 1;
 $avail = $product->availability()->or('instock')->value();
 $pct = ($uvp && $uvp > $priceFrom) ? (int) round((1 - $priceFrom / $uvp) * 100) : 0;
 $availLabel = $avail === 'short' ? ($en ? 'Few in stock' : 'Wenige verfügbar') : ($avail === 'preorder' ? ($en ? 'Pre-order' : 'Vorbestellung') : ($en ? 'In stock' : 'Lieferbar'));
+$prodData = [
+    'id'    => $product->id(),
+    'title' => $product->title()->value(),
+    'url'   => $product->url(),
+    'img'   => $cover ? $cover->resize(420)->url() : '',
+    'price' => mv_eur($priceFrom, $code),
+    'ps'    => $product->powerPs()->value(),
+    'kw'    => $product->powerKw()->value(),
+    'kg'    => $product->weightKg()->value(),
+    'brand' => $product->brand()->value(),
+    'drive' => $isElectric ? ($en ? 'Electric' : 'Elektro') : ($en ? 'Petrol' : 'Benzin'),
+    'avail' => $availLabel,
+];
 ?>
-<article class="pcard">
+<article class="pcard" data-product='<?= htmlspecialchars(json_encode($prodData, JSON_UNESCAPED_UNICODE | JSON_HEX_APOS | JSON_HEX_TAG), ENT_QUOTES) ?>'>
+    <div class="pcard__tools">
+        <button type="button" class="ptool ptool--wl" data-wl-toggle aria-pressed="false" aria-label="<?= $en ? 'Save to wishlist' : 'Zur Merkliste' ?>" title="<?= $en ? 'Wishlist' : 'Merkliste' ?>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        </button>
+        <button type="button" class="ptool ptool--cmp" data-cmp-toggle aria-pressed="false" aria-label="<?= $en ? 'Add to comparison' : 'Zum Vergleich' ?>" title="<?= $en ? 'Compare' : 'Vergleichen' ?>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h7M3 12h7M3 18h7"/><path d="M17 4v16M14 7l3-3 3 3M14 17l3 3 3-3"/></svg>
+        </button>
+    </div>
     <div class="pcard__badges">
 <?php if ($pct > 0): ?>
         <span class="badge badge--sale">-<?= $pct ?>&nbsp;%</span>
