@@ -76,6 +76,11 @@ jobs:
             cd /opt/kielkraft
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
             docker compose -f docker-compose.prod.yml pull
+            # Katalog-Content aus dem Image ins Volume nachziehen (Volume shadowt das Image).
+            # cp -an: legt nur NEUE Dateien an, ueberschreibt NICHTS -> Bestellungen/Kunden/
+            # Bewertungen + Panel-Aenderungen bleiben unangetastet. Idempotent (jeder Deploy).
+            docker run --rm --user root -v kielkraft_content:/dest ghcr.io/tobzim/kielkraft-shop:app-latest \
+              sh -c 'cp -an /var/www/html/content/. /dest/ && chown -R www-data:www-data /dest'
             docker compose -f docker-compose.prod.yml up -d
             docker image prune -f
             docker logout ghcr.io
