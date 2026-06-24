@@ -336,7 +336,7 @@ if (!function_exists('kk_reviews_for')) {
     function kk_reviews_for($product)
     {
         $parent = page('reviews');
-        if (!$parent) { return new Kirby\Cms\Pages([]); }
+        if (!$parent) { return new \Kirby\Cms\Pages([]); }
         $pid = is_string($product) ? $product : $product->id();
         return $parent->children()->listed()
             ->filter(fn ($r) => (string) $r->product()->value() === $pid)
