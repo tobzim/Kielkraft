@@ -77,10 +77,15 @@ jobs:
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
             docker compose -f docker-compose.prod.yml pull
             # Katalog-Content aus dem Image ins Volume nachziehen (Volume shadowt das Image).
-            # cp -an: legt nur NEUE Dateien an, ueberschreibt NICHTS -> Bestellungen/Kunden/
-            # Bewertungen + Panel-Aenderungen bleiben unangetastet. Idempotent (jeder Deploy).
-            docker run --rm --user root -v kielkraft_content:/dest ghcr.io/tobzim/kielkraft-shop:app-latest \
-              sh -c 'cp -an /var/www/html/content/. /dest/ && chown -R www-data:www-data /dest'
+            # Tiefen-Merge via tar -k (keep-old): legt fehlende Dateien auf JEDER Ebene an,
+            # ueberschreibt NICHTS -> Bestellungen/Kunden/Bewertungen + Panel-Aenderungen bleiben.
+            # (BusyBox-cp im Alpine-Image kann das nicht: "cp -an /src/." kopiert nichts,
+            #  "cp -rn /src/*" ueberspringt bestehende Ordner. tar -k ist die robuste Variante.)
+            # Zusaetzlich Kirby-Seiten-Cache leeren, falls ein 404 gecacht wurde. Idempotent.
+            docker run --rm --user root \
+              -v kielkraft_content:/dest -v kielkraft_storage:/kstorage \
+              ghcr.io/tobzim/kielkraft-shop:app-latest \
+              sh -c 'cd /var/www/html/content && tar cf - . | tar xkf - -C /dest 2>/dev/null; rm -rf /kstorage/cache/* 2>/dev/null; chown -R www-data:www-data /dest; true'
             docker compose -f docker-compose.prod.yml up -d
             docker image prune -f
             docker logout ghcr.io
