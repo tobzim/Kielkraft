@@ -17,6 +17,13 @@ $en   = $code === 'en';
 $metaTitle = $page->metaTitle()->or($page->isHomePage() ? $site->title() : $page->title() . ' | ' . $site->title());
 $metaDesc  = $page->metaDescription()->or($site->description());
 
+// Open-Graph / Twitter share image: per-product card if available, else branded default
+$ogImage = url('assets/img/og-default.jpg');
+if ($page->intendedTemplate()->name() === 'product') {
+    $ogRel = 'assets/img/og/' . $page->slug() . '.jpg';
+    if (is_file(kirby()->root('index') . '/' . $ogRel)) { $ogImage = url($ogRel); }
+}
+
 $u = fn(string $de, string $enp) => url($en ? 'en/' . $enp : $de);
 $navE = $u('elektro-aussenborder', 'electric-outboards');
 $navP = $u('benzin-aussenborder', 'petrol-outboards');
@@ -51,12 +58,18 @@ $fmt = fn($p) => function_exists('mv_eur') ? mv_eur($p, $code) : $p;
     <meta property="og:description" content="<?= $metaDesc->html() ?>">
     <meta property="og:url" content="<?= $page->url() ?>">
     <meta property="og:locale" content="<?= $en ? 'en_US' : 'de_DE' ?>">
+    <meta property="og:image" content="<?= $ogImage ?>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="<?= $metaTitle->html() ?>">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="<?= $ogImage ?>">
     <link rel="icon" href="<?= url('assets/img/favicon.svg') ?>" type="image/svg+xml">
     <link rel="stylesheet" href="<?= mv_asset('assets/css/tokens.css') ?>">
     <link rel="stylesheet" href="<?= mv_asset('assets/css/app.css') ?>">
     <?php snippet('seo/jsonld-organization') ?>
-    <?php snippet('analytics') ?>
+<?php if (!$page->isHomePage()): ?>    <?php snippet('seo/jsonld-breadcrumb') ?>
+<?php endif ?>    <?php snippet('analytics') ?>
 </head>
 <body>
 <a class="skip-link" href="#main"><?= t('kielkraft.skip') ?></a>

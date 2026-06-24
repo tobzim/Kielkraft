@@ -26,7 +26,7 @@ $availLabel = $avail === 'short' ? ($en ? 'Few in stock' : 'Wenige verfügbar') 
     </div>
     <a class="pcard__media" href="<?= $product->url() ?>" aria-label="<?= $product->title()->esc() ?>">
 <?php if ($cover): ?>
-        <img src="<?= $cover->resize(540)->url() ?>" alt="<?= $cover->alt()->or($product->title())->esc() ?>" loading="lazy" width="540" height="405">
+        <img src="<?= $cover->resize(540)->url() ?>" srcset="<?= $cover->srcset([280, 420, 540, 760]) ?>" sizes="(max-width: 640px) 45vw, 260px" alt="<?= $cover->alt()->or($product->title())->esc() ?>" loading="lazy" width="540" height="405">
 <?php else: ?>
         <span class="pcard__ph"><?= $en ? 'Product photo follows' : 'Produktfoto folgt' ?></span>
 <?php endif ?>

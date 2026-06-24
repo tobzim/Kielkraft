@@ -18,6 +18,7 @@ $product_ld = [
     'brand'       => ['@type' => 'Brand', 'name' => $product->brand()->value()],
     'description' => $product->intro()->or($product->metaDescription())->value(),
     'sku'         => $first ? $first->sku()->value() : $product->modelcode()->value(),
+    'mpn'         => $product->mpn()->or($product->modelcode())->value(),
     'offers'      => [
         '@type'           => 'Offer',
         'price'           => number_format($price, 2, '.', ''),
@@ -26,10 +27,32 @@ $product_ld = [
         'url'             => $product->url(),
         'priceValidUntil' => date('Y') . '-12-31',
         'itemCondition'   => 'https://schema.org/NewCondition',
+        'seller'          => ['@type' => 'Organization', 'name' => 'Kielkraft'],
+        'shippingDetails' => [
+            '@type'               => 'OfferShippingDetails',
+            'shippingRate'        => ['@type' => 'MonetaryAmount', 'value' => number_format((float) $product->shippingCost()->or(0)->value(), 2, '.', ''), 'currency' => 'EUR'],
+            'shippingDestination' => ['@type' => 'DefinedRegion', 'addressCountry' => 'DE'],
+            'deliveryTime'        => [
+                '@type'        => 'ShippingDeliveryTime',
+                'handlingTime' => ['@type' => 'QuantitativeValue', 'minValue' => 1, 'maxValue' => 2, 'unitCode' => 'DAY'],
+                'transitTime'  => ['@type' => 'QuantitativeValue', 'minValue' => 2, 'maxValue' => 5, 'unitCode' => 'DAY'],
+            ],
+        ],
+        'hasMerchantReturnPolicy' => [
+            '@type'                => 'MerchantReturnPolicy',
+            'applicableCountry'    => 'DE',
+            'returnPolicyCategory' => 'https://schema.org/MerchantReturnFiniteReturnWindow',
+            'merchantReturnDays'   => 14,
+            'returnMethod'         => 'https://schema.org/ReturnByMail',
+            'returnFees'           => 'https://schema.org/ReturnShippingFees',
+        ],
     ],
 ];
 if ($img) {
     $product_ld['image'] = $img->url();
+}
+if ($product->gtin()->isNotEmpty()) {
+    $product_ld['gtin'] = $product->gtin()->value();
 }
 ?>
 <script type="application/ld+json"><?= json_encode($product_ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>

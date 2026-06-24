@@ -26,5 +26,19 @@ $org = [
         'availableLanguage' => ['de', 'en'],
     ],
 ];
+$website = [
+    '@context'   => 'https://schema.org',
+    '@type'      => 'WebSite',
+    'name'       => $site->title()->or('Kielkraft')->value(),
+    'url'        => $site->url(),
+    'inLanguage' => ['de', 'en'],
+    'publisher'  => ['@type' => 'Organization', 'name' => 'Boostboards GmbH & Co. KG'],
+    'potentialAction' => [
+        '@type'       => 'SearchAction',
+        'target'      => ['@type' => 'EntryPoint', 'urlTemplate' => $site->url() . '/suche?q={search_term_string}'],
+        'query-input' => 'required name=search_term_string',
+    ],
+];
 ?>
 <script type="application/ld+json"><?= json_encode($org, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+<script type="application/ld+json"><?= json_encode($website, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>

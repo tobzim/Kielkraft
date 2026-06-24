@@ -41,7 +41,7 @@ if ($cross->count() === 0) {
                 <div class="gallery">
                     <div class="gallery__main">
 <?php if ($cover): ?>
-                        <img src="<?= $cover->resize(1100)->url() ?>" alt="<?= $cover->alt()->or($page->title())->esc() ?>" width="1100" height="825">
+                        <img src="<?= $cover->resize(1100)->url() ?>" srcset="<?= $cover->srcset([560, 800, 1100]) ?>" sizes="(max-width: 900px) 92vw, 560px" alt="<?= $cover->alt()->or($page->title())->esc() ?>" width="1100" height="825" fetchpriority="high">
 <?php else: ?>
                         <div class="gallery__ph">
                             <strong><?= $page->title() ?></strong><br>
