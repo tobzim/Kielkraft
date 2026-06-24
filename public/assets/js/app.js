@@ -545,4 +545,31 @@
       });
     });
   }
+
+  /* --- Scroll reveal (dezent; respektiert prefers-reduced-motion) --- */
+  (function () {
+    if (!("IntersectionObserver" in window)) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var sel = "[data-reveal], .section__head, .pcard, .feature, .gauge, .ratgeber-card, .guide-card, .step, .featurelist > *";
+    var els = [].slice.call(document.querySelectorAll(sel));
+    if (!els.length) return;
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var ro = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-in"); obs.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -7% 0px", threshold: 0.05 });
+    var counts = new Map();
+    els.forEach(function (el) {
+      el.classList.add("reveal");
+      var r = el.getBoundingClientRect();
+      // Bereits im Viewport (Above-the-fold): sofort zeigen, kein Flash, keine Animation.
+      if (r.top < vh && r.bottom > 0) { el.classList.add("is-in"); return; }
+      var p = el.parentNode;
+      var i = counts.get(p) || 0;
+      if (i > 0 && i < 7) el.style.transitionDelay = (i * 55) + "ms";
+      counts.set(p, i + 1);
+      ro.observe(el);
+    });
+  })();
 })();
